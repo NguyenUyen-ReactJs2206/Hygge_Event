@@ -3,7 +3,7 @@ const path = {
   aboutUs: '/about-us',
   concept: '/concept',
   gallery: '/gallery',
-  testimonials: 'testimonials',
+  testimonials: '/testimonials',
   blog: '/blog',
   contact: '/contact'
 } as const

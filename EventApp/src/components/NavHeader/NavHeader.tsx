@@ -2,12 +2,11 @@ import { useState } from 'react'
 import logo from '../../assets/images/logopng.png'
 import { NavLink } from 'react-router-dom'
 import path from '../../constants/path'
-import './navHeader.scss'
 
 export default function NavHeader() {
   const [open, setOpen] = useState(false)
   return (
-    <nav className='border-b border-b-gray/10 bg-white shadow-sm'>
+    <nav className='fixed w-full border-b border-b-gray/10 bg-white shadow-sm'>
       <div className='container'>
         <div className='flex items-center justify-between font-medium'>
           <div className='z-50 flex w-full justify-between p-7 md:w-auto'>
@@ -92,74 +91,76 @@ export default function NavHeader() {
             <button className='rounded-full px-6 py-2 text-black'>Get Started</button>
           </div>
           <ul
-            className={`fixed bottom-0 top-0 mt-[94px] w-full overflow-y-auto bg-white py-24 pl-4 text-lg text-blue/70 text-cyan-500 duration-500 md:hidden 
-            ${open ? 'left-0' : 'left-[-100%]'}`}
+            className={`fixed right-0 top-0 z-0 mt-[94px] grid w-full gap-x-8 overflow-y-auto bg-white px-8 py-2 text-center text-sm text-blue/70 text-cyan-500 duration-500 sm:grid-cols-3 sm:py-4 sm:text-lg md:hidden 
+            ${open ? 'top-0' : 'top-[-100%]'}`}
           >
-            <li>
+            {/* className={`fixed bottom-0 top-0 mt-[94px] w-full overflow-y-auto bg-white py-6 pl-4 text-lg text-blue/70 text-cyan-500 duration-500 md:hidden 
+          ${open ? 'left-0' : 'left-[-100%]'}`} */}
+            <li className='sm:border-b sm:border-b-cyan-500/20'>
               <NavLink
                 to={path.home}
                 className={({ isActive }) =>
-                  `underline-effect inline-block px-6 py-1 hover:text-cyan-500/50 ${isActive ? 'text-cyan-500/50' : ''}`
+                  `inline-block px-6 py-1 hover:text-cyan-500/50 ${isActive ? 'text-cyan-500/50 ' : ''}`
                 }
               >
                 Home
               </NavLink>
             </li>
-            <li>
+            <li className='sm:border-b sm:border-b-cyan-500/20'>
               <NavLink
                 to={path.aboutUs}
                 className={({ isActive }) =>
-                  `underline-effect inline-block px-6 py-2 hover:text-cyan-500/50 ${isActive ? 'text-cyan-500/50' : ''}`
+                  `inline-block px-6 py-1 hover:text-cyan-500/50 ${isActive ? 'text-cyan-500/50' : ''}`
                 }
               >
                 About Us
               </NavLink>
             </li>
-            <li>
+            <li className='sm:border-b sm:border-b-cyan-500/20'>
               <NavLink
                 to={path.concept}
                 className={({ isActive }) =>
-                  `underline-effect inline-block px-6 py-2 hover:text-cyan-500/50 ${isActive ? 'text-cyan-500/50' : ''}`
+                  `inline-block px-6 py-1 hover:text-cyan-500/50 ${isActive ? 'text-cyan-500/50' : ''}`
                 }
               >
                 Concept
               </NavLink>
             </li>
-            <li>
+            <li className='sm:border-b sm:border-b-cyan-500/20 '>
               <NavLink
                 to={path.gallery}
                 className={({ isActive }) =>
-                  `underline-effect inline-block px-6 py-2 hover:text-cyan-500/50 ${isActive ? 'text-cyan-500/50' : ''}`
+                  `inline-block px-6 py-1 hover:text-cyan-500/50 ${isActive ? 'text-cyan-500/50' : ''}`
                 }
               >
                 Gallery
               </NavLink>
             </li>
-            <li>
+            <li className='sm:border-b sm:border-b-cyan-500/20 '>
               <NavLink
                 to={path.testimonials}
                 className={({ isActive }) =>
-                  `underline-effect inline-block px-6 py-2 hover:text-cyan-500/50 ${isActive ? 'text-cyan-500/50' : ''}`
+                  `inline-block px-6 py-1 hover:text-cyan-500/50 ${isActive ? 'text-cyan-500/50' : ''}`
                 }
               >
                 Testimonials
               </NavLink>
             </li>
-            <li>
+            <li className='sm:border-b sm:border-b-cyan-500/20 '>
               <NavLink
                 to={path.blog}
                 className={({ isActive }) =>
-                  `underline-effect inline-block px-6 py-2 hover:text-cyan-500/50 ${isActive ? 'text-cyan-500/50' : ''}`
+                  `inline-block px-6 py-1 hover:text-cyan-500/50 ${isActive ? 'text-cyan-500/50' : ''}`
                 }
               >
                 Blog
               </NavLink>
             </li>
-            <li>
+            <li className='sm:border-b sm:border-b-cyan-500/20'>
               <NavLink
                 to={path.contact}
                 className={({ isActive }) =>
-                  `underline-effect inline-block px-6 py-2 hover:text-cyan-500/50 ${isActive ? 'text-cyan-500/50' : ''}`
+                  `inline-block px-6 py-1 hover:text-cyan-500/50 ${isActive ? 'text-cyan-500/50' : ''}`
                 }
               >
                 Contact
