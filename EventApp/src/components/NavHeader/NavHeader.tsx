@@ -7,11 +7,37 @@ export default function NavHeader() {
   const [open, setOpen] = useState(false)
   return (
     <div className='container'>
-      <div className='flex items-center justify-between font-medium'>
+      <div className='flex items-center justify-around font-medium '>
         <div className='z-50 flex w-full justify-between p-7 md:w-auto'>
           <img src={logo} alt='logo' className='h-9 md:cursor-pointer' />
           <button className='text-3xl md:hidden' onClick={() => setOpen(!open)}>
-            {open ? 'close' : 'menu'}
+            {open ? (
+              <div className='h-8 w-10 cursor-pointer'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth={1.5}
+                  stroke='currentColor'
+                  className='h-full w-full'
+                >
+                  <path strokeLinecap='round' strokeLinejoin='round' d='M6 18L18 6M6 6l12 12' />
+                </svg>
+              </div>
+            ) : (
+              <div className='h-8 w-10 cursor-pointer'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth={1.5}
+                  stroke='currentColor'
+                  className='h-full w-full'
+                >
+                  <path strokeLinecap='round' strokeLinejoin='round' d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5' />
+                </svg>
+              </div>
+            )}
           </button>
         </div>
         <ul className='hidden items-center text-[13px] font-semibold uppercase tracking-wider text-blue md:flex md:gap-0 lg:gap-4 lg:text-sm'>
@@ -19,7 +45,9 @@ export default function NavHeader() {
             <NavLink
               to={path.home}
               className={({ isActive }) =>
-                `inline-block py-5 hover:text-blue/50 md:px-2 lg:px-4 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block py-5 hover:text-blue/50 hover:duration-300 md:px-2 lg:px-4 ${
+                  isActive ? 'text-blue/50' : ''
+                }`
               }
             >
               Home
@@ -29,7 +57,9 @@ export default function NavHeader() {
             <NavLink
               to={path.aboutUs}
               className={({ isActive }) =>
-                `inline-block py-5 hover:text-blue/50 md:px-2 lg:px-4 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block py-5  hover:text-blue/50 hover:duration-300 md:px-2 lg:px-4 ${
+                  isActive ? 'text-blue/50' : ''
+                }`
               }
             >
               About Us
@@ -39,7 +69,9 @@ export default function NavHeader() {
             <NavLink
               to={path.concept}
               className={({ isActive }) =>
-                `inline-block py-5 hover:text-blue/50 md:px-2 lg:px-4 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block py-5 hover:text-blue/50 hover:duration-300 md:px-2 lg:px-4 ${
+                  isActive ? 'text-blue/50' : ''
+                }`
               }
             >
               Concept
@@ -49,7 +81,9 @@ export default function NavHeader() {
             <NavLink
               to={path.gallery}
               className={({ isActive }) =>
-                `inline-block py-5 hover:text-blue/50 md:px-2 lg:px-4 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block py-5 hover:text-blue/50 hover:duration-300 md:px-2 lg:px-4 ${
+                  isActive ? 'text-blue/50' : ''
+                }`
               }
             >
               Gallery
@@ -59,7 +93,9 @@ export default function NavHeader() {
             <NavLink
               to={path.testimonials}
               className={({ isActive }) =>
-                `inline-block py-5 hover:text-blue/50 md:px-2 lg:px-4 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block py-5 hover:text-blue/50 hover:duration-300 md:px-2 lg:px-4 ${
+                  isActive ? 'text-blue/50' : ''
+                }`
               }
             >
               Testimonials
@@ -69,7 +105,9 @@ export default function NavHeader() {
             <NavLink
               to={path.blog}
               className={({ isActive }) =>
-                `inline-block py-5 hover:text-blue/50 md:px-2 lg:px-4 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block py-5 hover:text-blue/50 hover:duration-300 md:px-2 lg:px-4 ${
+                  isActive ? 'text-blue/50' : ''
+                }`
               }
             >
               Blog
@@ -79,15 +117,28 @@ export default function NavHeader() {
             <NavLink
               to={path.contact}
               className={({ isActive }) =>
-                `inline-block py-5 hover:text-blue/50 md:px-2 lg:px-4 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block py-5 hover:text-blue/50 hover:duration-300 md:px-2 lg:px-4 ${
+                  isActive ? 'text-blue/50' : ''
+                }`
               }
             >
               Contact
             </NavLink>
           </li>
         </ul>
-        <div className='hidden md:block'>
-          <button className='rounded-full px-6 py-2 text-black'>Get Started</button>
+        <div className='mr-4 hidden cursor-pointer md:block'>
+          <div className='h-8 w-10'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              strokeWidth={1.5}
+              stroke='currentColor'
+              className='h-full w-full'
+            >
+              <path strokeLinecap='round' strokeLinejoin='round' d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5' />
+            </svg>
+          </div>
         </div>
         <ul
           className={`fixed right-0 top-0 z-0 mt-[93px] grid w-full gap-x-8 overflow-y-auto bg-white px-8 py-2 text-center text-sm font-light tracking-wide text-blue shadow-sm duration-500 sm:grid-cols-3 sm:py-4 sm:text-lg md:hidden 
@@ -99,7 +150,7 @@ export default function NavHeader() {
             <NavLink
               to={path.home}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 ${isActive ? 'text-blue/50 ' : ''}`
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'text-blue/50 ' : ''}`
               }
             >
               Home
@@ -109,7 +160,7 @@ export default function NavHeader() {
             <NavLink
               to={path.aboutUs}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'text-blue/50' : ''}`
               }
             >
               About Us
@@ -119,7 +170,7 @@ export default function NavHeader() {
             <NavLink
               to={path.concept}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'text-blue/50' : ''}`
               }
             >
               Concept
@@ -129,7 +180,7 @@ export default function NavHeader() {
             <NavLink
               to={path.gallery}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'text-blue/50' : ''}`
               }
             >
               Gallery
@@ -139,7 +190,7 @@ export default function NavHeader() {
             <NavLink
               to={path.testimonials}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'text-blue/50' : ''}`
               }
             >
               Testimonials
@@ -149,7 +200,7 @@ export default function NavHeader() {
             <NavLink
               to={path.blog}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'text-blue/50' : ''}`
               }
             >
               Blog
@@ -159,7 +210,7 @@ export default function NavHeader() {
             <NavLink
               to={path.contact}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'text-blue/50' : ''}`
               }
             >
               Contact
