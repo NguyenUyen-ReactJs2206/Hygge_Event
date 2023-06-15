@@ -8,6 +8,9 @@ module.exports = {
     container: false
   },
   theme: {
+    container: {
+      center: true
+    },
     extend: {
       colors: {
         blueFooterOne: '#0173B5',

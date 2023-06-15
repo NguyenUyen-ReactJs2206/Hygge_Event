@@ -12,7 +12,7 @@ export default function Footer() {
             <div className='logo mb-2 ml-auto mr-auto block h-[30%] w-[30%]'>
               <img src={logo} alt='logo' className=' h-full w-full object-cover' />
             </div>
-            <div className='hidden items-center py-1 leading-loose sm:flex sm:justify-between'>
+            <div className='z-[-1] hidden items-center py-1 leading-loose sm:flex sm:justify-between'>
               <div>
                 <Link
                   to={path.home}
@@ -102,9 +102,6 @@ export default function Footer() {
         </div>
       </div>
       <div className='bg-blueFooterTwo py-5 text-center text-[14px] text-white'>@ 2023. All rights reserved</div>
-      <div className='py-8'>
-        <div className='underline-effect'>Hover me to see the effect</div>
-      </div>
     </div>
   )
 }
