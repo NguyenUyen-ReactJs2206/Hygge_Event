@@ -1,0 +1,19 @@
+.underline-effect {
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: rgb(207 250 254 / 0.9);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+}
