@@ -7,7 +7,7 @@ export default function NavHeader() {
   const [open, setOpen] = useState(false)
   return (
     <div className='container'>
-      <div className='flex items-center justify-around font-medium '>
+      <div className='flex items-center justify-between font-medium '>
         <div className='z-50 flex w-full justify-between p-7 md:w-auto'>
           <img src={logo} alt='logo' className='h-9 md:cursor-pointer' />
           <button className='text-3xl md:hidden' onClick={() => setOpen(!open)}>
