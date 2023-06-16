@@ -5,7 +5,7 @@ type Props = {
 export default function ConCeptArticle({ name }: Props) {
   return (
     <div>
-      <div className='w-full cursor-pointer overflow-hidden md:cursor-default'>
+      <div className='w-full overflow-hidden md:cursor-default'>
         <img
           src='https://www.brides.com/thmb/Nb8-KQb0UbTEh9uymClKoLHhEyg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WR-8b335c7adae842dc9f80ec3c4eaf9c48.jpg'
           alt='concept1'

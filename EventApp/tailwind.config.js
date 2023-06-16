@@ -3,7 +3,7 @@ const plugin = require('tailwindcss/plugin')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', './node_modules/flowbite/**/*.js'],
   corePlugins: {
     container: false
   },
@@ -31,6 +31,7 @@ module.exports = {
           paddingRight: theme('spacing.4')
         }
       })
-    })
+    }),
+    require('flowbite/plugin')
   ]
 }
