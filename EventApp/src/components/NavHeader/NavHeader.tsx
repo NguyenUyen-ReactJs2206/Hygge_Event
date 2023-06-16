@@ -150,7 +150,7 @@ export default function NavHeader() {
             <NavLink
               to={path.home}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'text-blue/50 ' : ''}`
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
               }
             >
               Home
@@ -160,7 +160,7 @@ export default function NavHeader() {
             <NavLink
               to={path.aboutUs}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
               }
             >
               About Us
@@ -170,7 +170,7 @@ export default function NavHeader() {
             <NavLink
               to={path.concept}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
               }
             >
               Concept
@@ -180,7 +180,7 @@ export default function NavHeader() {
             <NavLink
               to={path.gallery}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
               }
             >
               Gallery
@@ -190,7 +190,7 @@ export default function NavHeader() {
             <NavLink
               to={path.testimonials}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
               }
             >
               Testimonials
@@ -200,7 +200,7 @@ export default function NavHeader() {
             <NavLink
               to={path.blog}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
               }
             >
               Blog
@@ -210,7 +210,7 @@ export default function NavHeader() {
             <NavLink
               to={path.contact}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'text-blue/50' : ''}`
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
               }
             >
               Contact
