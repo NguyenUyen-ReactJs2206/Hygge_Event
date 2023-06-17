@@ -28,7 +28,7 @@ export default function Concept() {
             <div className='grid grid-cols-6'>
               <div className='col-span-6 md:col-span-3'>
                 <div className='group relative cursor-pointer pl-0 md:cursor-default md:pl-6 md:pr-24 md:pt-10 lg:pl-10 lg:pr-40 '>
-                  <ConCeptArticle name='Beaty and the beast' />
+                  <ConCeptArticle name='Beaty And The Beast' />
                 </div>
               </div>
               <div className='col-span-6 md:col-span-3'>

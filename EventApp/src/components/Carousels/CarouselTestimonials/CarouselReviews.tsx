@@ -59,7 +59,7 @@ export default function CarouselCategoryPost() {
         </div>
         <button
           onClick={nextSlide}
-          className='absolute left-0 top-[50%] translate-y-[-50%] cursor-pointer p-2 text-2xl text-black/30 hover:text-black/60 md:left-5'
+          className='absolute left-0 top-[50%] translate-y-[-50%] cursor-pointer p-2 text-2xl text-black/30 hover:text-black/60 md:left-14'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -74,7 +74,7 @@ export default function CarouselCategoryPost() {
         </button>
         <button
           onClick={prevSlide}
-          className='absolute right-0 top-[50%] translate-y-[-50%] cursor-pointer p-2 text-2xl text-black/30 hover:text-black/60 md:right-5'
+          className='absolute right-0 top-[50%] translate-y-[-50%] cursor-pointer p-2 text-2xl text-black/30 hover:text-black/60 md:right-14'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
