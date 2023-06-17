@@ -8,17 +8,17 @@ const slides = [
   },
   {
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas facere commodi vitae! Voluptatum dolor deleniti sequi ut aperiam hic, ipsam laudantium consequuntur quas magnam unde nam expedita aspernatur praesentium eveniet?',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas facere commodi vitae! Voluptatum dolor deleniti sequi ut aperiam hic',
     name: 'Hai Hoai - CEO'
   },
   {
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas facere commodi vitae! Voluptatum dolor deleniti sequi ut aperiam hic, ipsam laudantium consequuntur quas magnam unde nam expedita aspernatur praesentium eveniet?',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam laudantium consequuntur quas magnam unde nam expedita aspernatur praesentium eveniet?',
     name: 'Hoang Ha - CEO'
   },
   {
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas facere commodi vitae! Voluptatum dolor deleniti sequi ut aperiam hic, ipsam laudantium consequuntur quas magnam unde nam expedita aspernatur praesentium eveniet?',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolor deleniti sequi ut aperiam hic, ipsam laudantium consequuntur quas magnam unde nam expedita aspernatur praesentium eveniet?',
     name: 'Huy Hoang - CEO'
   }
 ]
