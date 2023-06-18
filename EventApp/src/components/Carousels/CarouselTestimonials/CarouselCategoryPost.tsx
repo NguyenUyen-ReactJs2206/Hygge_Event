@@ -3,7 +3,7 @@ import { slidesPost } from '../../../api/slides.api'
 
 export default function CarouselCategoryPost() {
   const autoSlide = true
-  const autoSlideInterval = 3000
+  const autoSlideInterval = 2000
 
   const [currentIndex, setCurrentIndex] = useState(0)
 

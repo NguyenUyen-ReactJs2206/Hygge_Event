@@ -4,7 +4,7 @@ import { slidesReview } from '../../../api/slides.api'
 export default function CarouselCategoryPost() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const autoSlide = true
-  const autoSlideInterval = 5000
+  const autoSlideInterval = 1000
 
   const prevSlide = () => {
     setCurrentIndex((curr) => (curr === slidesReview.length - 1 ? 0 : curr + 1))

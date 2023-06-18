@@ -3,6 +3,7 @@ import { services } from '../../api/services.api'
 import NavHeader from '../../components/NavHeader'
 import conceptOne from '../../assets/images/conceptOne.png'
 import conceptTwo from '../../assets/images/conceptTwo.png'
+import { features } from '../../api/featured.api'
 
 export default function Home() {
   return (
@@ -70,7 +71,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div>
+      <div className='strengths'>
         <div className='group relative grid grid-cols-2'>
           <div className='absolute col-span-2 h-full w-full lg:static lg:col-span-1'>
             <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:px-20 lg:py-32 '>
@@ -142,7 +143,7 @@ export default function Home() {
             </div>
           </div>
           <div className='absolute col-span-2 h-full w-full lg:static lg:col-span-1'>
-            <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:px-20 lg:py-36 '>
+            <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:px-20 lg:pt-36 xl:pt-52 '>
               <div
                 className='translate-y-12 transform opacity-0 transition-all 
             duration-1000 group-hover:translate-y-0
@@ -153,13 +154,45 @@ export default function Home() {
                 <h3 className='text-xl font-extrabold uppercase tracking-wider text-blue sm:text-2xl sm:font-semibold'>
                   From warmth to endless amore
                 </h3>
-                <p>
+                <p className='mt-4 text-sm sm:text-base'>
                   We are dedicated to creating unforgettable and everlasting memories for couples, turning their dreams
                   into reality with impeccable planning and attention to detail.
                 </p>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className='featured py-32'>
+        <div className='flex items-center justify-center'>
+          <div className='relative max-w-[680px] px-12 py-6'>
+            <div className='text-center'>
+              <h3 className='mb-4 text-2xl font-semibold uppercase tracking-wider text-blue md:text-4xl'>
+                Featured Projects
+              </h3>
+              <p className='text-base md:text-lg'>
+                These exemplary reflect out unwavering commilment and fervor tawards our croft.
+              </p>
+            </div>
+            <div className='absolute left-0 top-0 h-[1px] w-[12px] bg-black'></div>
+            <div className='absolute left-0 top-0 h-[12px] w-[2px] bg-black'></div>
+            <div className='absolute bottom-0 right-0 h-[0.5px] w-[12px] bg-black'></div>
+            <div className='absolute bottom-0 right-0 h-[12px] w-[1px] bg-black'></div>
+          </div>
+        </div>
+        <div className='mt-20 text-center md:px-20'>
+          <div className='grid grid-cols-6 gap-6'>
+            {features.map((feature, index) => (
+              <Fragment key={index}>
+                <div className='col-span-3 md:col-span-2'>
+                  <img src={feature} alt={feature} />
+                </div>
+              </Fragment>
+            ))}
+          </div>
+          <button className='mt-10 rounded-3xl border-2 border-gray/50 px-6 py-2 font-medium uppercase duration-300 hover:border-blue hover:bg-blue hover:text-white hover:transition-all hover:duration-300 sm:px-10 sm:py-3'>
+            Read more
+          </button>
         </div>
       </div>
     </div>
