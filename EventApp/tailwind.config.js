@@ -17,6 +17,9 @@ module.exports = {
         blueFooterTwo: '#4F89C1',
         blue: '#0073B5',
         gray: '#4c4c4c'
+      },
+      backgroundImage: {
+        banner: 'url(https://cdn0.weddingwire.ca/vendor/3632/3_2/960/jpg/1p2a3080_50_3632-161117907430780.jpeg)'
       }
     }
   },
