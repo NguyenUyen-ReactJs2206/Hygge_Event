@@ -11,6 +11,9 @@ module.exports = {
     container: {
       center: true
     },
+    fontFamily: {
+      camaufalge: 'NVN Camaufalge'
+    },
     extend: {
       colors: {
         blueFooterOne: '#0173B5',

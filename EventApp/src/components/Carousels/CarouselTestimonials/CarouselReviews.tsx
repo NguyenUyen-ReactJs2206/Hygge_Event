@@ -1,31 +1,5 @@
 import { useState, useEffect } from 'react'
-
-const slides = [
-  {
-    testimonial: 'Bridegerton Concept',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolor deleniti sequi ut aperiam hic, ipsam laudantium consequuntur quas magnam unde nam expedita aspernatur praesentium eveniet?',
-    name: 'Hoang Nhu - Out valued bride'
-  },
-  {
-    testimonial: 'Rapunzel Concept',
-    description:
-      'Lorem ipsum dolor elit. Quas facere commodi vitae! Voluptatum dolor deleniti sequi ut aperiam hic, ipsam laudantium consequuntur quas magnam unde nam expedita aspernatur praesentium eveniet?',
-    name: 'Hai Hoai - Out valued bride'
-  },
-  {
-    testimonial: 'Beaty Concept',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas facere commodi vitae! Voluptatum dolor deleniti sequi ut aperiam hic, ipsam laudantium consequuntur quas magnam unde nam expedita aspernatur praesentium eveniet?',
-    name: 'Hoang Ha - Out valued bride'
-  },
-  {
-    testimonial: 'Elegant Concept',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas facere commodi vitae! psam laudantium consequuntur quas magnam unde nam expedita aspernatur praesentium eveniet?',
-    name: 'Huy Hoang - Out valued bride'
-  }
-]
+import { slidesReview } from '../../../api/slides.api'
 
 export default function CarouselCategoryPost() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -33,11 +7,11 @@ export default function CarouselCategoryPost() {
   const autoSlideInterval = 5000
 
   const prevSlide = () => {
-    setCurrentIndex((curr) => (curr === slides.length - 1 ? 0 : curr + 1))
+    setCurrentIndex((curr) => (curr === slidesReview.length - 1 ? 0 : curr + 1))
   }
 
   const nextSlide = () => {
-    setCurrentIndex((curr) => (curr === slides.length - 1 ? 0 : curr + 1))
+    setCurrentIndex((curr) => (curr === slidesReview.length - 1 ? 0 : curr + 1))
   }
   useEffect(() => {
     if (!autoSlide) return
@@ -51,10 +25,10 @@ export default function CarouselCategoryPost() {
         <div className='flex h-full w-full items-center px-10 text-center transition-all duration-1000 ease-out md:px-32'>
           <div>
             <h2 className='my-4 text-lg font-[550] uppercase text-blue md:text-3xl '>
-              {slides[currentIndex].testimonial}
+              {slidesReview[currentIndex].testimonial}
             </h2>
-            <div>{slides[currentIndex].description}</div>
-            <h4 className='mt-4 text-sm uppercase'> {slides[currentIndex].name}</h4>
+            <div>{slidesReview[currentIndex].description}</div>
+            <h4 className='mt-4 text-sm uppercase'> {slidesReview[currentIndex].name}</h4>
           </div>
         </div>
         <button
