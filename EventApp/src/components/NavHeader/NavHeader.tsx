@@ -10,7 +10,7 @@ export default function NavHeader() {
       <div className='flex items-center justify-between font-medium '>
         <div className=' flex w-full justify-between p-7 md:w-auto'>
           <img src={logo} alt='logo' className='h-9 md:cursor-pointer' />
-          <button className='text-3xl md:hidden' onClick={() => setOpen(!open)}>
+          <button className='md:hidden' onClick={() => setOpen(!open)}>
             {open ? (
               <div className='h-8 w-10 cursor-pointer'>
                 <svg
@@ -26,16 +26,22 @@ export default function NavHeader() {
               </div>
             ) : (
               <div className='h-8 w-10 cursor-pointer'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={1.5}
-                  stroke='currentColor'
-                  className='h-full w-full'
-                >
-                  <path strokeLinecap='round' strokeLinejoin='round' d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5' />
-                </svg>
+                <div>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    strokeWidth={1.5}
+                    stroke='currentColor'
+                    className='h-full w-full'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
+                    />
+                  </svg>
+                </div>
               </div>
             )}
           </button>

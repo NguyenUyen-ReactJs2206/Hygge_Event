@@ -16,7 +16,7 @@ export default function Footer() {
               <div>
                 <Link
                   to={path.home}
-                  className='underline-effect py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
+                  className='underline-effect-footer py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
                 >
                   Home
                 </Link>

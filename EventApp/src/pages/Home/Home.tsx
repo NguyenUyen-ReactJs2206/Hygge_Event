@@ -4,6 +4,7 @@ import NavHeader from '../../components/NavHeader'
 import conceptOne from '../../assets/images/conceptOne.png'
 import conceptTwo from '../../assets/images/conceptTwo.png'
 import { features } from '../../api/featured.api'
+import NumberUp from 'src/components/NumberUp'
 
 export default function Home() {
   return (
@@ -163,7 +164,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='featured py-32'>
+      <div className='featured py-20 sm:pb-20 sm:pt-32'>
         <div className='flex items-center justify-center'>
           <div className='relative max-w-[680px] px-12 py-6'>
             <div className='text-center'>
@@ -181,7 +182,7 @@ export default function Home() {
           </div>
         </div>
         <div className='mt-20 text-center md:px-20'>
-          <div className='grid grid-cols-6 gap-6'>
+          <div className='grid grid-cols-6 md:gap-6'>
             {features.map((feature, index) => (
               <Fragment key={index}>
                 <div className='col-span-3 md:col-span-2'>
@@ -193,6 +194,42 @@ export default function Home() {
           <button className='mt-10 rounded-3xl border-2 border-gray/50 px-6 py-2 font-medium uppercase duration-300 hover:border-blue hover:bg-blue hover:text-white hover:transition-all hover:duration-300 sm:px-10 sm:py-3'>
             Read more
           </button>
+        </div>
+      </div>
+      <div className='my:4 sm:my-14 '>
+        <div className='grid grid-cols-4 gap-y-8'>
+          <div className='col-span-2 sm:col-span-1'>
+            <div className=' text-center'>
+              <div className='mb-[-7px] text-5xl font-medium tracking-wider text-blue'>
+                <NumberUp number={30} />
+              </div>
+              <div className='border-t-2 border-gray/5  text-[14px] font-semibold tracking-wider'>Projects</div>
+            </div>
+          </div>
+          <div className='col-span-2 sm:col-span-1'>
+            <div className='text-center'>
+              <div className='mb-[-7px] text-5xl font-medium tracking-wider text-blue'>
+                <NumberUp number={22} />
+              </div>
+              <div className='border-t-2 border-gray/5  text-[14px] font-semibold tracking-wider'>Team Members</div>
+            </div>
+          </div>
+          <div className='col-span-2 sm:col-span-1'>
+            <div className=' text-center'>
+              <div className='mb-[-7px] text-5xl font-medium tracking-wider text-blue'>
+                <NumberUp number={25} />
+              </div>
+              <div className='border-t-2 border-gray/5  text-[14px] font-semibold tracking-wider'>Clients</div>
+            </div>
+          </div>
+          <div className='col-span-2 sm:col-span-1'>
+            <div className=' text-center'>
+              <div className='mb-[-7px] text-5xl font-medium tracking-wider text-blue'>
+                <NumberUp number={5} />
+              </div>
+              <div className='border-t-2 border-gray/5  text-[14px] font-semibold tracking-wider'>Awards won</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
