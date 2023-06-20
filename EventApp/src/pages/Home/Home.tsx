@@ -4,8 +4,8 @@ import NavHeader from '../../components/NavHeader'
 import conceptOne from '../../assets/images/conceptOne.png'
 import conceptTwo from '../../assets/images/conceptTwo.png'
 import { features } from '../../api/featured.api'
-import NumberUp from 'src/components/NumberUp'
-
+import NumberUp from '../../components/NumberUp'
+import backgroundBlack from '../../assets/images/backgroundBlack.png'
 export default function Home() {
   return (
     <div>
@@ -196,7 +196,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className='my:4 sm:my-14 '>
+      <div className='my-10 '>
         <div className='grid grid-cols-4 gap-y-8'>
           <div className='col-span-2 sm:col-span-1'>
             <div className=' text-center'>
@@ -228,6 +228,63 @@ export default function Home() {
                 <NumberUp number={5} />
               </div>
               <div className='border-t-2 border-gray/5  text-[14px] font-semibold tracking-wider'>Awards won</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='my-32 sm:my-40'>
+        <div className='hidden md:block'>
+          <div className='relative h-full w-full pb-40 pt-14 lg:pb-48 lg:pt-16'>
+            <img src={backgroundBlack} alt='background' className='h-[70px] w-full' />
+            <div className='absolute bottom-0 top-0 grid grid-cols-3 md:left-4 md:right-4 md:gap-3 lg:left-10 lg:right-10 lg:gap-12'>
+              <div className='col-span-1'>
+                <div className='h-full w-full border-t border-t-gray/5 bg-white shadow-md'>
+                  <div className='flex justify-center md:py-6 lg:pb-8 lg:pt-12'>
+                    <div className='relative h-20 w-20 border-2 border-gray/60'>
+                      <div className='absolute left-0 top-0 h-[25px] w-[50px] border-b-2 border-r-2 border-gray/60'></div>
+                      <div className='absolute right-0 top-0 h-[25px] w-[30px] border-b-2 border-gray/60'></div>
+                    </div>
+                  </div>
+                  <div className='text-center md:px-2 lg:px-8'>
+                    <h3 className='mb-3 font-semibold uppercase tracking-wider text-blue md:text-xl lg:text-2xl'>
+                      UniQue Design
+                    </h3>
+                    <p className=''>Stay abreast of the latest trends and set the syandard with our designs.</p>
+                  </div>
+                </div>
+              </div>
+              <div className='col-span-1'>
+                <div className='h-full w-full border-t border-t-gray/5 bg-white shadow-md'>
+                  <div className='flex justify-center md:py-6 lg:pb-8 lg:pt-12'>
+                    <div className='relative h-20 w-20 border-2 border-gray/60'>
+                      <div className='absolute right-0 top-0 h-[25px] w-[30px] border-b-2 border-l-2 border-gray/60'></div>
+                      <div className='absolute bottom-0 right-0 h-[55px] w-[30px] border-l-2 border-gray/60'></div>
+                    </div>
+                  </div>
+                  <div className='text-center md:px-2 lg:px-8'>
+                    <h3 className='mb-3 font-semibold uppercase tracking-wider text-blue md:text-xl lg:text-2xl'>
+                      Credibility
+                    </h3>
+                    <p className=''>We are dedicated to providing our customers with unwavering commitment.</p>
+                  </div>
+                </div>
+              </div>
+              <div className='col-span-1'>
+                <div className='h-full w-full border-t border-t-gray/5 bg-white shadow-md'>
+                  <div className='flex justify-center md:py-6 lg:pb-8 lg:pt-12'>
+                    <div className='relative h-20 w-20 border-2 border-gray/60'>
+                      <div className='absolute left-0 top-0 h-[50px] w-[50px] border-b-2 border-r-2 border-gray/60'></div>
+                      <div className='absolute right-0 top-0 h-[50px] w-[30px] border-b-2 border-gray/60'></div>
+                    </div>
+                  </div>
+                  <div className='text-center md:px-2 lg:px-8'>
+                    <h3 className='mb-3 font-semibold uppercase tracking-wider text-blue md:text-xl lg:text-2xl'>
+                      Reasonable price
+                    </h3>
+                    <p className=''>The pricing of our service is competitive and offers excellent value.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

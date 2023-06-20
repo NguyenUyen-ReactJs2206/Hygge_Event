@@ -9,7 +9,7 @@ export default function Footer() {
       <div className='bg-blueFooterOne'>
         <div className='container'>
           <div className='px-8 pt-12 sm:px-16 sm:pt-16 md:px-24 lg:px-52 xl:px-60'>
-            <div className='logo mb-2 ml-auto mr-auto block h-[30%] w-[30%]'>
+            <div className='logo mb-2 ml-auto mr-auto h-[30%] w-[30%]'>
               <img src={logo} alt='logo' className=' h-full w-full object-cover' />
             </div>
             <div className='z-[-1] hidden items-center py-1 leading-loose sm:flex sm:justify-between'>
@@ -24,7 +24,7 @@ export default function Footer() {
               <div>
                 <Link
                   to={path.aboutUs}
-                  className='underline-effect py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
+                  className='underline-effect-footer py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
                 >
                   About Us
                 </Link>
@@ -32,7 +32,7 @@ export default function Footer() {
               <div>
                 <Link
                   to={path.concept}
-                  className='underline-effect py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
+                  className='underline-effect-footer py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
                 >
                   Concept
                 </Link>
@@ -40,7 +40,7 @@ export default function Footer() {
               <div>
                 <Link
                   to={path.gallery}
-                  className='underline-effect py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
+                  className='underline-effect-footer py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
                 >
                   Gallery
                 </Link>
@@ -48,7 +48,7 @@ export default function Footer() {
               <div>
                 <Link
                   to={path.testimonials}
-                  className='underline-effect py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
+                  className='underline-effect-footer py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
                 >
                   Testimonials
                 </Link>
@@ -56,7 +56,7 @@ export default function Footer() {
               <div>
                 <Link
                   to={path.blog}
-                  className='underline-effect py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
+                  className='underline-effect-footer py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
                 >
                   Blog
                 </Link>
@@ -64,7 +64,7 @@ export default function Footer() {
               <div>
                 <Link
                   to={path.contact}
-                  className='underline-effect py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
+                  className='underline-effect-footer py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
                 >
                   Contact
                 </Link>
