@@ -3,6 +3,9 @@ import { services } from '../../api/services.api'
 import NavHeader from '../../components/NavHeader'
 import conceptOne from '../../assets/images/conceptOne.png'
 import conceptTwo from '../../assets/images/conceptTwo.png'
+import avatarOne from '../../assets/images/avatarOne.png'
+import avatarTwo from '../../assets/images/avatarTwo.png'
+import avatarThree from '../../assets/images/avatarThree.png'
 import { features } from '../../api/featured.api'
 import NumberUp from '../../components/NumberUp'
 import backgroundBlack from '../../assets/images/backgroundBlack.png'
@@ -186,7 +189,7 @@ export default function Home() {
             <div className='absolute bottom-0 right-0 h-[12px] w-[1px] bg-black'></div>
           </div>
         </div>
-        <div className='mt-20 text-center md:px-20'>
+        <div className='mt-20 text-center md:px-10 lg:px-20'>
           <div className='grid grid-cols-6 md:gap-6'>
             {features.map((feature, index) => (
               <Fragment key={index}>
@@ -201,7 +204,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className='my-10 '>
+      <div className='number-up my-10'>
         <div className='grid grid-cols-4 gap-y-8'>
           <div className='col-span-2 sm:col-span-1'>
             <div className=' text-center'>
@@ -237,11 +240,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='my-32 sm:my-40'>
+      <div className='corporation-identify-program my-32 sm:my-40'>
         <div className='hidden md:block'>
           <div className='relative h-full w-full pb-40 pt-14 lg:pb-48 lg:pt-16'>
             <img src={backgroundBlack} alt='background' className='h-[70px] w-full' />
-            <div className='absolute bottom-0 top-0 grid grid-cols-3 md:left-4 md:right-4 md:gap-3 lg:left-10 lg:right-10 lg:gap-12'>
+            <div className='absolute bottom-0 top-0 grid grid-cols-3 md:left-10 md:right-10 md:gap-2 lg:left-20 lg:right-20 lg:gap-12'>
               <div className='col-span-1'>
                 <div className='h-full w-full border-t border-t-gray/5 bg-white shadow-md'>
                   <div className='flex justify-center md:py-6 lg:pb-8 lg:pt-12'>
@@ -347,11 +350,58 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='my-20'>
+      <div className='slide my-20'>
         <div className='relative h-full w-full pb-52 md:pb-48'>
           <img src={backgroundSlide} alt='background' className='h-[200px] w-full object-top' />
-          <div className='absolute bottom-0 left-5 right-5 top-16 bg-white shadow-md'>
+          <div className='absolute bottom-0 left-5 right-5 top-16 bg-white shadow-md md:left-10 md:right-10 lg:left-20 lg:right-20'>
             <CarouselCategoryPost />
+          </div>
+        </div>
+      </div>
+      <div className='create-team my-20 md:my-32'>
+        <div className='flex items-center justify-center'>
+          <div className='relative max-w-[680px] px-12 py-6'>
+            <div className='text-center'>
+              <h3 className='mb-4 text-2xl font-semibold uppercase tracking-wider text-blue md:text-4xl'>
+                Creative Team
+              </h3>
+              <p className='text-base tracking-wider md:text-lg'>
+                We become your confidants, effecttive partners, and diligent assistants throughout your journey.
+              </p>
+            </div>
+            <div className='absolute left-0 top-0 h-[1px] w-[12px] bg-black'></div>
+            <div className='absolute left-0 top-0 h-[12px] w-[2px] bg-black'></div>
+            <div className='absolute bottom-0 right-0 h-[1px] w-[12px] bg-black'></div>
+            <div className='absolute bottom-0 right-0 h-[12px] w-[2px] bg-black'></div>
+          </div>
+        </div>
+        <div className='py-10 md:px-5 xl:px-20'>
+          <div className='grid grid-cols-6 md:gap-4 lg:gap-6 xl:gap-8'>
+            <div className='col-span-6 md:col-span-2'>
+              <article>
+                <div className='h-full w-full'>
+                  <img src={avatarOne} alt={avatarOne} className='w-full object-cover md:h-72 lg:h-96 xl:h-[420px]' />
+                </div>
+              </article>
+            </div>
+            <div className='col-span-6 md:col-span-2'>
+              <article>
+                <div className='h-full w-full'>
+                  <img src={avatarTwo} alt={avatarTwo} className='w-full object-cover md:h-72 lg:h-96 xl:h-[420px]' />
+                </div>
+              </article>
+            </div>
+            <div className='col-span-6 md:col-span-2'>
+              <article>
+                <div className='h-full w-full'>
+                  <img
+                    src={avatarThree}
+                    alt={avatarThree}
+                    className='w-full object-cover md:h-72 lg:h-96 xl:h-[420px]'
+                  />
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </div>
