@@ -1,0 +1,2 @@
+import CorporationIdentifyProgramHome from './CorporationIdentifyProgramHome'
+export default CorporationIdentifyProgramHome

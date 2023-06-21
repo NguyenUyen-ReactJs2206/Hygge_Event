@@ -6,6 +6,9 @@ import conceptTwo from '../../assets/images/conceptTwo.png'
 import { features } from '../../api/featured.api'
 import NumberUp from '../../components/NumberUp'
 import backgroundBlack from '../../assets/images/backgroundBlack.png'
+import CorporationIdentifyProgramHome from '../../components/CorporationIdentifyProgramHome'
+import { corporationIdentifyProgram } from '../../api/cip.api'
+
 export default function Home() {
   return (
     <div>
@@ -245,12 +248,10 @@ export default function Home() {
                       <div className='absolute right-0 top-0 h-[25px] w-[30px] border-b-2 border-gray/60'></div>
                     </div>
                   </div>
-                  <div className='text-center md:px-2 lg:px-8'>
-                    <h3 className='mb-3 font-semibold uppercase tracking-wider text-blue md:text-xl lg:text-2xl'>
-                      UniQue Design
-                    </h3>
-                    <p className=''>Stay abreast of the latest trends and set the syandard with our designs.</p>
-                  </div>
+                  <CorporationIdentifyProgramHome
+                    nameCip={corporationIdentifyProgram[0].nameCip}
+                    descriptionCip={corporationIdentifyProgram[0].descriptionCip}
+                  />
                 </div>
               </div>
               <div className='col-span-1'>
@@ -261,12 +262,10 @@ export default function Home() {
                       <div className='absolute bottom-0 right-0 h-[55px] w-[30px] border-l-2 border-gray/60'></div>
                     </div>
                   </div>
-                  <div className='text-center md:px-2 lg:px-8'>
-                    <h3 className='mb-3 font-semibold uppercase tracking-wider text-blue md:text-xl lg:text-2xl'>
-                      Credibility
-                    </h3>
-                    <p className=''>We are dedicated to providing our customers with unwavering commitment.</p>
-                  </div>
+                  <CorporationIdentifyProgramHome
+                    nameCip={corporationIdentifyProgram[1].nameCip}
+                    descriptionCip={corporationIdentifyProgram[1].descriptionCip}
+                  />
                 </div>
               </div>
               <div className='col-span-1'>
@@ -277,12 +276,69 @@ export default function Home() {
                       <div className='absolute right-0 top-0 h-[50px] w-[30px] border-b-2 border-gray/60'></div>
                     </div>
                   </div>
-                  <div className='text-center md:px-2 lg:px-8'>
-                    <h3 className='mb-3 font-semibold uppercase tracking-wider text-blue md:text-xl lg:text-2xl'>
-                      Reasonable price
-                    </h3>
-                    <p className=''>The pricing of our service is competitive and offers excellent value.</p>
+                  <CorporationIdentifyProgramHome
+                    nameCip={corporationIdentifyProgram[2].nameCip}
+                    descriptionCip={corporationIdentifyProgram[2].descriptionCip}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='block md:hidden'>
+          <div className='relative mb-2 h-full w-full pb-32 pt-16'>
+            <img src={backgroundBlack} alt='background' className='h-[70px] w-full' />
+            <div className='absolute bottom-0 left-4 right-4 top-0 grid grid-cols-1 sm:left-28 sm:right-28'>
+              <div className='col-span-1'>
+                <div className='h-full w-full border-t border-t-gray/5 bg-white shadow-md'>
+                  <div className='flex justify-center py-6'>
+                    <div className='relative h-20 w-20 border-2 border-gray/60'>
+                      <div className='absolute left-0 top-0 h-[25px] w-[50px] border-b-2 border-r-2 border-gray/60'></div>
+                      <div className='absolute right-0 top-0 h-[25px] w-[30px] border-b-2 border-gray/60'></div>
+                    </div>
                   </div>
+                  <CorporationIdentifyProgramHome
+                    nameCip={corporationIdentifyProgram[0].nameCip}
+                    descriptionCip={corporationIdentifyProgram[0].descriptionCip}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='relative mb-2 h-full w-full pb-32 pt-16'>
+            <img src={backgroundBlack} alt='background' className='h-[70px] w-full' />
+            <div className='absolute bottom-0 left-4 right-4 top-0 grid grid-cols-1 sm:left-28 sm:right-28'>
+              <div className='col-span-1'>
+                <div className='h-full w-full border-t border-t-gray/5 bg-white shadow-md'>
+                  <div className='flex justify-center py-6'>
+                    <div className='relative h-20 w-20 border-2 border-gray/60'>
+                      <div className='absolute right-0 top-0 h-[25px] w-[30px] border-b-2 border-l-2 border-gray/60'></div>
+                      <div className='absolute bottom-0 right-0 h-[55px] w-[30px] border-l-2 border-gray/60'></div>
+                    </div>
+                  </div>
+                  <CorporationIdentifyProgramHome
+                    nameCip={corporationIdentifyProgram[1].nameCip}
+                    descriptionCip={corporationIdentifyProgram[1].descriptionCip}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='relative mb-2 h-full w-full pb-32 pt-16'>
+            <img src={backgroundBlack} alt='background' className='h-[70px] w-full' />
+            <div className='absolute bottom-0 left-4 right-4 top-0 grid grid-cols-1 sm:left-28 sm:right-28'>
+              <div className='col-span-1'>
+                <div className='h-full w-full border-t border-t-gray/5 bg-white shadow-md'>
+                  <div className='flex justify-center py-6'>
+                    <div className='relative h-20 w-20 border-2 border-gray/60'>
+                      <div className='absolute left-0 top-0 h-[50px] w-[50px] border-b-2 border-r-2 border-gray/60'></div>
+                      <div className='absolute right-0 top-0 h-[50px] w-[30px] border-b-2 border-gray/60'></div>
+                    </div>
+                  </div>
+                  <CorporationIdentifyProgramHome
+                    nameCip={corporationIdentifyProgram[2].nameCip}
+                    descriptionCip={corporationIdentifyProgram[2].descriptionCip}
+                  />
                 </div>
               </div>
             </div>
