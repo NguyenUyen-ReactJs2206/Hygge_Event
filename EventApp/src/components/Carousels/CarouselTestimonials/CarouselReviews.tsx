@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { slidesReview } from '../../../api/slides.api'
 
-export default function CarouselCategoryPost() {
+export default function CarouselReviews() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const autoSlide = true
   const autoSlideInterval = 1000
@@ -24,11 +24,11 @@ export default function CarouselCategoryPost() {
       <div className='group relative m-auto h-[50vh] w-full max-w-[1400px] px-0 py-8 md:px-4 md:py-16'>
         <div className='flex h-full w-full items-center px-10 text-center transition-all duration-1000 ease-out md:px-32'>
           <div>
-            <h2 className='my-4 text-lg font-[550] uppercase text-blue md:text-3xl '>
+            <h2 className='my-4 text-lg font-semibold uppercase tracking-wider text-blue md:text-3xl '>
               {slidesReview[currentIndex].testimonial}
             </h2>
-            <div>{slidesReview[currentIndex].description}</div>
-            <h4 className='mt-4 text-sm uppercase'> {slidesReview[currentIndex].name}</h4>
+            <div className='tracking-wider'>{slidesReview[currentIndex].description}</div>
+            <h4 className='mt-4 text-sm font-semibold uppercase tracking-wider'> {slidesReview[currentIndex].name}</h4>
           </div>
         </div>
         <button

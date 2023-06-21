@@ -6,8 +6,10 @@ import conceptTwo from '../../assets/images/conceptTwo.png'
 import { features } from '../../api/featured.api'
 import NumberUp from '../../components/NumberUp'
 import backgroundBlack from '../../assets/images/backgroundBlack.png'
+import backgroundSlide from '../../assets/images/backgroundSlide.png'
 import CorporationIdentifyProgramHome from '../../components/CorporationIdentifyProgramHome'
 import { corporationIdentifyProgram } from '../../api/cip.api'
+import CarouselCategoryPost from '../../components/Carousels/CarouselTestimonials/CarouselCategoryPost'
 
 export default function Home() {
   return (
@@ -48,7 +50,7 @@ export default function Home() {
               <h3 className='mb-4 text-2xl font-semibold uppercase tracking-wider text-blue md:text-4xl'>
                 What Hygge is about
               </h3>
-              <p className='text-base md:text-lg'>
+              <p className='text-base tracking-wider md:text-lg'>
                 Our company providerse range of services that aptly cater to all your specific needs.
               </p>
             </div>
@@ -158,7 +160,7 @@ export default function Home() {
                 <h3 className='text-xl font-extrabold uppercase tracking-wider text-blue sm:text-2xl sm:font-semibold'>
                   From warmth to endless amore
                 </h3>
-                <p className='mt-4 text-sm sm:text-base'>
+                <p className='mt-4 text-base tracking-wider sm:text-lg'>
                   We are dedicated to creating unforgettable and everlasting memories for couples, turning their dreams
                   into reality with impeccable planning and attention to detail.
                 </p>
@@ -174,7 +176,7 @@ export default function Home() {
               <h3 className='mb-4 text-2xl font-semibold uppercase tracking-wider text-blue md:text-4xl'>
                 Featured Projects
               </h3>
-              <p className='text-base md:text-lg'>
+              <p className='text-base tracking-wider md:text-lg'>
                 These exemplary reflect out unwavering commilment and fervor tawards our croft.
               </p>
             </div>
@@ -194,7 +196,7 @@ export default function Home() {
               </Fragment>
             ))}
           </div>
-          <button className='mt-10 rounded-3xl border-2 border-gray/50 px-6 py-2 font-medium uppercase duration-300 hover:border-blue hover:bg-blue hover:text-white hover:transition-all hover:duration-300 sm:px-10 sm:py-3'>
+          <button className='mt-10 rounded-3xl border-2 border-gray/50 px-6 py-2 font-medium uppercase tracking-wider duration-300 hover:border-blue hover:bg-blue hover:text-white hover:transition-all hover:duration-300 sm:px-10 sm:py-3'>
             Read more
           </button>
         </div>
@@ -342,6 +344,14 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className='my-20'>
+        <div className='relative h-full w-full pb-52 md:pb-48'>
+          <img src={backgroundSlide} alt='background' className='h-[200px] w-full object-top' />
+          <div className='absolute bottom-0 left-5 right-5 top-16 bg-white shadow-md'>
+            <CarouselCategoryPost />
           </div>
         </div>
       </div>
