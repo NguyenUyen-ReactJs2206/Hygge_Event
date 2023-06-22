@@ -12,9 +12,7 @@ export default function CarouselCategoryPost() {
   }
 
   const goToSlide = (slideIndex: number) => {
-    setCurrentIndex((curr) =>
-      curr === slideIndex ? slidesPost.length - (slidesPost.length - slideIndex) + 1 : slideIndex
-    )
+    setCurrentIndex((curr) => (curr === slideIndex ? slidesPost.length - (slidesPost.length - slideIndex) : slideIndex))
   }
 
   useEffect(() => {

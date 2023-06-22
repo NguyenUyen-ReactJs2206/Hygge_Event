@@ -1,7 +1,7 @@
-import articleOne from '../assets/images/latest-article-one.png'
-import articleTwo from '../assets/images/latest-article-two.png'
-import articleThree from '../assets/images/latest-article-three.png'
-import articleFour from '../assets/images/latest-article-four.png'
+import articleOne from '../assets/images/latestArticle/latest-article-one.png'
+import articleTwo from '../assets/images/latestArticle/latest-article-two.png'
+import articleThree from '../assets/images/latestArticle/latest-article-three.png'
+import articleFour from '../assets/images/latestArticle/latest-article-four.png'
 
 export const latestArticles = [
   {

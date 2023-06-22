@@ -1,6 +1,6 @@
-import avatarOne from '../assets/images/avatarOne.png'
-import avatarTwo from '../assets/images/avatarTwo.png'
-import avatarThree from '../assets/images/avatarThree.png'
+import avatarOne from '../assets/images/avatar/avatarOne.png'
+import avatarTwo from '../assets/images/avatar/avatarTwo.png'
+import avatarThree from '../assets/images/avatar/avatarThree.png'
 
 export const members = [
   {

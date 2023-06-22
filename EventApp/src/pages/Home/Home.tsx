@@ -1,12 +1,12 @@
 import { Fragment } from 'react'
 import { services } from '../../api/services.api'
 import NavHeader from '../../components/NavHeader'
-import conceptOne from '../../assets/images/conceptOne.png'
-import conceptTwo from '../../assets/images/conceptTwo.png'
+import strengthOne from '../../assets/images/strengths/strengthOne.png'
+import strengthTwo from '../../assets/images/strengths/strengthTwo.png'
 import { features } from '../../api/featured.api'
 import NumberUp from '../../components/NumberUp'
-import backgroundBlack from '../../assets/images/backgroundBlack.png'
-import backgroundSlide from '../../assets/images/backgroundSlide.png'
+import backgroundBlack from '../../assets/images/background/backgroundBlack.png'
+import backgroundSlide from '../../assets/images/background/backgroundSlide.png'
 import CorporationIdentifyProgramHome from '../../components/CorporationIdentifyProgramHome'
 import { corporationIdentifyProgram } from '../../api/cip.api'
 import CarouselCategoryPost from '../../components/Carousels/CarouselTestimonials/CarouselCategoryPost'
@@ -14,6 +14,7 @@ import { members } from '../../api/members.api'
 import Members from '../../components/Members'
 import { latestArticles } from '../../api/latestArticles.api'
 import LatestArticles from '../../components/LatestArticles'
+import CarouselBanner from '../../components/CarouselBanner'
 
 export default function Home() {
   return (
@@ -22,11 +23,8 @@ export default function Home() {
         <NavHeader />
       </nav>
       <div className='banner relative'>
-        <img
-          src='https://cdn0.weddingwire.ca/vendor/3632/3_2/960/jpg/1p2a3080_50_3632-161117907430780.jpeg'
-          alt='banner'
-          className='h-[60vh] w-full bg-banner bg-auto bg-fixed object-cover pt-20 sm:h-[70vh] md:h-[80vh] lg:pt-0 xl:h-[100vh]'
-        />
+        <CarouselBanner />
+
         <div className='absolute bottom-0 left-0 h-[200px] w-[200px] bg-white sm:h-[40%] sm:w-[40%] lg:h-[280px] lg:w-[430px] xl:h-[300px] xl:w-[480px]'>
           <div className='mt-10 pl-10 sm:pr-10 md:pl-16 lg:mt-16 lg:pl-16 xl:pl-20'>
             <h3 className='text-lg font-semibold uppercase tracking-wider text-blue sm:text-xl sm:leading-[34px] md:text-3xl md:leading-[38px] lg:text-4xl lg:leading-[44px] xl:leading-[52px]'>
@@ -138,7 +136,7 @@ export default function Home() {
           <div className=' col-span-2 lg:col-span-1'>
             <div className='h-full w-full overflow-hidden'>
               <img
-                src={conceptOne}
+                src={strengthOne}
                 alt='conceptOne'
                 className='h-full w-full duration-[2000ms] group-hover:scale-110 group-hover:opacity-30 group-hover:duration-[2000ms] lg:opacity-100 lg:group-hover:opacity-100'
               />
@@ -149,7 +147,7 @@ export default function Home() {
           <div className=' col-span-2 lg:col-span-1'>
             <div className='h-full w-full overflow-hidden'>
               <img
-                src={conceptTwo}
+                src={strengthTwo}
                 alt='conceptOne'
                 className='h-full w-full duration-[2000ms] group-hover:scale-110 group-hover:opacity-30 group-hover:duration-[2000ms] lg:group-hover:opacity-100'
               />
@@ -449,6 +447,9 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </div>
+      <div className='py-10'>
+        <CarouselBanner />
       </div>
     </div>
   )
