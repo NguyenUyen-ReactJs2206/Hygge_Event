@@ -25,6 +25,14 @@ module.exports = {
         banner: 'url(https://cdn0.weddingwire.ca/vendor/3632/3_2/960/jpg/1p2a3080_50_3632-161117907430780.jpeg)',
         strengths: 'url(https://meijerroses.com/wp-content/uploads/2016/02/event-flower-design-floral-wedding-arch.jpg)'
       }
+    },
+    screens: {
+      xs: '350px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      twoxl: '1536px'
     }
   },
   plugins: [
