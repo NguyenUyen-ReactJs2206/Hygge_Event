@@ -32,7 +32,8 @@ module.exports = {
       md: '768px',
       lg: '1024px',
       xl: '1280px',
-      twoxl: '1536px'
+      twoXl: '1500px',
+      threeXl: '1700px'
     }
   },
   plugins: [
