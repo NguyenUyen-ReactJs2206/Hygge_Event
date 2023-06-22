@@ -17,7 +17,7 @@ import CarouselCategoryPost from '../../components/Carousels/CarouselTestimonial
 export default function Home() {
   return (
     <div>
-      <nav className='fixed z-[999999] w-full border-b border-b-gray/10 bg-white shadow-sm lg:w-[1024px] twoXl:w-[1200px] threeXl:w-[1300px]'>
+      <nav className='fixed z-[999999] w-full border-b border-b-gray/10 bg-white shadow-sm lg:w-[1024px] twoXl:w-[1200px] threeXl:w-[1400px]'>
         <NavHeader />
       </nav>
       <div className='banner relative'>
@@ -83,93 +83,91 @@ export default function Home() {
         </div>
       </div>
       <div className='strengths'>
-        <div className='mx-auto max-w-[1800px]'>
-          <div className='group relative grid grid-cols-2'>
-            <div className='absolute col-span-2 h-full w-full lg:static lg:col-span-1'>
-              <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:px-20 lg:py-32 '>
-                <div
-                  className='translate-y-12 transform opacity-0 transition-all 
+        <div className='group relative grid grid-cols-2'>
+          <div className='absolute col-span-2 h-full w-full lg:static lg:col-span-1'>
+            <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:px-20 lg:py-32 '>
+              <div
+                className='translate-y-12 transform opacity-0 transition-all 
             duration-1000 group-hover:translate-y-0
             group-hover:opacity-100 lg:translate-y-0
             lg:transform-none lg:opacity-100
             lg:transition-none lg:duration-0'
-                >
-                  <h3 className='text-xl font-extrabold uppercase tracking-wider text-blue sm:text-2xl sm:font-semibold'>
-                    Our Strengths
-                  </h3>
-                  <div className=''>
-                    <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium'>
-                      <div className='uppercase tracking-wide'>Planning</div>
-                      <div>66%</div>
-                      <div className='absolute bottom-0 left-0 h-1 w-[66%] bg-blue'></div>
-                      <div className='absolute bottom-0 right-0 h-1 w-[34%] bg-gray/10'></div>
-                    </div>
-                  </div>
-                  <div className=''>
-                    <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium'>
-                      <div className='uppercase tracking-wide'>Concept</div>
-                      <div>72%</div>
-                      <div className='absolute bottom-0 left-0 h-1 w-[72%] bg-blue'></div>
-                      <div className='absolute bottom-0 right-0 h-1 w-[28%] bg-gray/10'></div>
-                    </div>
-                  </div>
-
-                  <div className=''>
-                    <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium'>
-                      <div className='uppercase tracking-wide'>Design</div>
-                      <div>78%</div>
-                      <div className='absolute bottom-0 left-0 h-1 w-[78%] bg-blue'></div>
-                      <div className='absolute bottom-0 right-0 h-1 w-[22%] bg-gray/10'></div>
-                    </div>
-                  </div>
-                  <div className=''>
-                    <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium'>
-                      <div className='uppercase tracking-wide'>Production</div>
-                      <div>90%</div>
-                      <div className='absolute bottom-0 left-0 h-1 w-[90%] bg-blue'></div>
-                      <div className='absolute bottom-0 right-0 h-1 w-[10%] bg-gray/10'></div>
-                    </div>
+              >
+                <h3 className='text-xl font-extrabold uppercase tracking-wider text-blue sm:text-2xl sm:font-semibold'>
+                  Our Strengths
+                </h3>
+                <div className=''>
+                  <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium'>
+                    <div className='uppercase tracking-wide'>Planning</div>
+                    <div>66%</div>
+                    <div className='absolute bottom-0 left-0 h-1 w-[66%] bg-blue'></div>
+                    <div className='absolute bottom-0 right-0 h-1 w-[34%] bg-gray/10'></div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className=' col-span-2 lg:col-span-1'>
-              <div className='h-full w-full overflow-hidden'>
-                <img
-                  src={conceptOne}
-                  alt='conceptOne'
-                  className='h-full w-full duration-[2000ms] group-hover:scale-110 group-hover:opacity-30 group-hover:duration-[2000ms] lg:opacity-100 lg:group-hover:opacity-100'
-                />
+                <div className=''>
+                  <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium'>
+                    <div className='uppercase tracking-wide'>Concept</div>
+                    <div>72%</div>
+                    <div className='absolute bottom-0 left-0 h-1 w-[72%] bg-blue'></div>
+                    <div className='absolute bottom-0 right-0 h-1 w-[28%] bg-gray/10'></div>
+                  </div>
+                </div>
+
+                <div className=''>
+                  <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium'>
+                    <div className='uppercase tracking-wide'>Design</div>
+                    <div>78%</div>
+                    <div className='absolute bottom-0 left-0 h-1 w-[78%] bg-blue'></div>
+                    <div className='absolute bottom-0 right-0 h-1 w-[22%] bg-gray/10'></div>
+                  </div>
+                </div>
+                <div className=''>
+                  <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium'>
+                    <div className='uppercase tracking-wide'>Production</div>
+                    <div>90%</div>
+                    <div className='absolute bottom-0 left-0 h-1 w-[90%] bg-blue'></div>
+                    <div className='absolute bottom-0 right-0 h-1 w-[10%] bg-gray/10'></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className='group relative grid grid-cols-2'>
-            <div className=' col-span-2 lg:col-span-1'>
-              <div className='h-full w-full overflow-hidden'>
-                <img
-                  src={conceptTwo}
-                  alt='conceptOne'
-                  className='h-full w-full duration-[2000ms] group-hover:scale-110 group-hover:opacity-30 group-hover:duration-[2000ms] lg:group-hover:opacity-100'
-                />
-              </div>
+          <div className=' col-span-2 lg:col-span-1'>
+            <div className='h-full w-full overflow-hidden'>
+              <img
+                src={conceptOne}
+                alt='conceptOne'
+                className='h-full w-full duration-[2000ms] group-hover:scale-110 group-hover:opacity-30 group-hover:duration-[2000ms] lg:opacity-100 lg:group-hover:opacity-100'
+              />
             </div>
-            <div className='absolute col-span-2 h-full w-full lg:static lg:col-span-1'>
-              <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:px-20 lg:pt-36 xl:pt-52 '>
-                <div
-                  className='translate-y-12 transform opacity-0 transition-all 
+          </div>
+        </div>
+        <div className='group relative grid grid-cols-2'>
+          <div className=' col-span-2 lg:col-span-1'>
+            <div className='h-full w-full overflow-hidden'>
+              <img
+                src={conceptTwo}
+                alt='conceptOne'
+                className='h-full w-full duration-[2000ms] group-hover:scale-110 group-hover:opacity-30 group-hover:duration-[2000ms] lg:group-hover:opacity-100'
+              />
+            </div>
+          </div>
+          <div className='absolute col-span-2 h-full w-full lg:static lg:col-span-1'>
+            <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:px-20 lg:pt-36 xl:pt-52 '>
+              <div
+                className='translate-y-12 transform opacity-0 transition-all 
             duration-1000 group-hover:translate-y-0
             group-hover:opacity-100 lg:translate-y-0
             lg:transform-none lg:opacity-100
             lg:transition-none lg:duration-0'
-                >
-                  <h3 className='text-xl font-extrabold uppercase tracking-wider text-blue sm:text-2xl sm:font-semibold'>
-                    From warmth to endless amore
-                  </h3>
-                  <p className='mt-4 text-base tracking-wider sm:text-lg'>
-                    We are dedicated to creating unforgettable and everlasting memories for couples, turning their
-                    dreams into reality with impeccable planning and attention to detail.
-                  </p>
-                </div>
+              >
+                <h3 className='text-xl font-extrabold uppercase tracking-wider text-blue sm:text-2xl sm:font-semibold'>
+                  From warmth to endless amore
+                </h3>
+                <p className='mt-4 text-base tracking-wider sm:text-lg'>
+                  We are dedicated to creating unforgettable and everlasting memories for couples, turning their dreams
+                  into reality with impeccable planning and attention to detail.
+                </p>
               </div>
             </div>
           </div>
@@ -209,13 +207,16 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='number-up my-10'>
+      <div className='number-up pt-32'>
         <div className='mx-auto max-w-[1800px]'>
           <div className='grid grid-cols-4 gap-y-8'>
             <div className='col-span-2 sm:col-span-1'>
               <div className=' text-center'>
                 <div className='mb-[-7px] text-5xl font-medium tracking-wider text-blue'>
                   <NumberUp number={30} />
+                </div>
+                <div className='block border-t border-t-gray/10 text-[14px] font-semibold tracking-wider sm:hidden'>
+                  Projects
                 </div>
               </div>
             </div>
@@ -224,12 +225,18 @@ export default function Home() {
                 <div className='mb-[-7px] text-5xl font-medium tracking-wider text-blue'>
                   <NumberUp number={22} />
                 </div>
+                <div className='block border-t border-t-gray/10 text-[14px] font-semibold tracking-wider sm:hidden'>
+                  Team Members
+                </div>
               </div>
             </div>
             <div className='col-span-2 sm:col-span-1'>
               <div className=' text-center'>
                 <div className='mb-[-7px] text-5xl font-medium tracking-wider text-blue'>
                   <NumberUp number={25} />
+                </div>
+                <div className='block border-t border-t-gray/10 text-[14px] font-semibold tracking-wider sm:hidden'>
+                  Clients
                 </div>
               </div>
             </div>
@@ -238,29 +245,32 @@ export default function Home() {
                 <div className='mb-[-7px] text-5xl font-medium tracking-wider text-blue'>
                   <NumberUp number={5} />
                 </div>
+                <div className='block border-t border-t-gray/10 text-[14px] font-semibold tracking-wider sm:hidden'>
+                  Awards won
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <hr className='text-gray/10' />
-        <div className='mx-auto max-w-[1800px]'>
+        <hr className='hidden text-gray/10 sm:block' />
+        <div className='mx-auto hidden max-w-[1800px] sm:block'>
           <div className='grid grid-cols-4 gap-y-8'>
-            <div className='col-span-2 sm:col-span-1'>
+            <div className='col-span-1'>
               <div className=' text-center'>
                 <div className='text-[14px] font-semibold tracking-wider'>Projects</div>
               </div>
             </div>
-            <div className='col-span-2 sm:col-span-1'>
+            <div className='col-span-1'>
               <div className='text-center'>
                 <div className='text-[14px] font-semibold tracking-wider'>Team Members</div>
               </div>
             </div>
-            <div className='col-span-2 sm:col-span-1'>
+            <div className='col-span-1'>
               <div className=' text-center'>
                 <div className='text-[14px] font-semibold tracking-wider'>Clients</div>
               </div>
             </div>
-            <div className='col-span-2 sm:col-span-1'>
+            <div className='col-span-1'>
               <div className=' text-center'>
                 <div className='text-[14px] font-semibold tracking-wider'>Awards won</div>
               </div>
