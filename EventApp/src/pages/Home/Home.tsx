@@ -12,6 +12,8 @@ import { corporationIdentifyProgram } from '../../api/cip.api'
 import CarouselCategoryPost from '../../components/Carousels/CarouselTestimonials/CarouselCategoryPost'
 import { members } from '../../api/members.api'
 import Members from '../../components/Members'
+import { latestArticles } from '../../api/latestArticles.api'
+import LatestArticles from '../../components/LatestArticles'
 
 export default function Home() {
   return (
@@ -429,6 +431,22 @@ export default function Home() {
                 </Fragment>
               ))}
             </div>
+          </div>
+        </div>
+      </div>
+      <div className='latest-articles my-32'>
+        <div className='mx-auto max-w-[1400px] px-4 sm:px-2'>
+          <h3 className='mb-10 text-center text-3xl font-semibold uppercase tracking-widest text-blue md:mb-20 md:text-5xl'>
+            Latest Articles
+          </h3>
+          <div className='grid grid-cols-4 gap-4 md:gap-2 lg:gap-10 xl:gap-16 '>
+            {latestArticles.map((article, index) => (
+              <Fragment key={index}>
+                <div className='col-span-4 sm:col-span-2 md:col-span-1 '>
+                  <LatestArticles nameArticle={article.nameArticle} image={article.image} time={article.time} />
+                </div>
+              </Fragment>
+            ))}
           </div>
         </div>
       </div>
