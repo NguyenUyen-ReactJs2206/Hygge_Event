@@ -1,6 +1,5 @@
 import { Fragment } from 'react'
 import { services } from '../../api/services.api'
-import NavHeader from '../../components/NavHeader'
 import strengthOne from '../../assets/images/strengths/strengthOne.png'
 import strengthTwo from '../../assets/images/strengths/strengthTwo.png'
 import { features } from '../../api/featured.api'
@@ -19,9 +18,6 @@ import CarouselBanner from 'src/components/CarouselBanner'
 export default function Home() {
   return (
     <div>
-      <nav className='fixed z-[999999] w-full border-b border-b-gray/10 bg-white shadow-sm lg:w-[950px] xl:w-[1024px] twoXl:w-[1200px] threeXl:w-[1400px]'>
-        <NavHeader />
-      </nav>
       <div className='banner relative'>
         <CarouselBanner />
 

@@ -1,12 +1,9 @@
 import ConCeptArticle from '../../components/ConceptArticle'
-import NavHeader from '../../components/NavHeader'
 import '../../sass/index.scss'
+
 export default function Concept() {
   return (
     <div>
-      <nav className='fixed top-0 z-[999999999999] w-full border-b border-b-gray/10 bg-white shadow-sm'>
-        <NavHeader />
-      </nav>
       <div className='pb-16 pt-36 lg:pt-48'>
         <div className='md:container'>
           <div>
