@@ -14,7 +14,7 @@ import { members } from '../../api/members.api'
 import Members from '../../components/Members'
 import { latestArticles } from '../../api/latestArticles.api'
 import LatestArticles from '../../components/LatestArticles'
-import CarouselBanner from '../../components/CarouselBanner'
+import CarouselBanner from 'src/components/CarouselBanner'
 
 export default function Home() {
   return (
