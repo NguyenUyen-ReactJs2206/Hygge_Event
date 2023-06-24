@@ -20,7 +20,6 @@ export default function Home() {
     <div>
       <div className='banner relative'>
         <CarouselBanner />
-
         <div className='absolute bottom-0 left-0 h-[200px] w-[200px] bg-white sm:h-[40%] sm:w-[40%] lg:h-[280px] lg:w-[430px] xl:h-[300px] xl:w-[480px]'>
           <div className='mt-10 pl-10 sm:pr-10 md:pl-16 lg:mt-16 lg:pl-16 xl:pl-20'>
             <h3 className='text-lg font-semibold uppercase tracking-wider text-blue sm:text-xl sm:leading-[34px] md:text-3xl md:leading-[38px] lg:text-4xl lg:leading-[44px] xl:leading-[52px]'>
@@ -443,9 +442,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
-      <div className='py-10'>
-        <CarouselBanner />
       </div>
     </div>
   )
