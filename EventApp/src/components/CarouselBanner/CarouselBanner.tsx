@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { banners } from '../../api/banner.api'
+import { banners } from 'src/api/home.api'
 
 export default function CarouselBanner() {
   const autoSlide = true

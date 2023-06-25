@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { slidesReview } from '../../../api/slides.api'
+import { slidesReview } from 'src/api/home.api'
 
 export default function CarouselReviews() {
   const [currentIndex, setCurrentIndex] = useState(0)

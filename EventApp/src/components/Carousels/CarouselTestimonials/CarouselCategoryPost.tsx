@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { slidesPost } from '../../../api/slides.api'
+import { slidesPost } from 'src/api/home.api'
 
 export default function CarouselCategoryPost() {
   const autoSlide = true
