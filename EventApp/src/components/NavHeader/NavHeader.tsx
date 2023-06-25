@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import logo from '../../assets/images/logopng.png'
 import { NavLink } from 'react-router-dom'
 import path from '../../constants/path'
+import UnderLineEffect from '../UnderlineEffect'
 
 export default function NavHeader() {
   const [open, setOpen] = useState(false)
@@ -74,7 +75,7 @@ export default function NavHeader() {
             </div>
 
             <ul className='hidden w-max items-center gap-4 font-semibold uppercase tracking-wider text-blue lg:flex lg:text-sm'>
-              <li>
+              <li className='group relative '>
                 <NavLink
                   to={path.home}
                   className={({ isActive }) =>
@@ -85,8 +86,10 @@ export default function NavHeader() {
                 >
                   Home
                 </NavLink>
+
+                <UnderLineEffect color='blue' />
               </li>
-              <li>
+              <li className='group relative'>
                 <NavLink
                   to={path.aboutUs}
                   className={({ isActive }) =>
@@ -97,8 +100,9 @@ export default function NavHeader() {
                 >
                   About Us
                 </NavLink>
+                <UnderLineEffect color='blue' />
               </li>
-              <li>
+              <li className='group relative'>
                 <NavLink
                   to={path.concept}
                   className={({ isActive }) =>
@@ -109,8 +113,9 @@ export default function NavHeader() {
                 >
                   Concept
                 </NavLink>
+                <UnderLineEffect color='blue' />
               </li>
-              <li>
+              <li className='group relative'>
                 <NavLink
                   to={path.gallery}
                   className={({ isActive }) =>
@@ -121,8 +126,9 @@ export default function NavHeader() {
                 >
                   Gallery
                 </NavLink>
+                <UnderLineEffect color='blue' />
               </li>
-              <li>
+              <li className='group relative'>
                 <NavLink
                   to={path.testimonials}
                   className={({ isActive }) =>
@@ -133,8 +139,9 @@ export default function NavHeader() {
                 >
                   Testimonials
                 </NavLink>
+                <UnderLineEffect color='blue' />
               </li>
-              <li>
+              <li className='group relative'>
                 <NavLink
                   to={path.blog}
                   className={({ isActive }) =>
@@ -145,8 +152,9 @@ export default function NavHeader() {
                 >
                   Blog
                 </NavLink>
+                <UnderLineEffect color='blue' />
               </li>
-              <li>
+              <li className='group relative'>
                 <NavLink
                   to={path.contact}
                   className={({ isActive }) =>
@@ -157,8 +165,9 @@ export default function NavHeader() {
                 >
                   Contact
                 </NavLink>
+                <UnderLineEffect color='blue' />
               </li>
-              <li>
+              <li className='group relative'>
                 <span className='cursor-pointer py-1 pl-5 hover:text-blue/50 hover:duration-300'>EN</span>
               </li>
             </ul>

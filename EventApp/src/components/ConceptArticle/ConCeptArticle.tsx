@@ -24,7 +24,7 @@ export default function ConCeptArticle({ name }: Props) {
             <h3 className='cursor-default text-3xl font-medium tracking-wide text-blue md:text-3xl md:font-medium'>
               {name}
             </h3>
-            <button className='hover:underline-effect underline-effect text-sm text-gray duration-300 hover:font-medium hover:text-blue/90 hover:duration-300'>
+            <button className='underline-effect hover:underline-effect text-base text-gray duration-300 hover:font-medium hover:text-blue/90 hover:duration-300'>
               Read More
             </button>
           </div>

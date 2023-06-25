@@ -10,7 +10,7 @@ import Members from 'src/components/Members'
 import LatestArticles from 'src/components/LatestArticles'
 import CarouselBanner from 'src/components/CarouselBanner'
 import { corporationIdentifyProgram, features, latestArticles, members, services } from 'src/api/home.api'
-import HorizontalLineEffect from 'src/components/HorizontalLineEffect/HorizontalLineEffect'
+import HorizontalLineEffect from 'src/components/HorizontalLineEffect'
 
 export default function Home() {
   return (
