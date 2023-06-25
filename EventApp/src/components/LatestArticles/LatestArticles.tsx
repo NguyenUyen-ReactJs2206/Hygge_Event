@@ -11,10 +11,10 @@ export default function LatestArticles({ image, nameArticle, time }: Props) {
         <img src={image} alt={image} className='h-full w-full object-cover' />
       </div>
       <div className='py-4 '>
-        <div className='text-lg font-semibold tracking-wider text-blue lg:text-xl lg:tracking-widest xl:text-2xl'>
+        <div className='text-lg font-semibold tracking-wider text-blue lg:text-xl lg:tracking-widest'>
           {nameArticle}
         </div>
-        <div className='text-sm font-medium tracking-wide sm:text-base lg:tracking-wider'>{time}</div>
+        <div className='text-sm font-medium tracking-wide lg:tracking-wider'>{time}</div>
       </div>
     </article>
   )

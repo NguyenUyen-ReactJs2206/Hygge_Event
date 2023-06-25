@@ -10,6 +10,7 @@ import Members from 'src/components/Members'
 import LatestArticles from 'src/components/LatestArticles'
 import CarouselBanner from 'src/components/CarouselBanner'
 import { corporationIdentifyProgram, features, latestArticles, members, services } from 'src/api/home.api'
+import HorizontalLineEffect from 'src/components/HorizontalLineEffect/HorizontalLineEffect'
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
       <div className='services py-32'>
         <div className='flex items-center justify-center'>
           <div className='container'>
-            <div className='relative max-w-[680px] px-12 py-6'>
+            <div className='group relative max-w-[680px] px-12 py-6'>
               <div className='text-center'>
                 <h3 className='mb-4 text-2xl font-semibold uppercase tracking-wider text-blue md:text-4xl'>
                   What Hygge is about
@@ -48,10 +49,7 @@ export default function Home() {
                   Our company providerse range of services that aptly cater to all your specific needs.
                 </p>
               </div>
-              <div className='absolute left-0 top-0 h-[1px] w-[12px] bg-black'></div>
-              <div className='absolute left-0 top-0 h-[12px] w-[2px] bg-black'></div>
-              <div className='absolute bottom-0 right-0 h-[0.5px] w-[12px] bg-black'></div>
-              <div className='absolute bottom-0 right-0 h-[12px] w-[1px] bg-black'></div>
+              <HorizontalLineEffect />
             </div>
           </div>
         </div>
@@ -168,7 +166,7 @@ export default function Home() {
       <div className='featured'>
         <div className='flex items-center justify-center py-28 lg:py-32'>
           <div className='container'>
-            <div className='relative max-w-[680px] px-12 py-6'>
+            <div className='group relative max-w-[680px] px-12 py-6'>
               <div className='text-center'>
                 <h3 className='mb-4 text-2xl font-semibold uppercase tracking-wider text-blue md:text-4xl'>
                   Featured Projects
@@ -177,10 +175,7 @@ export default function Home() {
                   These exemplary reflect out unwavering commilment and fervor tawards our croft.
                 </p>
               </div>
-              <div className='absolute left-0 top-0 h-[1px] w-[12px] bg-black'></div>
-              <div className='absolute left-0 top-0 h-[12px] w-[2px] bg-black'></div>
-              <div className='absolute bottom-0 right-0 h-[1px] w-[12px] bg-black'></div>
-              <div className='absolute bottom-0 right-0 h-[12px] w-[2px] bg-black'></div>
+              <HorizontalLineEffect />
             </div>
           </div>
         </div>
@@ -395,7 +390,7 @@ export default function Home() {
       <div className='create-team'>
         <div className='container'>
           <div className='flex items-center justify-center py-28 lg:py-32'>
-            <div className='relative max-w-[680px] px-12 py-6'>
+            <div className='group relative max-w-[680px] px-12 py-6'>
               <div className='text-center'>
                 <h3 className='mb-4 text-2xl font-semibold uppercase tracking-wider text-blue md:text-4xl'>
                   Creative Team
@@ -404,10 +399,7 @@ export default function Home() {
                   We become your confidants, effecttive partners, and diligent assistants throughout your journey.
                 </p>
               </div>
-              <div className='absolute left-0 top-0 h-[1px] w-[12px] bg-black'></div>
-              <div className='absolute left-0 top-0 h-[12px] w-[2px] bg-black'></div>
-              <div className='absolute bottom-0 right-0 h-[1px] w-[12px] bg-black'></div>
-              <div className='absolute bottom-0 right-0 h-[12px] w-[2px] bg-black'></div>
+              <HorizontalLineEffect />
             </div>
           </div>
           <div className='mb-10'>
