@@ -4,7 +4,7 @@ import '../../sass/index.scss'
 export default function Concept() {
   return (
     <div>
-      <div className='pb-16 pt-36 lg:pt-48'>
+      <div className='pb-16 pt-28 lg:pt-48'>
         <div className='md:container'>
           <div>
             <h1 className='font mb-4 pl-10 text-4xl font-semibold tracking-wider text-gray md:hidden'>Concepts</h1>

@@ -3,7 +3,7 @@ import { banners } from '../../api/banner.api'
 
 export default function CarouselBanner() {
   const autoSlide = true
-  const autoSlideInterval = 5000
+  const autoSlideInterval = 3000
 
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -24,19 +24,19 @@ export default function CarouselBanner() {
     <div className=''>
       <div className='group h-full w-full'>
         <div className='relative flex h-full w-full justify-center text-center transition-all duration-1000 ease-out'>
-          <div className='h-[70vh]  w-full overflow-hidden sm:h-[75vh] md:h-[85vh] xl:h-[100vh]'>
+          <div className='h-[75vh] w-full overflow-hidden md:h-[90vh] lg:h-[100vh]'>
             <img
               src={banners[currentIndex]}
               alt={banners[currentIndex]}
               className='h-full w-full object-none md:object-cover'
             />
           </div>
-          <div className='absolute bottom-0 left-0 right-0 flex h-20 items-center justify-end gap-2 md:justify-center'>
+          <div className='absolute bottom-0 left-0 right-0 flex h-10 items-center justify-end gap-2 md:justify-center'>
             {banners.map((_, index) => (
               <button
                 key={index}
                 className={`
-          z-10 h-3 w-3 rounded-full bg-white transition-all md:h-4 md:w-4
+          z-10 h-2 w-2 rounded-full bg-white transition-all md:h-3 md:w-3
           ${currentIndex === index ? '' : 'bg-opacity-30'}`}
                 onClick={() => goToSlide(index)}
               />

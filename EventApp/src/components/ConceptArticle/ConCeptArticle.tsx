@@ -9,7 +9,7 @@ export default function ConCeptArticle({ name }: Props) {
         <img
           src='https://www.brides.com/thmb/Nb8-KQb0UbTEh9uymClKoLHhEyg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WR-8b335c7adae842dc9f80ec3c4eaf9c48.jpg'
           alt='concept1'
-          className='h-[300px] w-full object-cover shadow-sm duration-[2000ms] group-hover:scale-110 group-hover:opacity-50 group-hover:duration-[2000ms] md:h-full md:group-hover:opacity-100'
+          className='h-[250px] w-full object-cover shadow-sm duration-[2000ms] group-hover:scale-110 group-hover:opacity-50 group-hover:duration-[2000ms] xs:h-[380px] md:h-full md:group-hover:opacity-100'
         />
       </div>
       <div className='absolute inset-0 md:static md:block'>

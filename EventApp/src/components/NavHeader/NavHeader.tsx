@@ -17,29 +17,25 @@ export default function NavHeader() {
   const handleScroll = () => {
     const currentScrollPos = window.scrollY
 
-    setShowNav((prevShowNav) => (prevScrollPos > currentScrollPos || currentScrollPos < 20 ? true : false))
+    setShowNav(() => (prevScrollPos > currentScrollPos || currentScrollPos < 20 ? true : false))
     setOpen(false)
     setPrevScrollPos(currentScrollPos)
   }
   return (
     <div className=''>
       <nav
-        className={`fixed top-0 z-[999999999999] w-full border-b border-b-gray/10 bg-white opacity-100 shadow-sm transition-all duration-[1000ms]
-         ${
-           showNav
-             ? 'visible opacity-0 transition-all duration-[1000ms]'
-             : 'invisible translate-y-[-100%] duration-[1000ms]'
-         }`}
+        className={`fixed top-0 z-[999999999999] w-full border-b border-b-gray/10 bg-white opacity-100 shadow-sm transition-all duration-[700ms]
+         ${showNav ? 'visible transition-all duration-[700ms]' : 'invisible translate-y-[-100%] duration-[700ms]'}`}
       >
         <div className='container'>
           <div className='flex items-center justify-between font-medium'>
-            <div className='flex w-full justify-between p-7 md:w-auto'>
+            <div className='flex w-full justify-between p-2 lg:w-auto lg:p-4'>
               <img src={logo} alt='logo' className='h-9 md:cursor-pointer' />
             </div>
             <div>
               {open && (
                 <button className='lg:hidden' onClick={() => setOpen(false)}>
-                  <div className='h-8 w-10 cursor-pointer'>
+                  <div className='h-6 w-8 cursor-pointer'>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
                       fill='none'
@@ -55,7 +51,7 @@ export default function NavHeader() {
               )}
               {!open && (
                 <button className='lg:hidden' onClick={() => setOpen(true)}>
-                  <div className='h-8 w-10 cursor-pointer'>
+                  <div className='h-6 w-8 cursor-pointer'>
                     <div>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -170,8 +166,8 @@ export default function NavHeader() {
         </div>
       </nav>
       <ul
-        className={`fixed right-0 top-0 z-[999] w-full overflow-y-auto bg-white px-8 py-2 text-center text-lg tracking-wide text-blue shadow-sm duration-1000  lg:hidden
-          ${open ? 'top-0 mt-[93px] duration-700' : 'top-[-100%] duration-700'}`}
+        className={`fixed right-0 top-0 z-[999] w-full overflow-y-auto bg-white/90 px-8 py-2 text-center text-lg tracking-wide text-blue shadow-sm duration-500  lg:hidden
+          ${open ? 'top-[50px] duration-500' : 'top-[-100%] duration-500'}`}
       >
         <li className=''>
           <NavLink
