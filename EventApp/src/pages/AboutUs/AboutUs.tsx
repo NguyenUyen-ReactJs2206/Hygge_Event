@@ -16,7 +16,7 @@ export default function AboutU2() {
             </div>
           </div>
           <div className='absolute col-span-12 h-full w-full lg:static lg:col-span-5 lg:bg-blue xl:col-span-4'>
-            <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:px-20 lg:pt-32 '>
+            <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:px-20 lg:pt-28 '>
               <div
                 className='translate-y-12 transform opacity-0 transition-all 
             duration-1000 group-hover:translate-y-0
@@ -36,7 +36,7 @@ export default function AboutU2() {
         </div>
         <div className='group relative grid grid-cols-12'>
           <div className='absolute col-span-12 h-full w-full lg:static lg:col-span-5 xl:col-span-4'>
-            <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:px-20 lg:pt-32'>
+            <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:px-20 lg:pt-28'>
               <div
                 className='translate-y-12 transform opacity-0 transition-all 
             duration-1000 group-hover:translate-y-0
@@ -74,7 +74,7 @@ export default function AboutU2() {
             </div>
           </div>
           <div className='absolute col-span-12 h-full w-full lg:static lg:col-span-5 xl:col-span-4'>
-            <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:bg-blue lg:px-20 lg:pt-32 '>
+            <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:bg-blue lg:px-20 lg:pt-28 '>
               <div
                 className='translate-y-12 transform opacity-0 transition-all 
             duration-1000 group-hover:translate-y-0
@@ -94,7 +94,7 @@ export default function AboutU2() {
         </div>
         <div className='group relative grid grid-cols-12'>
           <div className='absolute col-span-12 h-full w-full lg:static lg:col-span-5 xl:col-span-4'>
-            <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:px-20 lg:pt-32 '>
+            <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:px-20 lg:pt-28 '>
               <div
                 className='translate-y-12 transform opacity-0 transition-all 
             duration-1000 group-hover:translate-y-0
