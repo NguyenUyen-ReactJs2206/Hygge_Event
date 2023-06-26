@@ -3,7 +3,7 @@ import '../../sass/index.scss'
 
 export default function Concept() {
   return (
-    <div>
+    <div className='concept-page' id='top'>
       <div className='pb-16 pt-28 lg:pt-48'>
         <div className='md:container'>
           <div>

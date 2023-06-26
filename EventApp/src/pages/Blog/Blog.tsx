@@ -1,3 +1,7 @@
 export default function Blog() {
-  return <div>Blog</div>
+  return (
+    <div className='blog-page' id='top'>
+      Blog
+    </div>
+  )
 }

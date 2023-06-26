@@ -12,7 +12,7 @@ import UnderLineEffect from 'src/components/UnderlineEffect'
 
 export default function Gallery() {
   return (
-    <div className='about-us'>
+    <div className='gallery-page' id='top'>
       <div className='py-20 lg:pt-[70px]'>
         <div className='mx-auto max-w-[1500px]'>
           <div className='mb-4 flex flex-wrap justify-center gap-x-4 gap-y-0 lg:mb-0 lg:grid lg:grid-cols-5 lg:gap-4'>

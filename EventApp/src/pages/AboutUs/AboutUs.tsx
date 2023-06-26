@@ -2,7 +2,7 @@ import { aboutUsApi } from 'src/api/aboutUs.api'
 
 export default function AboutU2() {
   return (
-    <div className='about-us'>
+    <div className='about-us-page' id='top'>
       <div className='pt-20 lg:pt-[70px]'>
         <h1 className='font mb-4 pl-10 pt-6 text-4xl font-semibold tracking-wider text-gray lg:hidden'>About Us</h1>
         <div className='group relative grid grid-cols-12'>

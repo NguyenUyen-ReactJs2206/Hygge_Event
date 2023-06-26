@@ -14,7 +14,7 @@ import HorizontalLineEffect from 'src/components/HorizontalLineEffect'
 
 export default function Home() {
   return (
-    <div>
+    <div className='home-page' id='top'>
       <div className='banner relative'>
         <CarouselBanner />
         <div className='absolute bottom-0 left-0 h-[200px] w-[200px] bg-white sm:h-[40%] sm:w-[40%] lg:h-[280px] lg:w-[430px] xl:h-[300px] xl:w-[480px]'>
