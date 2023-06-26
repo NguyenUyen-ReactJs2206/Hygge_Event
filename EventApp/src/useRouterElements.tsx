@@ -1,5 +1,5 @@
 import { useRoutes } from 'react-router-dom'
-import { path } from './constants/path'
+
 import MainLayout from './layout/MainLayout'
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
@@ -8,6 +8,7 @@ import Concept from './pages/Concept'
 import Contact from './pages/Contact'
 import Gallery from './pages/Gallery'
 import Testimonials from './pages/Testimonials'
+import path from './constants/path'
 
 export default function useRouterElements() {
   const routes = useRoutes([
