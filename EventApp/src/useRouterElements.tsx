@@ -9,6 +9,8 @@ import Contact from './pages/Contact'
 import Gallery from './pages/Gallery'
 import Testimonials from './pages/Testimonials'
 import path from './constants/path'
+import pathConceptDetails from './constants/pathConceptDetails'
+import ConceptDetail from './components/ConceptDetail'
 
 export default function useRouterElements() {
   const routes = useRoutes([
@@ -66,6 +68,54 @@ export default function useRouterElements() {
       element: (
         <MainLayout>
           <Testimonials />
+        </MainLayout>
+      )
+    },
+    {
+      path: pathConceptDetails.conceptRapunzel,
+      element: (
+        <MainLayout>
+          <ConceptDetail name='Rapunzel' />
+        </MainLayout>
+      )
+    },
+    {
+      path: pathConceptDetails.conceptBridgerton,
+      element: (
+        <MainLayout>
+          <ConceptDetail name='Bridgeton' />
+        </MainLayout>
+      )
+    },
+    {
+      path: pathConceptDetails.conceptBeatyAndTheBeast,
+      element: (
+        <MainLayout>
+          <ConceptDetail name='Beaty And TheBeast' />
+        </MainLayout>
+      )
+    },
+    {
+      path: pathConceptDetails.conceptElegantLove,
+      element: (
+        <MainLayout>
+          <ConceptDetail name='Elegant Love' />
+        </MainLayout>
+      )
+    },
+    {
+      path: pathConceptDetails.conceptTheGreatestShowman,
+      element: (
+        <MainLayout>
+          <ConceptDetail name='The Greatest Showman' />
+        </MainLayout>
+      )
+    },
+    {
+      path: pathConceptDetails.conceptUpsideDown,
+      element: (
+        <MainLayout>
+          <ConceptDetail name='Upside Down' />
         </MainLayout>
       )
     }

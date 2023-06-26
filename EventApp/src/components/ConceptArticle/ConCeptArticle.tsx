@@ -1,17 +1,22 @@
+import { Link } from 'react-router-dom'
+
 type Props = {
   name: string
+  pathConcept: string
 }
 
-export default function ConCeptArticle({ name }: Props) {
+export default function ConCeptArticle({ name, pathConcept }: Props) {
   return (
     <div>
-      <div className='w-full overflow-hidden md:cursor-default'>
-        <img
-          src='https://www.brides.com/thmb/Nb8-KQb0UbTEh9uymClKoLHhEyg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WR-8b335c7adae842dc9f80ec3c4eaf9c48.jpg'
-          alt='concept1'
-          className='h-[250px] w-full object-cover shadow-sm duration-[2000ms] group-hover:scale-110 group-hover:opacity-50 group-hover:duration-[2000ms] xs:h-[380px] md:h-full md:group-hover:opacity-100'
-        />
-      </div>
+      <Link to={pathConcept}>
+        <div className='w-full overflow-hidden md:cursor-default'>
+          <img
+            src='https://www.brides.com/thmb/Nb8-KQb0UbTEh9uymClKoLHhEyg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WR-8b335c7adae842dc9f80ec3c4eaf9c48.jpg'
+            alt='concept1'
+            className='h-[250px] w-full cursor-pointer object-cover shadow-sm duration-[2000ms] group-hover:scale-110 group-hover:opacity-50 group-hover:duration-[2000ms] xs:h-[380px] md:h-full md:group-hover:opacity-100'
+          />
+        </div>
+      </Link>
       <div className='absolute inset-0 md:static md:block'>
         <div className='pl-4 pt-4 md:pt-4'>
           <div

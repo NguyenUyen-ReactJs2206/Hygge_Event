@@ -25,7 +25,7 @@ export default function NavHeader() {
   return (
     <div className=''>
       <nav
-        className={`fixed top-0 z-[999999999999] w-full border-b border-b-gray/10 bg-white opacity-100 shadow-sm transition-all duration-[700ms]
+        className={`fixed top-0 z-[999999999999] w-full bg-white opacity-100 transition-all duration-[700ms]
          ${showNav ? 'visible transition-all duration-[700ms]' : 'invisible translate-y-[-100%] duration-[700ms]'}`}
       >
         <div className='container'>
@@ -74,26 +74,25 @@ export default function NavHeader() {
               )}
             </div>
 
-            <ul className='hidden w-max items-center gap-4 font-semibold uppercase tracking-wider text-blue lg:flex lg:text-sm'>
+            <ul className='hidden w-max items-center gap-4 font-semibold uppercase tracking-wider lg:flex lg:text-sm'>
               <li className='group relative '>
                 <NavLink
                   to={path.home}
                   className={({ isActive }) =>
-                    `inline-block py-1 tracking-widest hover:text-blue/50 hover:duration-300 ${
+                    `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
                       isActive ? 'text-blue/50' : ''
                     }`
                   }
                 >
                   Home
                 </NavLink>
-
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>
                 <NavLink
                   to={path.aboutUs}
                   className={({ isActive }) =>
-                    `inline-block py-1 tracking-widest hover:text-blue/50 hover:duration-300 ${
+                    `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
                       isActive ? 'text-blue/50' : ''
                     }`
                   }
@@ -106,7 +105,7 @@ export default function NavHeader() {
                 <NavLink
                   to={path.concept}
                   className={({ isActive }) =>
-                    `inline-block py-1 tracking-widest hover:text-blue/50 hover:duration-300 ${
+                    `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
                       isActive ? 'text-blue/50' : ''
                     }`
                   }
@@ -119,7 +118,7 @@ export default function NavHeader() {
                 <NavLink
                   to={path.gallery}
                   className={({ isActive }) =>
-                    `inline-block py-1 tracking-widest hover:text-blue/50 hover:duration-300 ${
+                    `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
                       isActive ? 'text-blue/50' : ''
                     }`
                   }
@@ -132,7 +131,7 @@ export default function NavHeader() {
                 <NavLink
                   to={path.testimonials}
                   className={({ isActive }) =>
-                    `inline-block py-1 tracking-widest hover:text-blue/50 hover:duration-300 ${
+                    `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
                       isActive ? 'text-blue/50' : ''
                     }`
                   }
@@ -145,7 +144,7 @@ export default function NavHeader() {
                 <NavLink
                   to={path.blog}
                   className={({ isActive }) =>
-                    `inline-block py-1 tracking-widest hover:text-blue/50 hover:duration-300 ${
+                    `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
                       isActive ? 'text-blue/50' : ''
                     }`
                   }
@@ -158,7 +157,7 @@ export default function NavHeader() {
                 <NavLink
                   to={path.contact}
                   className={({ isActive }) =>
-                    `inline-block py-1 tracking-widest hover:text-blue/50 hover:duration-300 ${
+                    `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
                       isActive ? 'text-blue/50' : ''
                     }`
                   }
@@ -168,7 +167,7 @@ export default function NavHeader() {
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>
-                <span className='cursor-pointer py-1 pl-5 hover:text-blue/50 hover:duration-300'>EN</span>
+                <span className='cursor-pointer py-1 pl-5 text-blue hover:text-blue/50 hover:duration-300'>EN</span>
               </li>
             </ul>
           </div>
