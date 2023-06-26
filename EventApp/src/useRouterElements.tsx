@@ -1,5 +1,5 @@
 import { useRoutes } from 'react-router-dom'
-import path from './constants/path'
+import { path } from './constants/path'
 import MainLayout from './layout/MainLayout'
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
