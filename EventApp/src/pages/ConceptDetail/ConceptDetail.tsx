@@ -4,9 +4,9 @@ import 'slick-carousel/slick/slick-theme.css'
 
 type Props = {
   name: string
-  listConcept: string[]
+  listConceptDetail: string[]
 }
-export default function ConceptDetail({ name, listConcept }: Props) {
+export default function ConceptDetail({ name, listConceptDetail }: Props) {
   const settings = {
     dots: true,
     infinite: true,
@@ -21,7 +21,7 @@ export default function ConceptDetail({ name, listConcept }: Props) {
       <div className='container'>
         <h1 className='mb-4 p-4 text-3xl font-semibold tracking-wider text-gray md:p-10'>{name}</h1>
         <div className='grid gap-y-1'>
-          {listConcept.slice(0, 4).map((image, index) => (
+          {listConceptDetail.slice(0, 4).map((image, index) => (
             <div key={index} className='mx-auto h-full max-w-[1000px] cursor-pointer overflow-hidden'>
               <img src={image} alt={image} className='h-full w-[1000px] object-cover' />
             </div>
@@ -34,9 +34,10 @@ export default function ConceptDetail({ name, listConcept }: Props) {
         </div>
         <hr className='mx-auto max-w-[1000px] text-gray/10' />
         <div className='mx-auto my-10 max-w-[1000px]'>
+          <h4 className='py-4 text-2xl font-medium tracking-wider text-gray'>More concept</h4>
           <div>
             <Slider {...settings}>
-              {listConcept.map((image, index) => (
+              {listConceptDetail.map((image, index) => (
                 <div
                   key={index}
                   className='mx-auto h-[200px] w-full cursor-pointer overflow-hidden px-1 sm:h-[300px] md:h-[400px]'

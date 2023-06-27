@@ -41,12 +41,7 @@ export const listConceptBeatyAndTheBeast = [
   'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-dreaming-of-love-concept-6.jpg',
   'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-dreaming-of-love-concept-7.jpg',
   'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-dreaming-of-love-concept-8.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-dreaming-of-love-concept-9.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-dreaming-of-love-concept-10.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-dreaming-of-love-concept-11.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-dreaming-of-love-concept-12.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-dreaming-of-love-concept-13.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-dreaming-of-love-concept-14.jpg'
+  'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-dreaming-of-love-concept-9.jpg'
 ]
 
 export const listConceptElegantLove = [

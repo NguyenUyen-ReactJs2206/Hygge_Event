@@ -10,7 +10,7 @@ import Gallery from './pages/Gallery'
 import Testimonials from './pages/Testimonials'
 import path from './constants/path'
 import pathConceptDetails from './constants/pathConceptDetails'
-import ConceptDetail from './components/ConceptDetail'
+import ConceptDetail from './pages/ConceptDetail'
 import {
   listConceptBeatyAndTheBeast,
   listConceptBridgerton,
@@ -83,7 +83,7 @@ export default function useRouterElements() {
       path: pathConceptDetails.conceptRapunzel,
       element: (
         <MainLayout>
-          <ConceptDetail name='Rapunzel' listConcept={listConceptRapunzel} />
+          <ConceptDetail name='Rapunzel' listConceptDetail={listConceptRapunzel} />
         </MainLayout>
       )
     },
@@ -91,7 +91,7 @@ export default function useRouterElements() {
       path: pathConceptDetails.conceptBridgerton,
       element: (
         <MainLayout>
-          <ConceptDetail name='Bridgeton' listConcept={listConceptBridgerton} />
+          <ConceptDetail name='Bridgeton' listConceptDetail={listConceptBridgerton} />
         </MainLayout>
       )
     },
@@ -99,7 +99,7 @@ export default function useRouterElements() {
       path: pathConceptDetails.conceptBeatyAndTheBeast,
       element: (
         <MainLayout>
-          <ConceptDetail name='Beaty And TheBeast' listConcept={listConceptBeatyAndTheBeast} />
+          <ConceptDetail name='Beaty And The Beast' listConceptDetail={listConceptBeatyAndTheBeast} />
         </MainLayout>
       )
     },
@@ -107,7 +107,7 @@ export default function useRouterElements() {
       path: pathConceptDetails.conceptElegantLove,
       element: (
         <MainLayout>
-          <ConceptDetail name='Elegant Love' listConcept={listConceptElegantLove} />
+          <ConceptDetail name='Elegant Love' listConceptDetail={listConceptElegantLove} />
         </MainLayout>
       )
     },
@@ -115,7 +115,7 @@ export default function useRouterElements() {
       path: pathConceptDetails.conceptTheGreatestShowman,
       element: (
         <MainLayout>
-          <ConceptDetail name='The Greatest Showman' listConcept={listConceptTheGreatestShowman} />
+          <ConceptDetail name='The Greatest Showman' listConceptDetail={listConceptTheGreatestShowman} />
         </MainLayout>
       )
     },
@@ -123,7 +123,7 @@ export default function useRouterElements() {
       path: pathConceptDetails.conceptUpsideDown,
       element: (
         <MainLayout>
-          <ConceptDetail name='Upside Down' listConcept={listConceptUpsideDown} />
+          <ConceptDetail name='Upside Down' listConceptDetail={listConceptUpsideDown} />
         </MainLayout>
       )
     }

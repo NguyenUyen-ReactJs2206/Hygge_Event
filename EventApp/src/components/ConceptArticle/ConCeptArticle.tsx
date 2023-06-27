@@ -21,9 +21,9 @@ export default function ConCeptArticle({ name, pathConcept }: Props) {
         <div className='md:pt-4'>
           <div
             className='translate-y-0 transform opacity-100 transition-all
-            duration-1000 group-hover:-translate-y-2 group-hover:opacity-100 md:translate-y-0
-            md:transform-none md:opacity-100
-            md:transition-none md:duration-0'
+            duration-1000 group-hover:-translate-y-2 group-hover:opacity-100 md:translate-y-0 md:transform-none
+            md:opacity-100 md:transition-none
+            md:duration-0 md:group-hover:translate-y-0'
           >
             <h3 className='cursor-default text-2xl font-medium tracking-wide text-blue md:text-3xl md:font-medium'>
               {name}
