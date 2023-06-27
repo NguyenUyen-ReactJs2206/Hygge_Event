@@ -1,6 +1,8 @@
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import MoreConcept from 'src/components/MoreConcept'
+import pathConceptDetails from 'src/constants/pathConceptDetails'
 
 type Props = {
   name: string
@@ -37,14 +39,12 @@ export default function ConceptDetail({ name, listConceptDetail }: Props) {
           <h4 className='py-4 text-2xl font-medium tracking-wider text-gray'>More concept</h4>
           <div>
             <Slider {...settings}>
-              {listConceptDetail.map((image, index) => (
-                <div
-                  key={index}
-                  className='mx-auto h-[200px] w-full cursor-pointer overflow-hidden px-1 sm:h-[300px] md:h-[400px]'
-                >
-                  <img src={image} alt={image} className='h-full w-full object-cover' />
-                </div>
-              ))}
+              <MoreConcept name='Rapunzel' pathConcept={pathConceptDetails.conceptRapunzel} />
+              <MoreConcept name='Bridgerton' pathConcept={pathConceptDetails.conceptBridgerton} />
+              <MoreConcept name='Beaty And The Beast' pathConcept={pathConceptDetails.conceptBeatyAndTheBeast} />
+              <MoreConcept name='Elegant Love' pathConcept={pathConceptDetails.conceptElegantLove} />
+              <MoreConcept name='The Greatest Showman' pathConcept={pathConceptDetails.conceptTheGreatestShowman} />
+              <MoreConcept name='Upside Down' pathConcept={pathConceptDetails.conceptUpsideDown} />
             </Slider>
           </div>
         </div>
