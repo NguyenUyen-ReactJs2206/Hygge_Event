@@ -14,12 +14,15 @@
   },
   "dependencies": {
     "@types/react-scroll": "^1.8.7",
+    "@types/react-slick": "^0.23.10",
     "flowbite-react": "^0.4.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.12.1",
     "react-scroll": "^1.8.9",
-    "sass": "^1.63.4"
+    "react-slick": "^0.29.0",
+    "sass": "^1.63.4",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",

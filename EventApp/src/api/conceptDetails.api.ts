@@ -79,8 +79,7 @@ export const listConceptTheGreatestShowman = [
   'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-kaleidoscope-concept-10.jpg',
   'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-kaleidoscope-concept-11.jpg',
   'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-kaleidoscope-concept-12.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-kaleidoscope-concept-13.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-kaleidoscope-concept-14.jpg'
+  'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-kaleidoscope-concept-13.jpg'
 ]
 
 export const listConceptUpsideDown = [
