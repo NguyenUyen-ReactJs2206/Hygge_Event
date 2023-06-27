@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import ConCeptArticle from '../../components/ConceptArticle'
 import '../../sass/index.scss'
 import pathConceptDetails from 'src/constants/pathConceptDetails'
@@ -12,7 +11,7 @@ export default function Concept() {
             <h1 className='font mb-4 pl-10 text-4xl font-semibold tracking-wider text-gray md:hidden'>Concepts</h1>
             <div className='grid grid-cols-6'>
               <div className='col-span-6 md:col-span-3'>
-                <div className='group relative pl-0 md:cursor-default md:pl-6 lg:pl-10'>
+                <div className='group relative cursor-pointer pl-0 md:cursor-default md:pl-6 lg:pl-10'>
                   <ConCeptArticle name='Rapunzel' pathConcept={pathConceptDetails.conceptRapunzel} />
                 </div>
               </div>
