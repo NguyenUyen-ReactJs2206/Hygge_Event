@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { Link as ScrollLink } from 'react-scroll'
 
 type Props = {
   name: string
@@ -8,10 +7,10 @@ type Props = {
 
 export default function MoreConcept({ name, pathConcept }: Props) {
   return (
-    <div>
+    <div className='mx-auto lg:max-w-[450px]'>
       <div className='group relative cursor-pointer'>
         <Link to={pathConcept}>
-          <div className='mx-auto h-[200px] w-full cursor-pointer overflow-hidden px-2 sm:h-[300px] md:h-[400px]'>
+          <div className='mx-auto h-[200px] w-full cursor-pointer overflow-hidden sm:h-[300px] md:h-[400px]'>
             <img
               src='https://www.brides.com/thmb/Nb8-KQb0UbTEh9uymClKoLHhEyg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WR-8b335c7adae842dc9f80ec3c4eaf9c48.jpg'
               alt='concept1'

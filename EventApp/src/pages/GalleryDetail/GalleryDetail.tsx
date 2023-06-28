@@ -22,7 +22,7 @@ export default function GalleryDetail({ name, listGalleryDetail }: Props) {
         </div>
         <hr className='mx-auto max-w-[1000px] text-gray/10' />
         <div className='mx-auto my-10 max-w-[1000px]'>
-          <h4 className='py-4 text-2xl font-medium tracking-wider text-gray'>More concept</h4>
+          <h4 className='py-4 text-2xl font-medium tracking-wider text-gray'>More Galleries</h4>
         </div>
       </div>
     </div>

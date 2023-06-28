@@ -28,7 +28,7 @@ export default function CarouselBanner() {
             <img
               src={banners[currentIndex]}
               alt={banners[currentIndex]}
-              className='h-full w-full object-none md:object-cover'
+              className=' h-full w-full object-none md:object-cover'
             />
           </div>
           <div className='absolute bottom-0 left-0 right-0 flex h-10 items-center justify-end gap-2 md:justify-center'>

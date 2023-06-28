@@ -1,24 +1,15 @@
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
 import MoreConcept from 'src/components/MoreConcept'
 import pathConceptDetails from 'src/constants/pathConceptDetails'
 import { Link } from 'react-scroll'
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
+import { responsive } from 'src/api/conceptDetails.api'
 
 type Props = {
   name: string
   listConceptDetail: string[]
 }
 export default function ConceptDetail({ name, listConceptDetail }: Props) {
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true
-  }
   return (
     <div className='concept-detail py-24' id='top'>
       <div className='container'>
@@ -38,8 +29,8 @@ export default function ConceptDetail({ name, listConceptDetail }: Props) {
         <hr className='mx-auto max-w-[1000px] text-gray/10' />
         <div className='mx-auto my-10 max-w-[1000px]'>
           <h4 className='py-4 text-2xl font-medium tracking-wider text-gray'>More concept</h4>
-          <div>
-            <Slider {...settings}>
+          <div className=''>
+            <Carousel ssr={true} infinite={true} autoPlay={true} autoPlaySpeed={2000} responsive={responsive}>
               <Link to='top'>
                 <MoreConcept name='Rapunzel' pathConcept={pathConceptDetails.conceptRapunzel} />
               </Link>
@@ -58,7 +49,7 @@ export default function ConceptDetail({ name, listConceptDetail }: Props) {
               <Link to='top'>
                 <MoreConcept name='Upside Down' pathConcept={pathConceptDetails.conceptUpsideDown} />
               </Link>
-            </Slider>
+            </Carousel>
           </div>
         </div>
       </div>

@@ -81,7 +81,7 @@ export default function NavHeader() {
                   <NavLink
                     to={path.home}
                     className={({ isActive }) =>
-                      `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
+                      `text-blue hover:text-blue/50 inline-block py-1 tracking-widest hover:duration-300 ${
                         isActive ? 'text-blue/50' : ''
                       }`
                     }
@@ -96,7 +96,7 @@ export default function NavHeader() {
                   <NavLink
                     to={path.aboutUs}
                     className={({ isActive }) =>
-                      `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
+                      `text-blue hover:text-blue/50 inline-block py-1 tracking-widest hover:duration-300 ${
                         isActive ? 'text-blue/50' : ''
                       }`
                     }
@@ -111,7 +111,7 @@ export default function NavHeader() {
                   <NavLink
                     to={path.concept}
                     className={({ isActive }) =>
-                      `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
+                      `text-blue hover:text-blue/50 inline-block py-1 tracking-widest hover:duration-300 ${
                         isActive ? 'text-blue/50' : ''
                       }`
                     }
@@ -126,7 +126,7 @@ export default function NavHeader() {
                   <NavLink
                     to={path.gallery}
                     className={({ isActive }) =>
-                      `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
+                      `text-blue hover:text-blue/50 inline-block py-1 tracking-widest hover:duration-300 ${
                         isActive ? 'text-blue/50' : ''
                       }`
                     }
@@ -141,7 +141,7 @@ export default function NavHeader() {
                   <NavLink
                     to={path.testimonials}
                     className={({ isActive }) =>
-                      `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
+                      `text-blue hover:text-blue/50 inline-block py-1 tracking-widest hover:duration-300 ${
                         isActive ? 'text-blue/50' : ''
                       }`
                     }
@@ -156,7 +156,7 @@ export default function NavHeader() {
                   <NavLink
                     to={path.blog}
                     className={({ isActive }) =>
-                      `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
+                      `text-blue hover:text-blue/50 inline-block py-1 tracking-widest hover:duration-300 ${
                         isActive ? 'text-blue/50' : ''
                       }`
                     }
@@ -171,7 +171,7 @@ export default function NavHeader() {
                   <NavLink
                     to={path.contact}
                     className={({ isActive }) =>
-                      `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
+                      `text-blue hover:text-blue/50 inline-block py-1 tracking-widest hover:duration-300 ${
                         isActive ? 'text-blue/50' : ''
                       }`
                     }
@@ -182,14 +182,14 @@ export default function NavHeader() {
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>
-                <span className='cursor-pointer py-1 pl-5 text-blue hover:text-blue/50 hover:duration-300'>EN</span>
+                <span className='text-blue hover:text-blue/50 cursor-pointer py-1 pl-5 hover:duration-300'>EN</span>
               </li>
             </ul>
           </div>
         </div>
       </nav>
       <ul
-        className={`fixed right-0 top-0 z-[999] w-full overflow-y-auto bg-white/90 px-8 py-2 text-center text-lg tracking-wide text-blue shadow-sm duration-500  lg:hidden
+        className={`text-blue fixed right-0 top-0 z-[999] w-full overflow-y-auto bg-white/90 px-8 py-2 text-center text-lg tracking-wide shadow-sm duration-500  lg:hidden
           ${open ? 'top-[50px] duration-500' : 'top-[-100%] duration-500'}`}
       >
         <li className=''>
@@ -198,7 +198,7 @@ export default function NavHeader() {
               to={path.home}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
+                `hover:text-blue/50 inline-block px-6 py-1 hover:duration-300 ${isActive ? 'text-blue font-bold' : ''}`
               }
             >
               Home
@@ -211,7 +211,7 @@ export default function NavHeader() {
               to={path.aboutUs}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
+                `hover:text-blue/50 inline-block px-6 py-1 hover:duration-300 ${isActive ? 'text-blue font-bold' : ''}`
               }
             >
               About Us
@@ -224,7 +224,7 @@ export default function NavHeader() {
               to={path.concept}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
+                `hover:text-blue/50 inline-block px-6 py-1 hover:duration-300 ${isActive ? 'text-blue font-bold' : ''}`
               }
             >
               Concept
@@ -237,7 +237,7 @@ export default function NavHeader() {
               to={path.gallery}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
+                `hover:text-blue/50 inline-block px-6 py-1 hover:duration-300 ${isActive ? 'text-blue font-bold' : ''}`
               }
             >
               Gallery
@@ -250,7 +250,7 @@ export default function NavHeader() {
               to={path.testimonials}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
+                `hover:text-blue/50 inline-block px-6 py-1 hover:duration-300 ${isActive ? 'text-blue font-bold' : ''}`
               }
             >
               Testimonials
@@ -263,7 +263,7 @@ export default function NavHeader() {
               to={path.blog}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
+                `hover:text-blue/50 inline-block px-6 py-1 hover:duration-300 ${isActive ? 'text-blue font-bold' : ''}`
               }
             >
               Blog
@@ -276,7 +276,7 @@ export default function NavHeader() {
               to={path.contact}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
+                `hover:text-blue/50 inline-block px-6 py-1 hover:duration-300 ${isActive ? 'text-blue font-bold' : ''}`
               }
             >
               Contact
