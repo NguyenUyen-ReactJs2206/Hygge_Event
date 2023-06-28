@@ -9,6 +9,8 @@ import BeautyTwo from 'src/assets/images/gallery/beauty-and-the-beast-two.png'
 import UpsideOne from 'src/assets/images/gallery/upside-down-one.png'
 import UpsideTwo from 'src/assets/images/gallery/upside-down-two.png'
 import UnderLineEffect from 'src/components/UnderlineEffect'
+import { Link } from 'react-router-dom'
+import pathGalleryDetails from 'src/constants/pathGalleryDetails'
 
 export default function Gallery() {
   return (
@@ -17,54 +19,54 @@ export default function Gallery() {
         <div className='mx-auto max-w-[1500px]'>
           <div className='mb-4 flex flex-wrap justify-center gap-x-4 gap-y-0 lg:mb-0 lg:grid lg:grid-cols-5 lg:gap-4'>
             <div className='lg:col-span-1'>
-              <div className='text-center lg:py-4'>
+              <Link to={pathGalleryDetails.galleryTheGreatestShowman} className='text-center lg:py-4'>
                 <div className='group relative lg:static'>
                   <h2 className='cursor-pointer py-1 text-sm font-medium uppercase tracking-wide text-cyan-500 duration-300 hover:text-blue hover:transition-all hover:duration-300'>
                     The Greatest Showman
                   </h2>
                   <UnderLineEffect color='blue' />
                 </div>
-              </div>
+              </Link>
             </div>
             <div className='lg:col-span-1'>
-              <div className='text-center lg:py-4'>
+              <Link to={pathGalleryDetails.galleryUnderTheSea} className='text-center lg:py-4'>
                 <div className='group relative lg:static'>
                   <h2 className='cursor-pointer py-1 text-sm font-medium uppercase tracking-wide text-cyan-500 duration-300 hover:text-blue hover:transition-all hover:duration-300'>
                     Under The Sea
                   </h2>
                   <UnderLineEffect color='blue' />
                 </div>
-              </div>
+              </Link>
             </div>
             <div className='lg:col-span-1'>
-              <div className='text-center lg:py-4'>
+              <Link to={pathGalleryDetails.galleryRainforest} className='text-center lg:py-4'>
                 <div className='group relative lg:static'>
                   <h2 className='cursor-pointer py-1 text-sm font-medium uppercase tracking-wide text-cyan-500 duration-300 hover:text-blue hover:transition-all hover:duration-300'>
                     Rainforest
                   </h2>
                   <UnderLineEffect color='blue' />
                 </div>
-              </div>
+              </Link>
             </div>
             <div className='lg:col-span-1'>
-              <div className='text-center lg:py-4'>
+              <Link to={pathGalleryDetails.galleryBeautyAndTheBeast} className='text-center lg:py-4'>
                 <div className='group relative lg:static'>
                   <h2 className='cursor-pointer py-1 text-sm font-medium uppercase tracking-wide text-cyan-500 duration-300 hover:text-blue hover:transition-all hover:duration-300'>
                     Beauty And The Beast
                   </h2>
                   <UnderLineEffect color='blue' />
                 </div>
-              </div>
+              </Link>
             </div>
             <div className='lg:col-span-1'>
-              <div className='text-center lg:py-4'>
+              <Link to={pathGalleryDetails.galleryUpsideDown} className='text-center lg:py-4'>
                 <div className='group relative lg:static'>
                   <h2 className='cursor-pointer py-1 text-sm font-medium uppercase tracking-wide text-cyan-500 duration-300 hover:text-blue hover:transition-all hover:duration-300'>
                     Upside Down
                   </h2>
                   <UnderLineEffect color='blue' />
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
           <div className='grid grid-cols-5 gap-x-4 lg:gap-4'>

@@ -19,6 +19,15 @@ import {
   listConceptTheGreatestShowman,
   listConceptUpsideDown
 } from './api/conceptDetails.api'
+import pathGalleryDetails from './constants/pathGalleryDetails'
+import GalleryDetail from './pages/GalleryDetail/GalleryDetail'
+import {
+  listBeautyAndTheBeast,
+  listRainForest,
+  listTheGreatestShowman,
+  listUnderTheSea,
+  listUpsideDown
+} from './api/GalleryDetail.api'
 
 export default function useRouterElements() {
   const routes = useRoutes([
@@ -124,6 +133,46 @@ export default function useRouterElements() {
       element: (
         <MainLayout>
           <ConceptDetail name='Upside Down' listConceptDetail={listConceptUpsideDown} />
+        </MainLayout>
+      )
+    },
+    {
+      path: pathGalleryDetails.galleryTheGreatestShowman,
+      element: (
+        <MainLayout>
+          <GalleryDetail name='The Greatest Showman' listGalleryDetail={listTheGreatestShowman} />
+        </MainLayout>
+      )
+    },
+    {
+      path: pathGalleryDetails.galleryUnderTheSea,
+      element: (
+        <MainLayout>
+          <GalleryDetail name='Under The Sea' listGalleryDetail={listUnderTheSea} />
+        </MainLayout>
+      )
+    },
+    {
+      path: pathGalleryDetails.galleryRainforest,
+      element: (
+        <MainLayout>
+          <GalleryDetail name='Rainforest' listGalleryDetail={listRainForest} />
+        </MainLayout>
+      )
+    },
+    {
+      path: pathGalleryDetails.galleryBeautyAndTheBeast,
+      element: (
+        <MainLayout>
+          <GalleryDetail name='Beauty And The Beast' listGalleryDetail={listBeautyAndTheBeast} />
+        </MainLayout>
+      )
+    },
+    {
+      path: pathGalleryDetails.galleryUpsideDown,
+      element: (
+        <MainLayout>
+          <GalleryDetail name='Upside Down' listGalleryDetail={listUpsideDown} />
         </MainLayout>
       )
     }
