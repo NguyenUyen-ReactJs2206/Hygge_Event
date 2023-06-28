@@ -1,3 +1,13 @@
+import Carousel from 'react-multi-carousel'
+import { responsive } from 'src/api/conceptDetails.api'
+import MoreGalleries from 'src/components/MoreGalleries'
+import pathGalleryDetails from 'src/constants/pathGalleryDetails'
+import ImageGalleryTheGreatestShowman from 'src/assets/images/gallery/the-greatest-showman-one.png'
+import ImageGalleryUnderTheSea from 'src/assets/images/gallery/under-the-sea-one.png'
+import ImageGalleryRainforest from 'src/assets/images/gallery/rainforest-one.png'
+import ImageGalleryBeatyAndTheBeast from 'src/assets/images/gallery/beauty-and-the-beast-one.png'
+import ImageGalleryUpsideDown from 'src/assets/images/gallery/upside-down-one.png'
+
 type Props = {
   name: string
   listGalleryDetail: string[]
@@ -23,6 +33,37 @@ export default function GalleryDetail({ name, listGalleryDetail }: Props) {
         <hr className='mx-auto max-w-[1000px] text-gray/10' />
         <div className='mx-auto my-10 max-w-[1000px]'>
           <h4 className='py-4 text-2xl font-medium tracking-wider text-gray'>More Galleries</h4>
+          <Carousel responsive={responsive}>
+            <MoreGalleries
+              name='The Greatest Showman'
+              pathGalleries={pathGalleryDetails.galleryTheGreatestShowman}
+              image={ImageGalleryTheGreatestShowman}
+            />
+
+            <MoreGalleries
+              name='Under The Sea'
+              pathGalleries={pathGalleryDetails.galleryUnderTheSea}
+              image={ImageGalleryUnderTheSea}
+            />
+
+            <MoreGalleries
+              name='Rainforest'
+              pathGalleries={pathGalleryDetails.galleryRainforest}
+              image={ImageGalleryRainforest}
+            />
+
+            <MoreGalleries
+              name='Beauty And The Beast'
+              pathGalleries={pathGalleryDetails.galleryBeautyAndTheBeast}
+              image={ImageGalleryBeatyAndTheBeast}
+            />
+
+            <MoreGalleries
+              name='Upside Down'
+              pathGalleries={pathGalleryDetails.galleryUpsideDown}
+              image={ImageGalleryUpsideDown}
+            />
+          </Carousel>
         </div>
       </div>
     </div>
