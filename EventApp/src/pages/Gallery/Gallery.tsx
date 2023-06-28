@@ -21,7 +21,7 @@ export default function Gallery() {
             <div className='lg:col-span-1'>
               <Link to={pathGalleryDetails.galleryTheGreatestShowman} className='text-center lg:py-4'>
                 <div className='group relative lg:static'>
-                  <h2 className='cursor-pointer py-1 text-sm font-medium uppercase tracking-wide text-cyan-500 duration-300 hover:text-blue hover:transition-all hover:duration-300'>
+                  <h2 className='cursor-pointer py-1 text-sm font-medium uppercase tracking-wide text-cyan-500 duration-300 hover:text-blue hover:transition-all hover:duration-300 lg:py-2'>
                     The Greatest Showman
                   </h2>
                   <UnderLineEffect color='blue' />
@@ -72,92 +72,122 @@ export default function Gallery() {
           <div className='grid grid-cols-5 gap-x-4 lg:gap-4'>
             <div className='col-span-5 lg:col-span-1'>
               <div className='mx-auto flex max-w-[600px] items-center  justify-center sm:gap-2 md:gap-4 lg:block'>
-                <div className='h-full w-full cursor-pointer overflow-hidden'>
+                <Link
+                  to={pathGalleryDetails.galleryTheGreatestShowman}
+                  className='h-full w-full cursor-pointer overflow-hidden'
+                >
                   <img
                     src={`${TheGreatestShowmanOne}`}
                     alt={`${TheGreatestShowmanOne}`}
                     className='h-full w-full scale-100 cursor-pointer transition-all duration-[1000ms] hover:scale-105 hover:duration-[1000ms] lg:pb-4'
                   />
-                </div>
-                <div className='h-full w-full cursor-pointer overflow-hidden'>
+                </Link>
+                <Link
+                  to={pathGalleryDetails.galleryTheGreatestShowman}
+                  className='h-full w-full cursor-pointer overflow-hidden'
+                >
                   <img
                     src={`${TheGreatestShowmanTwo}`}
                     alt={`${TheGreatestShowmanTwo}`}
                     className='h-full w-full scale-100 cursor-pointer transition-all duration-[1000ms] hover:scale-105 hover:duration-[1000ms]'
                   />
-                </div>
+                </Link>
               </div>
             </div>
             <div className='col-span-5 lg:col-span-1'>
               <div className='mx-auto flex max-w-[600px] items-center justify-center sm:gap-2 md:gap-4 lg:block'>
-                <div className='h-full w-full cursor-pointer overflow-hidden'>
+                <Link
+                  to={pathGalleryDetails.galleryUnderTheSea}
+                  className='h-full w-full cursor-pointer overflow-hidden'
+                >
                   <img
                     src={`${UnderTheSeaOne}`}
                     alt={`${UnderTheSeaOne}`}
                     className='h-full w-full scale-100 cursor-pointer transition-all duration-[1000ms] hover:scale-105 hover:duration-[1000ms] lg:pb-4'
                   />
-                </div>
-                <div className='h-full w-full cursor-pointer overflow-hidden'>
+                </Link>
+                <Link
+                  to={pathGalleryDetails.galleryUnderTheSea}
+                  className='h-full w-full cursor-pointer overflow-hidden'
+                >
                   <img
                     src={`${UnderTheSeaTwo}`}
                     alt={`${UnderTheSeaTwo}`}
                     className='h-full w-full scale-100 cursor-pointer transition-all duration-[1000ms] hover:scale-105 hover:duration-[1000ms]'
                   />
-                </div>
+                </Link>
               </div>
             </div>
             <div className='col-span-5 lg:col-span-1'>
               <div className='mx-auto flex max-w-[600px] items-center justify-center sm:gap-2 md:gap-4 lg:block'>
-                <div className='h-full w-full cursor-pointer overflow-hidden'>
+                <Link
+                  to={pathGalleryDetails.galleryRainforest}
+                  className='h-full w-full cursor-pointer overflow-hidden'
+                >
                   <img
                     src={`${RainforestOne}`}
                     alt={`${RainforestOne}`}
                     className='h-full w-full scale-100 cursor-pointer transition-all duration-[1000ms] hover:scale-105 hover:duration-[1000ms] lg:pb-4'
                   />
-                </div>
-                <div className='h-full w-full cursor-pointer overflow-hidden'>
+                </Link>
+                <Link
+                  to={pathGalleryDetails.galleryRainforest}
+                  className='h-full w-full cursor-pointer overflow-hidden'
+                >
                   <img
                     src={`${RainforestTwo}`}
                     alt={`${RainforestTwo}`}
                     className='h-full w-full scale-100 cursor-pointer transition-all duration-[1000ms] hover:scale-105 hover:duration-[1000ms]'
                   />
-                </div>
+                </Link>
               </div>
             </div>
             <div className='col-span-5 lg:col-span-1'>
               <div className='mx-auto flex max-w-[600px] items-center justify-center sm:gap-2 md:gap-4 lg:block'>
-                <div className='h-full w-full cursor-pointer overflow-hidden'>
+                <Link
+                  to={pathGalleryDetails.galleryBeautyAndTheBeast}
+                  className='h-full w-full cursor-pointer overflow-hidden'
+                >
                   <img
                     src={`${BeautyOne}`}
                     alt={`${BeautyOne}`}
                     className='h-full w-full scale-100 cursor-pointer transition-all duration-[1000ms] hover:scale-105 hover:duration-[1000ms] lg:pb-4'
                   />
-                </div>
-                <div className='h-full w-full cursor-pointer overflow-hidden'>
+                </Link>
+                <Link
+                  to={pathGalleryDetails.galleryBeautyAndTheBeast}
+                  className='h-full w-full cursor-pointer overflow-hidden'
+                >
                   <img
                     src={`${BeautyTwo}`}
                     alt={`${BeautyTwo}`}
                     className='h-full w-full scale-100 cursor-pointer transition-all duration-[1000ms] hover:scale-105 hover:duration-[1000ms]'
                   />
-                </div>
+                </Link>
               </div>
             </div>
             <div className='col-span-5 lg:col-span-1'>
               <div className='mx-auto flex max-w-[600px] items-center justify-center sm:gap-2 md:gap-4 lg:block'>
-                <div className='h-full w-full cursor-pointer overflow-hidden'>
+                <Link
+                  to={pathGalleryDetails.galleryUpsideDown}
+                  className='h-full w-full cursor-pointer overflow-hidden'
+                >
                   <img
                     src={`${UpsideOne}`}
                     alt={`${UpsideOne}`}
                     className='h-full w-full scale-100 cursor-pointer transition-all duration-[1000ms] hover:scale-105 hover:duration-[1000ms] lg:pb-4'
                   />
-                </div>
-                <div className='h-full w-full cursor-pointer overflow-hidden'>
+                </Link>
+                <Link
+                  to={pathGalleryDetails.galleryUpsideDown}
+                  className='h-full w-full cursor-pointer overflow-hidden'
+                >
                   <img
                     src={`${UpsideTwo}`}
                     alt={`${UpsideTwo}`}
                     className='h-full w-full scale-100 cursor-pointer transition-all duration-[1000ms] hover:scale-105 hover:duration-[1000ms]'
                   />
-                </div>
+                </Link>
               </div>
             </div>
           </div>
