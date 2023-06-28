@@ -31,9 +31,9 @@ export default function NavHeader() {
       >
         <div className='container'>
           <div className='flex items-center justify-between font-medium'>
-            <div className='flex w-full justify-between p-2 lg:w-auto lg:p-4'>
+            <Link to={path.home} className='flex w-full justify-between p-2 lg:w-auto lg:p-4'>
               <img src={logo} alt='logo' className='h-9 md:cursor-pointer' />
-            </div>
+            </Link>
             <div>
               {open && (
                 <button className='lg:hidden' onClick={() => setOpen(false)}>
