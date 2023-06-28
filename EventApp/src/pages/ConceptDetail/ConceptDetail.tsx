@@ -1,6 +1,5 @@
 import MoreConcept from 'src/components/MoreConcept'
 import pathConceptDetails from 'src/constants/pathConceptDetails'
-import { Link } from 'react-scroll'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import { responsive } from 'src/api/conceptDetails.api'
@@ -30,35 +29,18 @@ export default function ConceptDetail({ name, listConceptDetail }: Props) {
         <div className='mx-auto my-10 max-w-[1000px]'>
           <h4 className='py-4 text-2xl font-medium tracking-wider text-gray'>More concept</h4>
           <div className=''>
-            <Carousel
-              swipeable={true}
-              draggable={true}
-              responsive={responsive}
-              ssr={true}
-              infinite={true}
-              autoPlaySpeed={2000}
-              keyBoardControl={true}
-              transitionDuration={2000}
-              autoPlay={true}
-            >
-              <Link to='top'>
-                <MoreConcept name='Rapunzel' pathConcept={pathConceptDetails.conceptRapunzel} />
-              </Link>
-              <Link to='top'>
-                <MoreConcept name='Bridgerton' pathConcept={pathConceptDetails.conceptBridgerton} />
-              </Link>
-              <Link to='top'>
-                <MoreConcept name='Beaty And The Beast' pathConcept={pathConceptDetails.conceptBeatyAndTheBeast} />
-              </Link>
-              <Link to='top'>
-                <MoreConcept name='Elegant Love' pathConcept={pathConceptDetails.conceptElegantLove} />
-              </Link>
-              <Link to='top'>
-                <MoreConcept name='The Greatest Showman' pathConcept={pathConceptDetails.conceptTheGreatestShowman} />
-              </Link>
-              <Link to='top'>
-                <MoreConcept name='Upside Down' pathConcept={pathConceptDetails.conceptUpsideDown} />
-              </Link>
+            <Carousel responsive={responsive}>
+              <MoreConcept name='Rapunzel' pathConcept={pathConceptDetails.conceptRapunzel} />
+
+              <MoreConcept name='Bridgerton' pathConcept={pathConceptDetails.conceptBridgerton} />
+
+              <MoreConcept name='Beaty And The Beast' pathConcept={pathConceptDetails.conceptBeatyAndTheBeast} />
+
+              <MoreConcept name='Elegant Love' pathConcept={pathConceptDetails.conceptElegantLove} />
+
+              <MoreConcept name='The Greatest Showman' pathConcept={pathConceptDetails.conceptTheGreatestShowman} />
+
+              <MoreConcept name='Upside Down' pathConcept={pathConceptDetails.conceptUpsideDown} />
             </Carousel>
           </div>
         </div>

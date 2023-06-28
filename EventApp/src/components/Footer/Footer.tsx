@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import logo from '../../assets/images/logopng.png'
 import path from '../../constants/path'
 import UnderLineEffect from '../UnderlineEffect'
-import { Link as ScrollLink } from 'react-scroll'
 
 export default function Footer() {
   return (
@@ -15,81 +14,67 @@ export default function Footer() {
             </div>
             <div className='z-[-1] hidden items-center py-1 leading-loose sm:flex sm:justify-between'>
               <div className='group relative'>
-                <ScrollLink to='top'>
-                  <Link
-                    to={path.home}
-                    className='py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
-                  >
-                    Home
-                  </Link>
-                  <UnderLineEffect color='white' />
-                </ScrollLink>
+                <Link
+                  to={path.home}
+                  className='py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
+                >
+                  Home
+                </Link>
+                <UnderLineEffect color='white' />
               </div>
               <div className='group relative'>
-                <ScrollLink to='top'>
-                  <Link
-                    to={path.aboutUs}
-                    className='py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
-                  >
-                    About Us
-                  </Link>
-                  <UnderLineEffect color='white' />
-                </ScrollLink>
+                <Link
+                  to={path.aboutUs}
+                  className='py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
+                >
+                  About Us
+                </Link>
+                <UnderLineEffect color='white' />
               </div>
               <div className='group relative'>
-                <ScrollLink to='top'>
-                  <Link
-                    to={path.concept}
-                    className='py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
-                  >
-                    Concept
-                  </Link>
-                  <UnderLineEffect color='white' />
-                </ScrollLink>
+                <Link
+                  to={path.concept}
+                  className='py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
+                >
+                  Concept
+                </Link>
+                <UnderLineEffect color='white' />
               </div>
               <div className='group relative'>
-                <ScrollLink to='top'>
-                  <Link
-                    to={path.gallery}
-                    className='py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
-                  >
-                    Gallery
-                  </Link>
-                  <UnderLineEffect color='white' />
-                </ScrollLink>
+                <Link
+                  to={path.gallery}
+                  className='py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
+                >
+                  Gallery
+                </Link>
+                <UnderLineEffect color='white' />
               </div>
               <div className='group relative'>
-                <ScrollLink to='top'>
-                  <Link
-                    to={path.testimonials}
-                    className='py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
-                  >
-                    Testimonials
-                  </Link>
-                  <UnderLineEffect color='white' />
-                </ScrollLink>
+                <Link
+                  to={path.testimonials}
+                  className='py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
+                >
+                  Testimonials
+                </Link>
+                <UnderLineEffect color='white' />
               </div>
               <div className='group relative'>
-                <ScrollLink to='top'>
-                  <Link
-                    to={path.blog}
-                    className='py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
-                  >
-                    Blog
-                  </Link>
-                  <UnderLineEffect color='white' />
-                </ScrollLink>
+                <Link
+                  to={path.blog}
+                  className='py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
+                >
+                  Blog
+                </Link>
+                <UnderLineEffect color='white' />
               </div>
               <div className='group relative'>
-                <ScrollLink to='top'>
-                  <Link
-                    to={path.contact}
-                    className='py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
-                  >
-                    Contact
-                  </Link>
-                  <UnderLineEffect color='white' />
-                </ScrollLink>
+                <Link
+                  to={path.contact}
+                  className='py-1 text-sm font-semibold uppercase tracking-wide text-white hover:text-cyan-100/90 hover:duration-300 md:font-bold md:tracking-widest '
+                >
+                  Contact
+                </Link>
+                <UnderLineEffect color='white' />
               </div>
             </div>
             <div className='pb-6 pt-2 sm:pb-12 sm:pt-6'>

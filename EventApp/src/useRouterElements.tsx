@@ -1,5 +1,5 @@
-import { useRoutes } from 'react-router-dom'
-
+import { useLocation, useRoutes } from 'react-router-dom'
+import { useEffect } from 'react'
 import MainLayout from './layout/MainLayout'
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
@@ -30,6 +30,12 @@ import {
 } from './api/GalleryDetail.api'
 
 export default function useRouterElements() {
+  const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location])
+
   const routes = useRoutes([
     {
       path: path.home,
