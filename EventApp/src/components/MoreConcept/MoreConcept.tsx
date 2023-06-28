@@ -7,10 +7,10 @@ type Props = {
 
 export default function MoreConcept({ name, pathConcept }: Props) {
   return (
-    <div className='mx-auto lg:max-w-[450px]'>
+    <div className='mx-4'>
       <div className='group relative cursor-pointer'>
         <Link to={pathConcept}>
-          <div className='mx-auto h-[200px] w-full cursor-pointer overflow-hidden sm:h-[300px] md:h-[400px]'>
+          <div className='mx-auto h-[300px] w-full cursor-pointer overflow-hidden sm:h-[300px] md:h-[400px]'>
             <img
               src='https://www.brides.com/thmb/Nb8-KQb0UbTEh9uymClKoLHhEyg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WR-8b335c7adae842dc9f80ec3c4eaf9c48.jpg'
               alt='concept1'
