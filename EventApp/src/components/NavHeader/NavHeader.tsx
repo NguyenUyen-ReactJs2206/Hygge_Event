@@ -25,7 +25,7 @@ export default function NavHeader() {
   return (
     <div className='navigation-bar'>
       <nav
-        className={`fixed top-0 z-[999999999999] w-full bg-white opacity-100 transition-all duration-[700ms]
+        className={`fixed top-0 z-[999999999999] w-full bg-white text-blue opacity-100 transition-all duration-[700ms]
          ${showNav ? 'visible transition-all duration-[700ms]' : 'invisible translate-y-[-100%] duration-[700ms]'}`}
       >
         <div className='container'>
@@ -74,7 +74,7 @@ export default function NavHeader() {
               )}
             </div>
 
-            <ul className='hidden w-max items-center gap-4 font-semibold uppercase tracking-wider lg:flex lg:text-sm'>
+            <ul className='hidden w-max items-center gap-4 font-semibold uppercase tracking-wider text-blue lg:flex lg:text-sm'>
               <li className='group relative '>
                 <NavLink
                   to={path.home}
@@ -86,7 +86,6 @@ export default function NavHeader() {
                 >
                   Home
                 </NavLink>
-
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>
@@ -100,7 +99,6 @@ export default function NavHeader() {
                 >
                   About Us
                 </NavLink>
-
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>
@@ -114,7 +112,6 @@ export default function NavHeader() {
                 >
                   Concept
                 </NavLink>
-
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>
@@ -128,7 +125,6 @@ export default function NavHeader() {
                 >
                   Gallery
                 </NavLink>
-
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>
@@ -142,7 +138,6 @@ export default function NavHeader() {
                 >
                   Testimonials
                 </NavLink>
-
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>
@@ -156,7 +151,6 @@ export default function NavHeader() {
                 >
                   Blog
                 </NavLink>
-
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>
@@ -170,7 +164,6 @@ export default function NavHeader() {
                 >
                   Contact
                 </NavLink>
-
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>

@@ -25,7 +25,7 @@ export default function MoreGalleries({ name, pathGalleries, image }: Props) {
               className='translate-y-0 transform opacity-100 transition-all
         duration-1000 group-hover:-translate-y-2 group-hover:opacity-100'
             >
-              <h3 className='cursor-default text-base font-medium tracking-wide text-blue sm:text-lg'>{name}</h3>
+              <h3 className='cursor-default text-base font-medium tracking-wide text-black sm:text-xl'>{name}</h3>
               <Link to={pathGalleries}>
                 <button className='underline-effect hover:underline-effect text-sm text-gray duration-300 hover:font-medium hover:text-blue/90 hover:duration-300 sm:text-base'>
                   Read More
