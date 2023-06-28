@@ -3,6 +3,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import MoreConcept from 'src/components/MoreConcept'
 import pathConceptDetails from 'src/constants/pathConceptDetails'
+import { Link } from 'react-scroll'
 
 type Props = {
   name: string
@@ -39,12 +40,24 @@ export default function ConceptDetail({ name, listConceptDetail }: Props) {
           <h4 className='py-4 text-2xl font-medium tracking-wider text-gray'>More concept</h4>
           <div>
             <Slider {...settings}>
-              <MoreConcept name='Rapunzel' pathConcept={pathConceptDetails.conceptRapunzel} />
-              <MoreConcept name='Bridgerton' pathConcept={pathConceptDetails.conceptBridgerton} />
-              <MoreConcept name='Beaty And The Beast' pathConcept={pathConceptDetails.conceptBeatyAndTheBeast} />
-              <MoreConcept name='Elegant Love' pathConcept={pathConceptDetails.conceptElegantLove} />
-              <MoreConcept name='The Greatest Showman' pathConcept={pathConceptDetails.conceptTheGreatestShowman} />
-              <MoreConcept name='Upside Down' pathConcept={pathConceptDetails.conceptUpsideDown} />
+              <Link to='top'>
+                <MoreConcept name='Rapunzel' pathConcept={pathConceptDetails.conceptRapunzel} />
+              </Link>
+              <Link to='top'>
+                <MoreConcept name='Bridgerton' pathConcept={pathConceptDetails.conceptBridgerton} />
+              </Link>
+              <Link to='top'>
+                <MoreConcept name='Beaty And The Beast' pathConcept={pathConceptDetails.conceptBeatyAndTheBeast} />
+              </Link>
+              <Link to='top'>
+                <MoreConcept name='Elegant Love' pathConcept={pathConceptDetails.conceptElegantLove} />
+              </Link>
+              <Link to='top'>
+                <MoreConcept name='The Greatest Showman' pathConcept={pathConceptDetails.conceptTheGreatestShowman} />
+              </Link>
+              <Link to='top'>
+                <MoreConcept name='Upside Down' pathConcept={pathConceptDetails.conceptUpsideDown} />
+              </Link>
             </Slider>
           </div>
         </div>

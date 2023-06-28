@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Link as ScrollLink } from 'react-scroll'
 
 type Props = {
   name: string
@@ -8,15 +9,18 @@ type Props = {
 export default function ConCeptArticle({ name, pathConcept }: Props) {
   return (
     <div>
-      <Link to={pathConcept}>
-        <div className='w-full overflow-hidden md:cursor-default'>
-          <img
-            src='https://www.brides.com/thmb/Nb8-KQb0UbTEh9uymClKoLHhEyg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WR-8b335c7adae842dc9f80ec3c4eaf9c48.jpg'
-            alt='concept1'
-            className='h-[250px] w-full cursor-pointer object-cover shadow-sm duration-[2000ms] group-hover:scale-110 group-hover:opacity-50 group-hover:duration-[2000ms] xs:h-[380px] md:h-full md:group-hover:opacity-100'
-          />
-        </div>
-      </Link>
+      <ScrollLink to='top'>
+        <Link to={pathConcept}>
+          <div className='w-full overflow-hidden md:cursor-default'>
+            <img
+              src='https://www.brides.com/thmb/Nb8-KQb0UbTEh9uymClKoLHhEyg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WR-8b335c7adae842dc9f80ec3c4eaf9c48.jpg'
+              alt='concept1'
+              className='h-[250px] w-full cursor-pointer object-cover shadow-sm duration-[2000ms] group-hover:scale-110 group-hover:opacity-50 group-hover:duration-[2000ms] xs:h-[380px] md:h-full md:group-hover:opacity-100'
+            />
+          </div>
+        </Link>
+      </ScrollLink>
+
       <div className='absolute bottom-2 left-4 h-fit w-fit md:static md:block'>
         <div className='md:pt-4'>
           <div
@@ -28,11 +32,13 @@ export default function ConCeptArticle({ name, pathConcept }: Props) {
             <h3 className='cursor-default text-2xl font-medium tracking-wide text-blue md:text-3xl md:font-medium'>
               {name}
             </h3>
-            <Link to={pathConcept}>
-              <button className='underline-effect hover:underline-effect text-base text-gray duration-300 hover:font-medium hover:text-blue/90 hover:duration-300'>
-                Read More
-              </button>
-            </Link>
+            <ScrollLink to='top'>
+              <Link to={pathConcept}>
+                <button className='underline-effect hover:underline-effect text-base text-gray duration-300 hover:font-medium hover:text-blue/90 hover:duration-300'>
+                  Read More
+                </button>
+              </Link>
+            </ScrollLink>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import pathConceptDetails from 'src/constants/pathConceptDetails'
+import { Link as ScrollLink } from 'react-scroll'
 
 type Props = {
   name: string

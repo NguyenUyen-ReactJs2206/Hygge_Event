@@ -3,6 +3,7 @@ import logo from '../../assets/images/logopng.png'
 import { NavLink } from 'react-router-dom'
 import path from '../../constants/path'
 import UnderLineEffect from '../UnderlineEffect'
+import { Link } from 'react-scroll'
 
 export default function NavHeader() {
   const [open, setOpen] = useState(false)
@@ -23,7 +24,7 @@ export default function NavHeader() {
     setPrevScrollPos(currentScrollPos)
   }
   return (
-    <div className=''>
+    <div className='navigation-bar'>
       <nav
         className={`fixed top-0 z-[999999999999] w-full bg-white opacity-100 transition-all duration-[700ms]
          ${showNav ? 'visible transition-all duration-[700ms]' : 'invisible translate-y-[-100%] duration-[700ms]'}`}
@@ -76,94 +77,108 @@ export default function NavHeader() {
 
             <ul className='hidden w-max items-center gap-4 font-semibold uppercase tracking-wider lg:flex lg:text-sm'>
               <li className='group relative '>
-                <NavLink
-                  to={path.home}
-                  className={({ isActive }) =>
-                    `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
-                      isActive ? 'text-blue/50' : ''
-                    }`
-                  }
-                >
-                  Home
-                </NavLink>
+                <Link to='top'>
+                  <NavLink
+                    to={path.home}
+                    className={({ isActive }) =>
+                      `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
+                        isActive ? 'text-blue/50' : ''
+                      }`
+                    }
+                  >
+                    Home
+                  </NavLink>
+                </Link>
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>
-                <NavLink
-                  to={path.aboutUs}
-                  className={({ isActive }) =>
-                    `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
-                      isActive ? 'text-blue/50' : ''
-                    }`
-                  }
-                >
-                  About Us
-                </NavLink>
+                <Link to='top'>
+                  <NavLink
+                    to={path.aboutUs}
+                    className={({ isActive }) =>
+                      `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
+                        isActive ? 'text-blue/50' : ''
+                      }`
+                    }
+                  >
+                    About Us
+                  </NavLink>
+                </Link>
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>
-                <NavLink
-                  to={path.concept}
-                  className={({ isActive }) =>
-                    `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
-                      isActive ? 'text-blue/50' : ''
-                    }`
-                  }
-                >
-                  Concept
-                </NavLink>
+                <Link to='top'>
+                  <NavLink
+                    to={path.concept}
+                    className={({ isActive }) =>
+                      `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
+                        isActive ? 'text-blue/50' : ''
+                      }`
+                    }
+                  >
+                    Concept
+                  </NavLink>
+                </Link>
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>
-                <NavLink
-                  to={path.gallery}
-                  className={({ isActive }) =>
-                    `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
-                      isActive ? 'text-blue/50' : ''
-                    }`
-                  }
-                >
-                  Gallery
-                </NavLink>
+                <Link to='top'>
+                  <NavLink
+                    to={path.gallery}
+                    className={({ isActive }) =>
+                      `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
+                        isActive ? 'text-blue/50' : ''
+                      }`
+                    }
+                  >
+                    Gallery
+                  </NavLink>
+                </Link>
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>
-                <NavLink
-                  to={path.testimonials}
-                  className={({ isActive }) =>
-                    `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
-                      isActive ? 'text-blue/50' : ''
-                    }`
-                  }
-                >
-                  Testimonials
-                </NavLink>
+                <Link to='top'>
+                  <NavLink
+                    to={path.testimonials}
+                    className={({ isActive }) =>
+                      `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
+                        isActive ? 'text-blue/50' : ''
+                      }`
+                    }
+                  >
+                    Testimonials
+                  </NavLink>
+                </Link>
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>
-                <NavLink
-                  to={path.blog}
-                  className={({ isActive }) =>
-                    `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
-                      isActive ? 'text-blue/50' : ''
-                    }`
-                  }
-                >
-                  Blog
-                </NavLink>
+                <Link to='top'>
+                  <NavLink
+                    to={path.blog}
+                    className={({ isActive }) =>
+                      `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
+                        isActive ? 'text-blue/50' : ''
+                      }`
+                    }
+                  >
+                    Blog
+                  </NavLink>
+                </Link>
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>
-                <NavLink
-                  to={path.contact}
-                  className={({ isActive }) =>
-                    `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
-                      isActive ? 'text-blue/50' : ''
-                    }`
-                  }
-                >
-                  Contact
-                </NavLink>
+                <Link to='top'>
+                  <NavLink
+                    to={path.contact}
+                    className={({ isActive }) =>
+                      `inline-block py-1 tracking-widest text-blue hover:text-blue/50 hover:duration-300 ${
+                        isActive ? 'text-blue/50' : ''
+                      }`
+                    }
+                  >
+                    Contact
+                  </NavLink>
+                </Link>
                 <UnderLineEffect color='blue' />
               </li>
               <li className='group relative'>
@@ -178,81 +193,95 @@ export default function NavHeader() {
           ${open ? 'top-[50px] duration-500' : 'top-[-100%] duration-500'}`}
       >
         <li className=''>
-          <NavLink
-            to={path.home}
-            onClick={() => setOpen(false)}
-            className={({ isActive }) =>
-              `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
-            }
-          >
-            Home
-          </NavLink>
+          <Link to='top'>
+            <NavLink
+              to={path.home}
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
+              }
+            >
+              Home
+            </NavLink>
+          </Link>
         </li>
         <li className=''>
-          <NavLink
-            to={path.aboutUs}
-            onClick={() => setOpen(false)}
-            className={({ isActive }) =>
-              `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
-            }
-          >
-            About Us
-          </NavLink>
+          <Link to='top'>
+            <NavLink
+              to={path.aboutUs}
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
+              }
+            >
+              About Us
+            </NavLink>
+          </Link>
         </li>
         <li className=''>
-          <NavLink
-            to={path.concept}
-            onClick={() => setOpen(false)}
-            className={({ isActive }) =>
-              `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
-            }
-          >
-            Concept
-          </NavLink>
+          <Link to='top'>
+            <NavLink
+              to={path.concept}
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
+              }
+            >
+              Concept
+            </NavLink>
+          </Link>
         </li>
         <li className=' '>
-          <NavLink
-            to={path.gallery}
-            onClick={() => setOpen(false)}
-            className={({ isActive }) =>
-              `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
-            }
-          >
-            Gallery
-          </NavLink>
+          <Link to='top'>
+            <NavLink
+              to={path.gallery}
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
+              }
+            >
+              Gallery
+            </NavLink>
+          </Link>
         </li>
         <li className=' '>
-          <NavLink
-            to={path.testimonials}
-            onClick={() => setOpen(false)}
-            className={({ isActive }) =>
-              `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
-            }
-          >
-            Testimonials
-          </NavLink>
+          <Link to='top'>
+            <NavLink
+              to={path.testimonials}
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
+              }
+            >
+              Testimonials
+            </NavLink>
+          </Link>
         </li>
         <li className=' '>
-          <NavLink
-            to={path.blog}
-            onClick={() => setOpen(false)}
-            className={({ isActive }) =>
-              `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
-            }
-          >
-            Blog
-          </NavLink>
+          <Link to='top'>
+            <NavLink
+              to={path.blog}
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
+              }
+            >
+              Blog
+            </NavLink>
+          </Link>
         </li>
         <li className=''>
-          <NavLink
-            to={path.contact}
-            onClick={() => setOpen(false)}
-            className={({ isActive }) =>
-              `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
-            }
-          >
-            Contact
-          </NavLink>
+          <Link to='top'>
+            <NavLink
+              to={path.contact}
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
+              }
+            >
+              Contact
+            </NavLink>
+          </Link>
         </li>
       </ul>
     </div>
