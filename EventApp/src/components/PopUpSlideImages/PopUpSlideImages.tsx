@@ -69,7 +69,7 @@ export default function PopUpSlideImages({ setIsPopupVisible, listGalleryDetail 
         </div>
         <div className='absolute bottom-0 left-0 right-0 h-[100px] w-full bg-[#0d0a0a]'>
           <div className='mt-2 h-[84px]'>
-            <div className='flex flex-shrink-0 gap-1 overflow-hidden'>
+            <div className='flex gap-1 overflow-hidden'>
               <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500 '>
                 <img src={listGalleryDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
               </div>

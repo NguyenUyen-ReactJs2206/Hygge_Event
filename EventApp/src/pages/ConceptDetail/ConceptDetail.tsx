@@ -3,12 +3,16 @@ import pathConceptDetails from 'src/constants/pathConceptDetails'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import { responsive } from 'src/api/conceptDetails.api'
+import { useState } from 'react'
+import PopUpSlideImages from 'src/components/PopUpSlideImages'
 
 type Props = {
   name: string
   listConceptDetail: string[]
 }
 export default function ConceptDetail({ name, listConceptDetail }: Props) {
+  const [isPopupVisible, setIsPopupVisible] = useState(false)
+  const handleShowPopup = () => setIsPopupVisible(true)
   return (
     <div className='concept-detail py-24' id='top'>
       <div className='container'>
@@ -21,7 +25,10 @@ export default function ConceptDetail({ name, listConceptDetail }: Props) {
           ))}
         </div>
         <div className='text-center'>
-          <button className='my-10 flex-shrink-0 rounded-sm border border-gray/50 px-6 py-2 text-center text-lg uppercase tracking-widest text-gray/50 hover:border-gray/70 hover:text-gray/70'>
+          <button
+            onClick={handleShowPopup}
+            className='my-10 flex-shrink-0 rounded-sm border border-gray/50 px-6 py-2 text-center text-lg uppercase tracking-widest text-gray/50 hover:border-gray/70 hover:text-gray/70'
+          >
             View full album
           </button>
         </div>
@@ -45,6 +52,9 @@ export default function ConceptDetail({ name, listConceptDetail }: Props) {
           </div>
         </div>
       </div>
+      {isPopupVisible && (
+        <PopUpSlideImages listGalleryDetail={listConceptDetail} setIsPopupVisible={setIsPopupVisible} />
+      )}
     </div>
   )
 }
