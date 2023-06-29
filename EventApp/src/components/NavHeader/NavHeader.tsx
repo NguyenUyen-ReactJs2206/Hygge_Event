@@ -25,7 +25,7 @@ export default function NavHeader() {
   return (
     <div className='navigation-bar'>
       <nav
-        className={`fixed top-0 z-[999999999999] w-full bg-white text-blue opacity-100 transition-all duration-[700ms]
+        className={`fixed top-0 z-[99999] w-full bg-white text-blue opacity-100 transition-all duration-[700ms]
          ${showNav ? 'visible transition-all duration-[700ms]' : 'invisible translate-y-[-100%] duration-[700ms]'}`}
       >
         <div className='container'>
