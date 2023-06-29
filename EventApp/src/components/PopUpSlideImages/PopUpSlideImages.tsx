@@ -2,11 +2,11 @@ import { useState } from 'react'
 import { createPortal } from 'react-dom'
 
 type Props = {
-  listGalleryDetail: string[]
+  listImageDetail: string[]
 
   setIsPopupVisible: React.Dispatch<React.SetStateAction<boolean>>
 }
-export default function PopUpSlideImages({ setIsPopupVisible, listGalleryDetail }: Props) {
+export default function PopUpSlideImages({ setIsPopupVisible, listImageDetail }: Props) {
   const [imageIndex, setImageIndex] = useState(0)
   const handleClosePopup = () => setIsPopupVisible(false)
 
@@ -14,7 +14,7 @@ export default function PopUpSlideImages({ setIsPopupVisible, listGalleryDetail 
     <div className='fixed inset-0 z-[99999] h-[100vh] w-full bg-black'>
       <div className='relative'>
         <div className='mx-auto h-[100vh] max-w-[1300px] overflow-hidden'>
-          <img src={listGalleryDetail[0]} alt='#' className='h-full w-full object-cover' />
+          <img src={listImageDetail[0]} alt='#' className='h-full w-full object-cover' />
         </div>
         <div className='absolute left-0 right-0 top-0 h-[7vh] w-full bg-black/20'>
           <div className='flex items-center justify-between p-4'>
@@ -71,43 +71,43 @@ export default function PopUpSlideImages({ setIsPopupVisible, listGalleryDetail 
           <div className='mt-2 h-[84px]'>
             <div className='flex gap-1 overflow-hidden'>
               <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500 '>
-                <img src={listGalleryDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
+                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
               </div>
               <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listGalleryDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
+                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
               </div>
               <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listGalleryDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
+                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
               </div>
               <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listGalleryDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
+                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
               </div>
               <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listGalleryDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
+                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
               </div>
               <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listGalleryDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
+                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
               </div>
               <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listGalleryDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
+                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
               </div>
               <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listGalleryDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
+                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
               </div>
               <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listGalleryDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
+                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
               </div>
               <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listGalleryDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
+                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
               </div>
               <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listGalleryDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
+                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
               </div>
               <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listGalleryDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
+                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
               </div>
               <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listGalleryDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
+                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
               </div>
             </div>
           </div>

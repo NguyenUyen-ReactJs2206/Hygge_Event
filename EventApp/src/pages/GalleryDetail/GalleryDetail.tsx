@@ -74,9 +74,7 @@ export default function GalleryDetail({ name, listGalleryDetail }: Props) {
         </div>
       </div>
 
-      {isPopupVisible && (
-        <PopUpSlideImages listGalleryDetail={listGalleryDetail} setIsPopupVisible={setIsPopupVisible} />
-      )}
+      {isPopupVisible && <PopUpSlideImages listImageDetail={listGalleryDetail} setIsPopupVisible={setIsPopupVisible} />}
     </div>
   )
 }

@@ -52,9 +52,7 @@ export default function ConceptDetail({ name, listConceptDetail }: Props) {
           </div>
         </div>
       </div>
-      {isPopupVisible && (
-        <PopUpSlideImages listGalleryDetail={listConceptDetail} setIsPopupVisible={setIsPopupVisible} />
-      )}
+      {isPopupVisible && <PopUpSlideImages listImageDetail={listConceptDetail} setIsPopupVisible={setIsPopupVisible} />}
     </div>
   )
 }
