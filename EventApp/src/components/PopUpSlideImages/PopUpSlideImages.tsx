@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 import { createPortal } from 'react-dom'
 
 type Props = {
@@ -7,14 +7,23 @@ type Props = {
   setIsPopupVisible: React.Dispatch<React.SetStateAction<boolean>>
 }
 export default function PopUpSlideImages({ setIsPopupVisible, listImageDetail }: Props) {
-  const [imageIndex, setImageIndex] = useState(0)
+  const [imageCurrentIndex, setImageCurrentIndex] = useState(0)
+
+  const prevImage = () => {
+    setImageCurrentIndex((curr) => (curr === listImageDetail.length - 1 ? 0 : curr + 1))
+  }
+
+  const nextImage = () => {
+    setImageCurrentIndex((curr) => (curr === listImageDetail.length - 1 ? 0 : curr + 1))
+  }
+
   const handleClosePopup = () => setIsPopupVisible(false)
 
   return createPortal(
     <div className='fixed inset-0 z-[99999] h-[100vh] w-full bg-black'>
       <div className='relative'>
         <div className='mx-auto h-[100vh] max-w-[1300px] overflow-hidden'>
-          <img src={listImageDetail[0]} alt='#' className='h-full w-full object-cover' />
+          <img src={listImageDetail[imageCurrentIndex]} alt='#' className='h-full w-full object-cover' />
         </div>
         <div className='absolute left-0 right-0 top-0 h-[7vh] w-full bg-black/20'>
           <div className='flex items-center justify-between p-4'>
@@ -70,48 +79,50 @@ export default function PopUpSlideImages({ setIsPopupVisible, listImageDetail }:
         <div className='absolute bottom-0 left-0 right-0 h-[100px] w-full bg-[#0d0a0a]'>
           <div className='mt-2 h-[84px]'>
             <div className='flex gap-1 overflow-hidden'>
-              <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500 '>
-                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
-              </div>
-              <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
-              </div>
-              <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
-              </div>
-              <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
-              </div>
-              <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
-              </div>
-              <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
-              </div>
-              <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
-              </div>
-              <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
-              </div>
-              <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
-              </div>
-              <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
-              </div>
-              <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
-              </div>
-              <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
-              </div>
-              <div className='h-[84px] w-[120px] overflow-hidden rounded-md border-2 border-white transition-all duration-500 hover:border-red-500 hover:duration-500'>
-                <img src={listImageDetail[imageIndex]} alt='' className='h-full w-full object-cover' />
-              </div>
+              {listImageDetail.map((image, index) => (
+                <Fragment key={index}>
+                  <div className='h-[84px] w-[200px]'>
+                    <img
+                      src={image}
+                      alt=''
+                      className='h-full w-full rounded-md border-2 border-white transition-all duration-300 hover:border-red-700 hover:duration-300'
+                    />
+                  </div>
+                </Fragment>
+              ))}
             </div>
           </div>
         </div>
+        <button
+          onClick={prevImage}
+          className='absolute left-6 top-[40%] flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-gray bg-black text-white/80 transition-all duration-300 hover:bg-white hover:text-black hover:duration-300'
+        >
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 24 24'
+            strokeWidth={1.5}
+            stroke='currentColor'
+            className='h-8 w-8'
+          >
+            <path strokeLinecap='round' strokeLinejoin='round' d='M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75' />
+          </svg>
+        </button>
+        <button
+          onClick={nextImage}
+          className='absolute right-6 top-[40%] flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-gray bg-black text-white/80 transition-all duration-300 hover:bg-white hover:text-black hover:duration-300'
+        >
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 24 24'
+            strokeWidth={1.5}
+            stroke='currentColor'
+            className='h-8 w-8'
+          >
+            <path strokeLinecap='round' strokeLinejoin='round' d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' />
+          </svg>
+        </button>
       </div>
     </div>,
     document.body
