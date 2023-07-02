@@ -7,7 +7,7 @@ export default function CarouselReviews() {
   const autoSlideInterval = 1000
 
   const prevSlide = () => {
-    setCurrentIndex((curr) => (curr === slidesReview.length - 1 ? 0 : curr + 1))
+    setCurrentIndex((curr) => (curr === 0 ? slidesReview.length - 1 : curr - 1))
   }
 
   const nextSlide = () => {

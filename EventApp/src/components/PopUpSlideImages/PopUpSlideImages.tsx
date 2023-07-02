@@ -1,5 +1,6 @@
-import { Fragment, useState } from 'react'
+import { useState } from 'react'
 import { createPortal } from 'react-dom'
+import CarouselImage from '../CarouselImage'
 
 type Props = {
   listImageDetail: string[]
@@ -10,7 +11,7 @@ export default function PopUpSlideImages({ setIsPopupVisible, listImageDetail }:
   const [imageCurrentIndex, setImageCurrentIndex] = useState(0)
 
   const prevImage = () => {
-    setImageCurrentIndex((curr) => (curr === listImageDetail.length - 1 ? 0 : curr + 1))
+    setImageCurrentIndex((curr) => (curr === 0 ? listImageDetail.length - 1 : curr - 1))
   }
 
   const nextImage = () => {
@@ -22,7 +23,7 @@ export default function PopUpSlideImages({ setIsPopupVisible, listImageDetail }:
   return createPortal(
     <div className='fixed inset-0 z-[99999] h-[100vh] w-full bg-black'>
       <div className='relative'>
-        <div className='mx-auto h-[100vh] max-w-[1300px] overflow-hidden'>
+        <div className='mx-auto h-[100vh] max-w-[1200px] overflow-hidden'>
           <img src={listImageDetail[imageCurrentIndex]} alt='#' className='h-full w-full object-cover' />
         </div>
         <div className='absolute left-0 right-0 top-0 h-[7vh] w-full bg-black/20'>
@@ -76,23 +77,11 @@ export default function PopUpSlideImages({ setIsPopupVisible, listImageDetail }:
             </div>
           </div>
         </div>
-        <div className='absolute bottom-0 left-0 right-0 h-[100px] w-full bg-[#0d0a0a]'>
-          <div className='mt-2 h-[84px]'>
-            <div className='flex gap-1 overflow-hidden'>
-              {listImageDetail.map((image, index) => (
-                <Fragment key={index}>
-                  <div className='h-[84px] w-[200px]'>
-                    <img
-                      src={image}
-                      alt=''
-                      className='h-full w-full rounded-md border-2 border-white transition-all duration-300 hover:border-red-700 hover:duration-300'
-                    />
-                  </div>
-                </Fragment>
-              ))}
-            </div>
-          </div>
-        </div>
+        <CarouselImage
+          imageCurrentIndex={imageCurrentIndex}
+          setImageCurrentIndex={setImageCurrentIndex}
+          listImageDetail={listImageDetail}
+        />
         <button
           onClick={prevImage}
           className='absolute left-6 top-[40%] flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-gray bg-black text-white/80 transition-all duration-300 hover:bg-white hover:text-black hover:duration-300'
