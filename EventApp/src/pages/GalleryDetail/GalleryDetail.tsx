@@ -17,21 +17,30 @@ type Props = {
 
 export default function GalleryDetail({ name, listGalleryDetail }: Props) {
   const [isPopupVisible, setIsPopupVisible] = useState(false)
-  const handleShowPopup = () => setIsPopupVisible(true)
+
+  const [currentIndexImages, setCurrentIndexImages] = useState(0)
+  const handleShowPopup = (index: number) => {
+    setIsPopupVisible(true)
+    setCurrentIndexImages(index)
+  }
   return (
     <div className='gallery-detail py-24' id='top'>
       <div className='container'>
         <h1 className='mb-4 p-4 text-3xl font-semibold tracking-wider text-gray md:p-10'>{name}</h1>
         <div className='grid gap-y-1'>
           {listGalleryDetail.slice(0, 4).map((image, index) => (
-            <div key={index} className='mx-auto h-full max-w-[1000px] cursor-pointer overflow-hidden'>
+            <button
+              onClick={() => handleShowPopup(index)}
+              key={index}
+              className='mx-auto h-full max-w-[1000px] cursor-pointer overflow-hidden'
+            >
               <img src={image} alt={image} className='h-full w-[1000px] object-cover' />
-            </div>
+            </button>
           ))}
         </div>
         <div className='text-center'>
           <button
-            onClick={handleShowPopup}
+            onClick={() => handleShowPopup(0)}
             className='my-10 flex-shrink-0 rounded-sm border border-gray/50 px-6 py-2 text-center text-lg uppercase tracking-widest text-gray/50 hover:border-gray/70 hover:text-gray/70'
           >
             View full album
@@ -74,7 +83,15 @@ export default function GalleryDetail({ name, listGalleryDetail }: Props) {
         </div>
       </div>
 
-      {isPopupVisible && <PopUpSlideImages listImageDetail={listGalleryDetail} setIsPopupVisible={setIsPopupVisible} />}
+      {isPopupVisible && (
+        <PopUpSlideImages
+          isPopupVisible={isPopupVisible}
+          currentIndexImages={currentIndexImages}
+          setCurrentIndexImages={setCurrentIndexImages}
+          listImageDetail={listGalleryDetail}
+          setIsPopupVisible={setIsPopupVisible}
+        />
+      )}
     </div>
   )
 }

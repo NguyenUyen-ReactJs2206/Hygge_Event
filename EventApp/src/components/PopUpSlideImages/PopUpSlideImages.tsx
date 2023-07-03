@@ -1,14 +1,21 @@
-import { useState, Fragment } from 'react'
+import { Fragment } from 'react'
 import { createPortal } from 'react-dom'
 import Carousel from 'react-multi-carousel'
 
 type Props = {
+  isPopupVisible: boolean
   listImageDetail: string[]
-
+  currentIndexImages: number
+  setCurrentIndexImages: React.Dispatch<React.SetStateAction<number>>
   setIsPopupVisible: React.Dispatch<React.SetStateAction<boolean>>
 }
-export default function PopUpSlideImages({ setIsPopupVisible, listImageDetail }: Props) {
-  const [currentIndexImages, setCurrentIndexImages] = useState(0)
+export default function PopUpSlideImages({
+  isPopupVisible,
+  setIsPopupVisible,
+  listImageDetail,
+  currentIndexImages,
+  setCurrentIndexImages
+}: Props) {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -39,19 +46,19 @@ export default function PopUpSlideImages({ setIsPopupVisible, listImageDetail }:
         src={image}
         alt={image}
         className={`h-[12vh] w-[150px] rounded-md border-2 border-white object-cover transition-all duration-300 ${
-          index === currentIndexImages ? 'border-red-700' : ''
+          index === currentIndexImages ? 'border-[2px] border-red-700' : ''
         } hover:border-red-700 hover:duration-300`}
       />
     </Fragment>
   ))
 
-  const prevImage = () => {
-    setCurrentIndexImages((curr) => (curr === 0 ? listImageDetail.length - 1 : curr - 1))
-  }
+  // const prevImage = () => {
+  //   setCurrentIndexImages((curr) => (curr === 0 ? listImageDetail.length - 1 : curr - 1))
+  // }
 
-  const nextImage = () => {
-    setCurrentIndexImages((curr) => (curr === listImageDetail.length - 1 ? 0 : curr + 1))
-  }
+  // const nextImage = () => {
+  //   setCurrentIndexImages((curr) => (curr === listImageDetail.length - 1 ? 0 : curr + 1))
+  // }
 
   const handleClosePopup = () => setIsPopupVisible(false)
   const handleChangeImage = (index: number) => {
@@ -72,7 +79,9 @@ export default function PopUpSlideImages({ setIsPopupVisible, listImageDetail }:
         </div>
         <div className='absolute left-0 right-0 top-0 h-[7vh] w-full bg-black/20'>
           <div className='flex items-center justify-between p-4'>
-            <div className='text-white/80 hover:text-white'>1/10</div>
+            <div className='text-white/80 hover:text-white'>{`${currentIndexImages + 1}/${
+              listImageDetail.length
+            }`}</div>
             <div className='flex gap-8 '>
               <button>
                 <svg
@@ -121,7 +130,7 @@ export default function PopUpSlideImages({ setIsPopupVisible, listImageDetail }:
             </div>
           </div>
         </div>
-        <button
+        {/* <button
           onClick={prevImage}
           className='absolute left-2 top-[40%] flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-gray bg-black text-white/80 transition-all duration-300 hover:bg-white hover:text-black hover:duration-300 lg:left-6 lg:h-12 lg:w-12'
         >
@@ -150,7 +159,7 @@ export default function PopUpSlideImages({ setIsPopupVisible, listImageDetail }:
           >
             <path strokeLinecap='round' strokeLinejoin='round' d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' />
           </svg>
-        </button>
+        </button> */}
       </div>
     </div>,
     document.body
