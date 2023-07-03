@@ -21,6 +21,7 @@
     "react-multi-carousel": "^2.8.4",
     "react-router-dom": "^6.12.1",
     "react-scroll": "^1.8.9",
+    "react-spinners": "^0.13.8",
     "sass": "^1.63.4"
   },
   "devDependencies": {

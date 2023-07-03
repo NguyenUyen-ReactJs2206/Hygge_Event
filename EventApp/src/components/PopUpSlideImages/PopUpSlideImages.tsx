@@ -10,7 +10,6 @@ type Props = {
   setIsPopupVisible: React.Dispatch<React.SetStateAction<boolean>>
 }
 export default function PopUpSlideImages({
-  isPopupVisible,
   setIsPopupVisible,
   listImageDetail,
   currentIndexImages,

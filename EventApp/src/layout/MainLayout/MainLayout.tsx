@@ -1,12 +1,27 @@
+import { useState, useEffect } from 'react'
 import NavHeader from 'src/components/NavHeader'
 import Footer from '../../components/Footer'
 import { Link } from 'react-scroll'
+import Loading from 'src/components/Loading'
 
 interface Props {
   children?: React.ReactNode
 }
 
 export default function MainLayout({ children }: Props) {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 3000)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (loading) {
+    return <Loading />
+  }
   return (
     <div>
       <NavHeader />
