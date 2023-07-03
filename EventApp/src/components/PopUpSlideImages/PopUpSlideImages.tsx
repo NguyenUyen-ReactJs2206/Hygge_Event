@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, Fragment } from 'react'
 import { createPortal } from 'react-dom'
-import CarouselImage from '../CarouselImage'
+import Carousel from 'react-multi-carousel'
 
 type Props = {
   listImageDetail: string[]
@@ -8,23 +8,67 @@ type Props = {
   setIsPopupVisible: React.Dispatch<React.SetStateAction<boolean>>
 }
 export default function PopUpSlideImages({ setIsPopupVisible, listImageDetail }: Props) {
-  const [imageCurrentIndex, setImageCurrentIndex] = useState(0)
+  const [currentIndexImages, setCurrentIndexImages] = useState(0)
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 1024 },
+      items: 10,
+      slidesToSlide: 5
+    },
+    desktop: {
+      breakpoint: { max: 1024, min: 768 },
+      items: 8,
+      slidesToSlide: 4
+    },
+    tablet: {
+      breakpoint: { max: 768, min: 680 },
+      items: 6,
+      slidesToSlide: 3
+    },
+    mobile: {
+      breakpoint: { max: 680, min: 0 },
+      items: 4,
+      slidesToSlide: 2
+    }
+  }
+  const image = listImageDetail.map((image, index) => (
+    <Fragment key={index}>
+      <img
+        onMouseEnter={() => handleChangeImage(index)}
+        src={image}
+        alt={image}
+        className={`h-[12vh] w-[150px] rounded-md border-2 border-white object-cover transition-all duration-300 ${
+          index === currentIndexImages ? 'border-red-700' : ''
+        } hover:border-red-700 hover:duration-300`}
+      />
+    </Fragment>
+  ))
 
   const prevImage = () => {
-    setImageCurrentIndex((curr) => (curr === 0 ? listImageDetail.length - 1 : curr - 1))
+    setCurrentIndexImages((curr) => (curr === 0 ? listImageDetail.length - 1 : curr - 1))
   }
 
   const nextImage = () => {
-    setImageCurrentIndex((curr) => (curr === listImageDetail.length - 1 ? 0 : curr + 1))
+    setCurrentIndexImages((curr) => (curr === listImageDetail.length - 1 ? 0 : curr + 1))
   }
 
   const handleClosePopup = () => setIsPopupVisible(false)
-
+  const handleChangeImage = (index: number) => {
+    setCurrentIndexImages(index)
+  }
   return createPortal(
     <div className='fixed inset-0 z-[99999] h-[100vh] w-full bg-black'>
-      <div className='relative'>
-        <div className='mx-auto h-[100vh] max-w-[1200px] overflow-hidden'>
-          <img src={listImageDetail[imageCurrentIndex]} alt='#' className='h-full w-full object-cover' />
+      <div className='relative h-[100vh]'>
+        <div className='m-auto flex h-[85vh] max-w-[1300px] items-center justify-center'>
+          <div className='overflow-hidden'>
+            <img src={listImageDetail[currentIndexImages]} alt='#' className='h-full w-full object-cover' />
+          </div>
+        </div>
+        <div className='absolute inset-x-0 bottom-0 mx-auto h-[15vh] max-w-[1500px] bg-[#0d0a0a]'>
+          <div className='mt-2'>
+            <Carousel responsive={responsive}>{image}</Carousel>
+          </div>
         </div>
         <div className='absolute left-0 right-0 top-0 h-[7vh] w-full bg-black/20'>
           <div className='flex items-center justify-between p-4'>
@@ -77,14 +121,9 @@ export default function PopUpSlideImages({ setIsPopupVisible, listImageDetail }:
             </div>
           </div>
         </div>
-        <CarouselImage
-          imageCurrentIndex={imageCurrentIndex}
-          setImageCurrentIndex={setImageCurrentIndex}
-          listImageDetail={listImageDetail}
-        />
         <button
           onClick={prevImage}
-          className='absolute left-6 top-[40%] flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-gray bg-black text-white/80 transition-all duration-300 hover:bg-white hover:text-black hover:duration-300'
+          className='absolute left-2 top-[40%] flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-gray bg-black text-white/80 transition-all duration-300 hover:bg-white hover:text-black hover:duration-300 lg:left-6 lg:h-12 lg:w-12'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -92,14 +131,14 @@ export default function PopUpSlideImages({ setIsPopupVisible, listImageDetail }:
             viewBox='0 0 24 24'
             strokeWidth={1.5}
             stroke='currentColor'
-            className='h-8 w-8'
+            className='h-6 w-6 lg:h-8 lg:w-8'
           >
             <path strokeLinecap='round' strokeLinejoin='round' d='M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75' />
           </svg>
         </button>
         <button
           onClick={nextImage}
-          className='absolute right-6 top-[40%] flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-gray bg-black text-white/80 transition-all duration-300 hover:bg-white hover:text-black hover:duration-300'
+          className='absolute right-2 top-[40%] flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-gray bg-black text-white/80 transition-all duration-300 hover:bg-white hover:text-black hover:duration-300 lg:right-6 lg:h-12 lg:w-12'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -107,7 +146,7 @@ export default function PopUpSlideImages({ setIsPopupVisible, listImageDetail }:
             viewBox='0 0 24 24'
             strokeWidth={1.5}
             stroke='currentColor'
-            className='h-8 w-8'
+            className='h-6 w-6 lg:h-8 lg:w-8'
           >
             <path strokeLinecap='round' strokeLinejoin='round' d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' />
           </svg>
