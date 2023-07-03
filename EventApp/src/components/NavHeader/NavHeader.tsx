@@ -4,7 +4,11 @@ import { Link, NavLink } from 'react-router-dom'
 import path from '../../constants/path'
 import UnderLineEffect from '../UnderlineEffect'
 
-export default function NavHeader() {
+type Props = {
+  loading: boolean
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>
+}
+export default function NavHeader({ loading, setLoading }: Props) {
   const [open, setOpen] = useState(false)
   const [showNav, setShowNav] = useState(true)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
@@ -83,6 +87,7 @@ export default function NavHeader() {
                       isActive ? 'text-blue/50' : ''
                     }`
                   }
+                  onClick={() => setLoading(false)}
                 >
                   Home
                 </NavLink>
@@ -96,6 +101,7 @@ export default function NavHeader() {
                       isActive ? 'text-blue/50' : ''
                     }`
                   }
+                  onClick={() => setLoading(false)}
                 >
                   About Us
                 </NavLink>
@@ -109,6 +115,7 @@ export default function NavHeader() {
                       isActive ? 'text-blue/50' : ''
                     }`
                   }
+                  onClick={() => setLoading(false)}
                 >
                   Concept
                 </NavLink>
@@ -122,6 +129,7 @@ export default function NavHeader() {
                       isActive ? 'text-blue/50' : ''
                     }`
                   }
+                  onClick={() => setLoading(false)}
                 >
                   Gallery
                 </NavLink>
@@ -135,6 +143,7 @@ export default function NavHeader() {
                       isActive ? 'text-blue/50' : ''
                     }`
                   }
+                  onClick={() => setLoading(false)}
                 >
                   Testimonials
                 </NavLink>
@@ -148,6 +157,7 @@ export default function NavHeader() {
                       isActive ? 'text-blue/50' : ''
                     }`
                   }
+                  onClick={() => setLoading(false)}
                 >
                   Blog
                 </NavLink>
