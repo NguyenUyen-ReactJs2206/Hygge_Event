@@ -1,7 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import NavHeader from 'src/components/NavHeader'
 import Footer from '../../components/Footer'
 import { Link } from 'react-scroll'
+// import Loading from 'src/components/Loading'
+import { CSSTransition } from 'react-transition-group'
+import './index.css'
 import Loading from 'src/components/Loading'
 
 interface Props {
@@ -10,20 +13,26 @@ interface Props {
 
 export default function MainLayout({ children }: Props) {
   const [loading, setLoading] = useState(true)
+  const nodeRef = useRef(null)
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 3000)
+    }, 2000)
 
     return () => clearTimeout(timer)
   }, [])
 
   return (
     <div>
-      {loading && <Loading />}
-      {!loading && (
-        <>
+      {loading && (
+        <CSSTransition in={loading} timeout={500} nodeRef={nodeRef} classNames='loading' unmountOnExit>
+          <Loading />
+        </CSSTransition>
+      )}
+
+      <CSSTransition in={!loading} timeout={1000} nodeRef={nodeRef} classNames='page' unmountOnExit>
+        <div ref={nodeRef}>
           <NavHeader setLoading={setLoading} loading={loading} />
           {children}
           <Footer />
@@ -53,8 +62,8 @@ export default function MainLayout({ children }: Props) {
               </svg>
             </button>
           </Link>
-        </>
-      )}
+        </div>
+      </CSSTransition>
     </div>
   )
 }

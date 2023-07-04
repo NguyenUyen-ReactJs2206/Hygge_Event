@@ -31,20 +31,17 @@ export default function NavHeader({ loading, setLoading }: Props) {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 3000)
+    }, 1000)
   }
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setLoading(false)
-  //   }, 3000)
-  //   return () => clearTimeout(timer)
-  // }, [])
-
   return (
     <>
       {loading && <Loading />}
       {!loading && (
-        <div className='navigation-bar'>
+        <div
+          className={`navigation-bar opacity-0 transition-all duration-1000 ${
+            loading ? '' : 'opacity-100 duration-1000'
+          }`}
+        >
           <nav
             className={`fixed top-0 z-[99999] w-full bg-white text-blue opacity-100 transition-all duration-[700ms]
        ${showNav ? 'visible transition-all duration-[700ms]' : 'invisible translate-y-[-100%] duration-[700ms]'}`}
