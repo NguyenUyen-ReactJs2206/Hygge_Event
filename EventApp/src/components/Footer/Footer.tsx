@@ -1,14 +1,13 @@
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/images/logopng.png'
 import path from '../../constants/path'
 import UnderLineEffect from '../UnderlineEffect'
 import Loading from '../Loading'
+import { AppContext } from 'src/contexts/app.context'
 
-type Props = {
-  loading: boolean
-  setLoading: React.Dispatch<React.SetStateAction<boolean>>
-}
-export default function Footer({ loading, setLoading }: Props) {
+export default function Footer() {
+  const { setLoading, loading } = useContext(AppContext)
   const handleNextPage = () => {
     setLoading(true)
     setTimeout(() => {

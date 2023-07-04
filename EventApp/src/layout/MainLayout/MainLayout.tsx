@@ -1,18 +1,18 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useContext } from 'react'
 import NavHeader from 'src/components/NavHeader'
 import Footer from '../../components/Footer'
 import { Link } from 'react-scroll'
-// import Loading from 'src/components/Loading'
 import { CSSTransition } from 'react-transition-group'
 import './index.css'
 import Loading from 'src/components/Loading'
+import { AppContext } from 'src/contexts/app.context'
 
 interface Props {
   children?: React.ReactNode
 }
 
 export default function MainLayout({ children }: Props) {
-  const [loading, setLoading] = useState(true)
+  const { setLoading, loading } = useContext(AppContext)
   const nodeRef = useRef(null)
 
   useEffect(() => {
@@ -33,9 +33,9 @@ export default function MainLayout({ children }: Props) {
 
       <CSSTransition in={!loading} timeout={1000} nodeRef={nodeRef} classNames='page' unmountOnExit>
         <div ref={nodeRef}>
-          <NavHeader setLoading={setLoading} loading={loading} />
+          <NavHeader />
           {children}
-          <Footer setLoading={setLoading} loading={loading} />
+          <Footer />
           <Link
             className='fixed bottom-[10%] right-2 z-[999] flex h-12 w-12'
             activeClass='active'

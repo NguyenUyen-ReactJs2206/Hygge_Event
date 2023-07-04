@@ -1,15 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import logo from '../../assets/images/logopng.png'
 import { Link, NavLink } from 'react-router-dom'
 import path from '../../constants/path'
 import UnderLineEffect from '../UnderlineEffect'
 import Loading from '../Loading'
+import { AppContext } from 'src/contexts/app.context'
 
-type Props = {
-  loading: boolean
-  setLoading: React.Dispatch<React.SetStateAction<boolean>>
-}
-export default function NavHeader({ loading, setLoading }: Props) {
+export default function NavHeader() {
+  const { setLoading, loading } = useContext(AppContext)
   const [open, setOpen] = useState(false)
   const [showNav, setShowNav] = useState(true)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
