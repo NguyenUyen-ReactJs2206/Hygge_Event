@@ -1,16 +1,16 @@
 import { useLocation, useRoutes } from 'react-router-dom'
 import { useEffect } from 'react'
-import MainLayout from './layout/MainLayout'
-import Home from './pages/Home'
-import AboutUs from './pages/AboutUs'
-import Blog from './pages/Blog'
-import Concept from './pages/Concept'
-import Contact from './pages/Contact'
-import Gallery from './pages/Gallery'
-import Testimonials from './pages/Testimonials'
-import path from './constants/path'
-import pathConceptDetails from './constants/pathConceptDetails'
-import ConceptDetail from './pages/ConceptDetail'
+import MainLayout from 'src/layout/MainLayout'
+import Home from 'src/pages/Home'
+import AboutUs from 'src/pages/AboutUs'
+import Blog from 'src/pages/Blog'
+import Concept from 'src/pages/Concept'
+import Contact from 'src/pages/Contact'
+import Gallery from 'src/pages/Gallery'
+import Testimonials from 'src/pages/Testimonials'
+import path from 'src/constants/path'
+import pathConceptDetails from 'src/constants/pathConceptDetails'
+import ConceptDetail from 'src/pages/ConceptDetail'
 import {
   listConceptBeatyAndTheBeast,
   listConceptBridgerton,
@@ -18,16 +18,16 @@ import {
   listConceptRapunzel,
   listConceptTheGreatestShowman,
   listConceptUpsideDown
-} from './api/conceptDetails.api'
-import pathGalleryDetails from './constants/pathGalleryDetails'
-import GalleryDetail from './pages/GalleryDetail/GalleryDetail'
+} from 'src/api/conceptDetails.api'
+import pathGalleryDetails from 'src/constants/pathGalleryDetails'
+import GalleryDetail from 'src/pages/GalleryDetail/GalleryDetail'
 import {
   listBeautyAndTheBeast,
   listRainForest,
   listTheGreatestShowman,
   listUnderTheSea,
   listUpsideDown
-} from './api/GalleryDetail.api'
+} from 'src/api/GalleryDetail.api'
 
 export default function useRouterElements() {
   const location = useLocation()

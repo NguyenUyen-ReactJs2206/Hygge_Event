@@ -10,7 +10,7 @@ export default function NumberUp({ number }: Props) {
   useEffect(() => {
     setTimeout(() => {
       setCount(100)
-    }, 10000)
+    }, 5000)
   }, [])
 
   return <CountUp start={count} end={number} duration={4} />
