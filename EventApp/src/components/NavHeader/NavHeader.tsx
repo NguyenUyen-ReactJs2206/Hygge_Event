@@ -27,12 +27,21 @@ export default function NavHeader({ loading, setLoading }: Props) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [prevScrollPos])
 
-  const handleClick = () => {
+  const handleNextPage = () => {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
     }, 1000)
   }
+
+  const handleNextPageMobie = () => {
+    setOpen(false)
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+  }
+
   return (
     <>
       {loading && <Loading />}
@@ -101,7 +110,7 @@ export default function NavHeader({ loading, setLoading }: Props) {
                           isActive ? 'text-blue/50' : ''
                         }`
                       }
-                      onClick={handleClick}
+                      onClick={handleNextPage}
                     >
                       Home
                     </NavLink>
@@ -115,7 +124,7 @@ export default function NavHeader({ loading, setLoading }: Props) {
                           isActive ? 'text-blue/50' : ''
                         }`
                       }
-                      onClick={handleClick}
+                      onClick={handleNextPage}
                     >
                       About Us
                     </NavLink>
@@ -129,7 +138,7 @@ export default function NavHeader({ loading, setLoading }: Props) {
                           isActive ? 'text-blue/50' : ''
                         }`
                       }
-                      onClick={handleClick}
+                      onClick={handleNextPage}
                     >
                       Concept
                     </NavLink>
@@ -143,7 +152,7 @@ export default function NavHeader({ loading, setLoading }: Props) {
                           isActive ? 'text-blue/50' : ''
                         }`
                       }
-                      onClick={handleClick}
+                      onClick={handleNextPage}
                     >
                       Gallery
                     </NavLink>
@@ -157,7 +166,7 @@ export default function NavHeader({ loading, setLoading }: Props) {
                           isActive ? 'text-blue/50' : ''
                         }`
                       }
-                      onClick={handleClick}
+                      onClick={handleNextPage}
                     >
                       Testimonials
                     </NavLink>
@@ -171,7 +180,7 @@ export default function NavHeader({ loading, setLoading }: Props) {
                           isActive ? 'text-blue/50' : ''
                         }`
                       }
-                      onClick={handleClick}
+                      onClick={handleNextPage}
                     >
                       Blog
                     </NavLink>
@@ -185,7 +194,7 @@ export default function NavHeader({ loading, setLoading }: Props) {
                           isActive ? 'text-blue/50' : ''
                         }`
                       }
-                      onClick={handleClick}
+                      onClick={handleNextPage}
                     >
                       Contact
                     </NavLink>
@@ -205,7 +214,7 @@ export default function NavHeader({ loading, setLoading }: Props) {
             <li className=''>
               <NavLink
                 to={path.home}
-                onClick={() => setOpen(false)}
+                onClick={handleNextPageMobie}
                 className={({ isActive }) =>
                   `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${
                     isActive ? 'font-bold text-blue' : ''
@@ -218,7 +227,7 @@ export default function NavHeader({ loading, setLoading }: Props) {
             <li className=''>
               <NavLink
                 to={path.aboutUs}
-                onClick={() => setOpen(false)}
+                onClick={handleNextPageMobie}
                 className={({ isActive }) =>
                   `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${
                     isActive ? 'font-bold text-blue' : ''
@@ -231,7 +240,7 @@ export default function NavHeader({ loading, setLoading }: Props) {
             <li className=''>
               <NavLink
                 to={path.concept}
-                onClick={() => setOpen(false)}
+                onClick={handleNextPageMobie}
                 className={({ isActive }) =>
                   `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${
                     isActive ? 'font-bold text-blue' : ''
@@ -244,7 +253,7 @@ export default function NavHeader({ loading, setLoading }: Props) {
             <li className=' '>
               <NavLink
                 to={path.gallery}
-                onClick={() => setOpen(false)}
+                onClick={handleNextPageMobie}
                 className={({ isActive }) =>
                   `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${
                     isActive ? 'font-bold text-blue' : ''
@@ -257,7 +266,7 @@ export default function NavHeader({ loading, setLoading }: Props) {
             <li className=' '>
               <NavLink
                 to={path.testimonials}
-                onClick={() => setOpen(false)}
+                onClick={handleNextPageMobie}
                 className={({ isActive }) =>
                   `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${
                     isActive ? 'font-bold text-blue' : ''
@@ -270,7 +279,7 @@ export default function NavHeader({ loading, setLoading }: Props) {
             <li className=' '>
               <NavLink
                 to={path.blog}
-                onClick={() => setOpen(false)}
+                onClick={handleNextPageMobie}
                 className={({ isActive }) =>
                   `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${
                     isActive ? 'font-bold text-blue' : ''
@@ -283,7 +292,7 @@ export default function NavHeader({ loading, setLoading }: Props) {
             <li className=''>
               <NavLink
                 to={path.contact}
-                onClick={() => setOpen(false)}
+                onClick={handleNextPageMobie}
                 className={({ isActive }) =>
                   `inline-block px-6 py-1 hover:text-blue/50 hover:duration-300 ${
                     isActive ? 'font-bold text-blue' : ''

@@ -35,7 +35,7 @@ export default function MainLayout({ children }: Props) {
         <div ref={nodeRef}>
           <NavHeader setLoading={setLoading} loading={loading} />
           {children}
-          <Footer />
+          <Footer setLoading={setLoading} loading={loading} />
           <Link
             className='fixed bottom-[10%] right-2 z-[999] flex h-12 w-12'
             activeClass='active'
