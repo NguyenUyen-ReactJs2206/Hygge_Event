@@ -28,6 +28,7 @@ import {
   listUnderTheSea,
   listUpsideDown
 } from 'src/api/GalleryDetail.api'
+import NotFound from './pages/NotFound'
 
 export default function useRouterElements() {
   const location = useLocation()
@@ -91,6 +92,14 @@ export default function useRouterElements() {
       element: (
         <MainLayout>
           <Testimonials />
+        </MainLayout>
+      )
+    },
+    {
+      path: '*',
+      element: (
+        <MainLayout>
+          <NotFound />
         </MainLayout>
       )
     },
