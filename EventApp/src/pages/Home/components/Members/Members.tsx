@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 type Props = {
   name: string
   avatar: string
@@ -8,7 +6,7 @@ type Props = {
 
 export default function Members({ avatar, name, posision }: Props) {
   return (
-    <article className='border-b-1 group relative border-b-white'>
+    <article className='border-b-1 group relative border-b-white transition-all duration-500 hover:shadow-md hover:duration-500'>
       <div className='max-h-[400px] w-full overflow-hidden'>
         <img
           src={avatar}
@@ -16,8 +14,8 @@ export default function Members({ avatar, name, posision }: Props) {
           className='w-full object-cover duration-1000 group-hover:scale-105 group-hover:duration-1000'
         />
       </div>
-      <div className='absolute inset-x-0 bottom-0 p-5 duration-700 group-hover:scale-105 group-hover:bg-white/70 group-hover:duration-700 md:static md:p-0 md:group-hover:scale-100'>
-        <div className='py-2 font-bold tracking-wider md:font-semibold'>
+      <div className='absolute inset-x-0 bottom-0 scale-100 p-5 duration-700 group-hover:scale-105 group-hover:bg-white/70 group-hover:duration-700 md:static md:p-2 md:group-hover:scale-100'>
+        <div className='my-2 font-bold tracking-wider md:font-semibold'>
           <h3 className='text-xl uppercase text-blue md:text-lg'>{name}</h3>
           <p className='text-sm'>{posision}</p>
         </div>

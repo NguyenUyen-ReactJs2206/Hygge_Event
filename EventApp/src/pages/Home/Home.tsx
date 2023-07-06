@@ -58,7 +58,7 @@ export default function Home() {
             <div className='grid grid-cols-12 gap-x-4 gap-y-6 md:gap-6'>
               {services.map((service, index) => (
                 <Fragment key={index}>
-                  <article className='col-span-6 cursor-default hover:shadow-xl lg:col-span-3'>
+                  <article className='col-span-6 cursor-default transition-all duration-500 hover:shadow-xl hover:duration-500 lg:col-span-3'>
                     <div className='relative p-2'>
                       <div className='pt-8 text-center lg:text-left'>
                         <h4 className='mb-1 font-semibold tracking-wider text-blue sm:text-lg'>
@@ -427,7 +427,7 @@ export default function Home() {
           <div className='grid grid-cols-4 gap-4 md:gap-2 lg:gap-10 xl:gap-16 '>
             {latestArticles.map((article, index) => (
               <Fragment key={index}>
-                <div className='col-span-4 sm:col-span-2 md:col-span-1 '>
+                <div className='col-span-4 transition-all duration-500 hover:shadow-md hover:duration-500 sm:col-span-2 md:col-span-1 '>
                   <LatestArticles
                     pathDetail={article.slug}
                     nameArticle={article.nameArticle}

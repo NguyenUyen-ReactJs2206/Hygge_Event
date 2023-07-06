@@ -17,7 +17,7 @@ export default function LatestArticles({ image, nameArticle, time, pathDetail }:
           className='h-full w-full object-cover transition-all duration-700 hover:scale-105 hover:duration-700'
         />
       </div>
-      <div className='py-4 '>
+      <div className='px-2 py-4'>
         <Link
           to={pathDetail}
           className='text-lg font-semibold tracking-wider text-blue hover:underline lg:text-xl lg:tracking-widest'
