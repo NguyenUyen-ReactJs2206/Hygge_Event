@@ -40,24 +40,25 @@ export default function PopUpSlideImages({
   }
   const image = listImageDetail.map((image, index) => (
     <Fragment key={index}>
-      <img
-        onMouseEnter={() => handleChangeImage(index)}
-        src={image}
-        alt={image}
-        className={`h-[12vh] w-[150px] rounded-md border-2 border-white object-cover transition-all duration-300 ${
-          index === currentIndexImages ? 'border-[2px] border-red-700' : ''
-        } hover:border-red-700 hover:duration-300`}
-      />
+      <button onClick={() => handleChangeImage(index)}>
+        <img
+          src={image}
+          alt={image}
+          className={`h-[12vh] w-[150px] rounded-md object-cover transition-all duration-300 ${
+            index === currentIndexImages ? 'border-2 border-red-700' : 'border-2 border-white '
+          } hover:border-red-700 hover:duration-300`}
+        />
+      </button>
     </Fragment>
   ))
 
-  // const prevImage = () => {
-  //   setCurrentIndexImages((curr) => (curr === 0 ? listImageDetail.length - 1 : curr - 1))
-  // }
+  const prevImage = () => {
+    setCurrentIndexImages((curr) => (curr === 0 ? listImageDetail.length - 1 : curr - 1))
+  }
 
-  // const nextImage = () => {
-  //   setCurrentIndexImages((curr) => (curr === listImageDetail.length - 1 ? 0 : curr + 1))
-  // }
+  const nextImage = () => {
+    setCurrentIndexImages((curr) => (curr === listImageDetail.length - 1 ? 0 : curr + 1))
+  }
 
   const handleClosePopup = () => setIsPopupVisible(false)
   const handleChangeImage = (index: number) => {
@@ -68,7 +69,11 @@ export default function PopUpSlideImages({
       <div className='relative h-[100vh]'>
         <div className='m-auto flex h-[85vh] max-w-[1300px] items-center justify-center'>
           <div className='overflow-hidden'>
-            <img src={listImageDetail[currentIndexImages]} alt='#' className='h-full w-full object-cover' />
+            <img
+              src={listImageDetail[currentIndexImages]}
+              alt={listImageDetail[currentIndexImages]}
+              className='h-full w-full object-cover'
+            />
           </div>
         </div>
         <div className='absolute inset-x-0 bottom-0 mx-auto h-[15vh] max-w-[1500px] bg-[#0d0a0a]'>
@@ -129,7 +134,7 @@ export default function PopUpSlideImages({
             </div>
           </div>
         </div>
-        {/* <button
+        <button
           onClick={prevImage}
           className='absolute left-2 top-[40%] flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-gray bg-black text-white/80 transition-all duration-300 hover:bg-white hover:text-black hover:duration-300 lg:left-6 lg:h-12 lg:w-12'
         >
@@ -158,7 +163,7 @@ export default function PopUpSlideImages({
           >
             <path strokeLinecap='round' strokeLinejoin='round' d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' />
           </svg>
-        </button> */}
+        </button>
       </div>
     </div>,
     document.body

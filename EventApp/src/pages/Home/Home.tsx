@@ -53,18 +53,22 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='mt-16 py-2 sm:px-10 md:px-16 lg:px-8'>
+        <div className='mt-16 p-2 sm:px-10 md:px-16 lg:px-8'>
           <div className='mx-auto max-w-[1700px]'>
             <div className='grid grid-cols-12 gap-x-4 gap-y-6 md:gap-6'>
               {services.map((service, index) => (
                 <Fragment key={index}>
-                  <article className='relative col-span-6 lg:col-span-3'>
-                    <div className='pt-8 text-center lg:text-left'>
-                      <h4 className='mb-1 font-semibold tracking-wider text-blue sm:text-lg'>{service.serviceName}</h4>
-                      <p className='leading-5'>{service.description}</p>
+                  <article className='col-span-6 cursor-default hover:shadow-xl lg:col-span-3'>
+                    <div className='relative p-2'>
+                      <div className='pt-8 text-center lg:text-left'>
+                        <h4 className='mb-1 font-semibold tracking-wider text-blue sm:text-lg'>
+                          {service.serviceName}
+                        </h4>
+                        <p className='leading-5'>{service.description}</p>
+                      </div>
+                      <div className='absolute left-[50%] top-2 h-5 w-5 rounded-full border-2 border-blue bg-transparent sm:h-6 sm:w-6 lg:left-2'></div>
+                      <div className='absolute left-[46%] top-2 h-5 w-5 rounded-full border-2 border-blue bg-transparent sm:h-6 sm:w-6 lg:left-5'></div>
                     </div>
-                    <div className='absolute left-[50%] top-0 h-5 w-5 rounded-full border-2 border-blue bg-transparent sm:h-6 sm:w-6 lg:left-0'></div>
-                    <div className='absolute left-[46%] top-0 h-5 w-5 rounded-full border-2 border-blue bg-transparent sm:h-6 sm:w-6 lg:left-3'></div>
                   </article>
                 </Fragment>
               ))}
@@ -275,7 +279,7 @@ export default function Home() {
             <img src={backgroundBlack} alt='background' className='h-[70px] w-full' />
             <div className='container absolute bottom-0 top-0 mx-auto grid grid-cols-3 md:gap-2 lg:inset-x-2 lg:gap-12 xl:inset-x-10 twoXl:inset-x-16'>
               <div className='col-span-1'>
-                <div className='h-full w-full border-t border-t-gray/5 bg-white shadow-md'>
+                <div className='h-full w-full scale-100 border-t border-t-gray/5 bg-white shadow-md transition-all duration-700 hover:shadow-2xl hover:duration-700'>
                   <div className='flex justify-center md:py-6 lg:pb-8 lg:pt-12'>
                     <div className='relative h-20 w-20 border-2 border-gray/60'>
                       <div className='absolute left-0 top-0 h-[25px] w-[50px] border-b-2 border-r-2 border-gray/60'></div>
@@ -289,7 +293,7 @@ export default function Home() {
                 </div>
               </div>
               <div className='col-span-1'>
-                <div className='h-full w-full border-t border-t-gray/5 bg-white shadow-md'>
+                <div className='h-full w-full scale-100 border-t border-t-gray/5 bg-white shadow-md transition-all duration-700 hover:shadow-2xl hover:duration-700'>
                   <div className='flex justify-center md:py-6 lg:pb-8 lg:pt-12'>
                     <div className='relative h-20 w-20 border-2 border-gray/60'>
                       <div className='absolute right-0 top-0 h-[25px] w-[30px] border-b-2 border-l-2 border-gray/60'></div>
@@ -303,7 +307,7 @@ export default function Home() {
                 </div>
               </div>
               <div className='col-span-1'>
-                <div className='h-full w-full border-t border-t-gray/5 bg-white shadow-md'>
+                <div className='h-full w-full scale-100 border-t border-t-gray/5 bg-white shadow-md transition-all duration-700 hover:shadow-2xl hover:duration-700'>
                   <div className='flex justify-center md:py-6 lg:pb-8 lg:pt-12'>
                     <div className='relative h-20 w-20 border-2 border-gray/60'>
                       <div className='absolute left-0 top-0 h-[50px] w-[50px] border-b-2 border-r-2 border-gray/60'></div>
