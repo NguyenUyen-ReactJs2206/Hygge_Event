@@ -142,25 +142,33 @@ export const latestArticles = [
   {
     slug: 'wedding-themes-ideas-for-any-styles-one',
     image: `${articleOne}`,
-    nameArticle: 'Wedding Themes Ideas for Any Styles',
-    time: 'JUNE 4, 2023 - 4 Likes'
+    nameArticle: 'Wedding Themes Ideas for Any Styles One',
+    time: 'JUNE 4, 2023 - 4 Likes',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quibusdam officia, fugiat esse sint tempora voluptatum perspiciatis nam optio culpa odio ipsam molestiae quaerat veniam a maiores vero, accusamus nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat inventore, ipsa odio dicta fuga eligendi illum vitae expedita tempora? Eveniet necessitatibus ut itaque accusamus, ex sint sapiente ipsa illo dolorem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem dolorem nihil, molestias consectetur minus perferendis non enim ipsam quos dolor voluptatum vitae earum veniam odio suscipit nostrum nulla rem sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolore voluptates assumenda? Eligendi, ipsam ad itaque laudantium suscipit eius adipisci eaque eum quibusdam mollitia qui placeat animi iure error vitae.'
   },
   {
     slug: 'wedding-themes-ideas-for-any-styles-two',
     image: `${articleTwo}`,
-    nameArticle: 'Wedding Themes Ideas for Any Styles',
-    time: 'JUNE 4, 2023 - 4 Likes'
+    nameArticle: 'Wedding Themes Ideas for Any Styles Two',
+    time: 'JUNE 4, 2023 - 4 Likes',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quibusdam officia, fugiat esse sint tempora voluptatum perspiciatis nam optio culpa odio ipsam molestiae quaerat veniam a maiores vero, accusamus nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat inventore, ipsa odio dicta fuga eligendi illum vitae expedita tempora? Eveniet necessitatibus ut itaque accusamus, ex sint sapiente ipsa illo dolorem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem dolorem nihil, molestias consectetur minus perferendis non enim ipsam quos dolor voluptatum vitae earum veniam odio suscipit nostrum nulla rem sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolore voluptates assumenda? Eligendi, ipsam ad itaque laudantium suscipit eius adipisci eaque eum quibusdam mollitia qui placeat animi iure error vitae.'
   },
   {
     slug: 'wedding-themes-ideas-for-any-styles-three',
     image: `${articleThree}`,
-    nameArticle: 'Wedding Themes Ideas for Any Styles',
-    time: 'JUNE 4, 2023 - 4 Likes'
+    nameArticle: 'Wedding Themes Ideas for Any Styles Three',
+    time: 'JUNE 4, 2023 - 4 Likes',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quibusdam officia, fugiat esse sint tempora voluptatum perspiciatis nam optio culpa odio ipsam molestiae quaerat veniam a maiores vero, accusamus nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat inventore, ipsa odio dicta fuga eligendi illum vitae expedita tempora? Eveniet necessitatibus ut itaque accusamus, ex sint sapiente ipsa illo dolorem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem dolorem nihil, molestias consectetur minus perferendis non enim ipsam quos dolor voluptatum vitae earum veniam odio suscipit nostrum nulla rem sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolore voluptates assumenda? Eligendi, ipsam ad itaque laudantium suscipit eius adipisci eaque eum quibusdam mollitia qui placeat animi iure error vitae.'
   },
   {
     slug: 'wedding-themes-ideas-for-any-styles-four',
     image: `${articleFour}`,
-    nameArticle: 'Wedding Themes Ideas for Any Styles',
-    time: 'JUNE 4, 2023 - 4 Likes'
+    nameArticle: 'Wedding Themes Ideas for Any Styles Four',
+    time: 'JUNE 4, 2023 - 4 Likes',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quibusdam officia, fugiat esse sint tempora voluptatum perspiciatis nam optio culpa odio ipsam molestiae quaerat veniam a maiores vero, accusamus nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat inventore, ipsa odio dicta fuga eligendi illum vitae expedita tempora? Eveniet necessitatibus ut itaque accusamus, ex sint sapiente ipsa illo dolorem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem dolorem nihil, molestias consectetur minus perferendis non enim ipsam quos dolor voluptatum vitae earum veniam odio suscipit nostrum nulla rem sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolore voluptates assumenda? Eligendi, ipsam ad itaque laudantium suscipit eius adipisci eaque eum quibusdam mollitia qui placeat animi iure error vitae.'
   }
 ]

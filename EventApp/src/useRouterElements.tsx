@@ -30,6 +30,8 @@ import {
 } from 'src/api/GalleryDetail.api'
 import NotFound from './pages/NotFound'
 import LatestArticleDetail from './pages/LatestArticleDetail'
+import pathLatestArticleDetail from './constants/pathLatestArticleDetail'
+import { latestArticles } from './api/home.api'
 
 export default function useRouterElements() {
   const location = useLocation()
@@ -105,10 +107,34 @@ export default function useRouterElements() {
       )
     },
     {
-      path: '/:nameId',
+      path: pathLatestArticleDetail.latestOne,
       element: (
         <MainLayout>
-          <LatestArticleDetail />
+          <LatestArticleDetail latestArticleContent={latestArticles[0]} />
+        </MainLayout>
+      )
+    },
+    {
+      path: pathLatestArticleDetail.latestTwo,
+      element: (
+        <MainLayout>
+          <LatestArticleDetail latestArticleContent={latestArticles[1]} />
+        </MainLayout>
+      )
+    },
+    {
+      path: pathLatestArticleDetail.latestThree,
+      element: (
+        <MainLayout>
+          <LatestArticleDetail latestArticleContent={latestArticles[2]} />
+        </MainLayout>
+      )
+    },
+    {
+      path: pathLatestArticleDetail.latestFour,
+      element: (
+        <MainLayout>
+          <LatestArticleDetail latestArticleContent={latestArticles[3]} />
         </MainLayout>
       )
     },
