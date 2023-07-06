@@ -3,8 +3,8 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import React from 'react'
 import App from './App'
-import ErrorBoundary from './components/ErrorBoundary'
-import { AppProvider } from './contexts/app.context'
+import ErrorBoundary from 'src/pages/ErrorBoundary'
+import { AppProvider } from 'src/contexts/app.context'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
