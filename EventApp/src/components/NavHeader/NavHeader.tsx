@@ -3,11 +3,10 @@ import logo from '../../assets/images/logopng.png'
 import { Link, NavLink } from 'react-router-dom'
 import path from '../../constants/path'
 import UnderLineEffect from '../UnderlineEffect'
-import Loading from '../Loading'
 import { AppContext } from 'src/contexts/app.context'
 
 export default function NavHeader() {
-  const { setLoading, loading, handleNextPage } = useContext(AppContext)
+  const { setLoading, handleNextPage } = useContext(AppContext)
   const [open, setOpen] = useState(false)
   const [showNav, setShowNav] = useState(true)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
@@ -35,11 +34,7 @@ export default function NavHeader() {
 
   return (
     <>
-      <div
-        className={`navigation-bar opacity-0 transition-all duration-1000 ${
-          loading ? '' : 'opacity-100 duration-1000'
-        }`}
-      >
+      <div className='navigation-bar'>
         <nav
           className={`fixed top-0 z-[99999] w-full bg-white text-blue opacity-100 transition-all duration-[700ms]
        ${showNav ? 'visible transition-all duration-[700ms]' : 'invisible translate-y-[-100%] duration-[700ms]'}`}

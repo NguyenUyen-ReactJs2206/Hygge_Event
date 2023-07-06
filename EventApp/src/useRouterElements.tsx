@@ -29,6 +29,7 @@ import {
   listUpsideDown
 } from 'src/api/GalleryDetail.api'
 import NotFound from './pages/NotFound'
+import LatestArticleDetail from './pages/LatestArticleDetail'
 
 export default function useRouterElements() {
   const location = useLocation()
@@ -100,6 +101,14 @@ export default function useRouterElements() {
       element: (
         <MainLayout>
           <NotFound />
+        </MainLayout>
+      )
+    },
+    {
+      path: '/:nameId',
+      element: (
+        <MainLayout>
+          <LatestArticleDetail />
         </MainLayout>
       )
     },

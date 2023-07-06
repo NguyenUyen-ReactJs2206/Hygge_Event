@@ -424,7 +424,12 @@ export default function Home() {
             {latestArticles.map((article, index) => (
               <Fragment key={index}>
                 <div className='col-span-4 sm:col-span-2 md:col-span-1 '>
-                  <LatestArticles nameArticle={article.nameArticle} image={article.image} time={article.time} />
+                  <LatestArticles
+                    pathDetail={article.slug}
+                    nameArticle={article.nameArticle}
+                    image={article.image}
+                    time={article.time}
+                  />
                 </div>
               </Fragment>
             ))}

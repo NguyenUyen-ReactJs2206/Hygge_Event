@@ -140,21 +140,25 @@ export const members = [
 ]
 export const latestArticles = [
   {
+    slug: 'wedding-themes-ideas-for-any-styles-one',
     image: `${articleOne}`,
     nameArticle: 'Wedding Themes Ideas for Any Styles',
     time: 'JUNE 4, 2023 - 4 Likes'
   },
   {
+    slug: 'wedding-themes-ideas-for-any-styles-two',
     image: `${articleTwo}`,
     nameArticle: 'Wedding Themes Ideas for Any Styles',
     time: 'JUNE 4, 2023 - 4 Likes'
   },
   {
+    slug: 'wedding-themes-ideas-for-any-styles-three',
     image: `${articleThree}`,
     nameArticle: 'Wedding Themes Ideas for Any Styles',
     time: 'JUNE 4, 2023 - 4 Likes'
   },
   {
+    slug: 'wedding-themes-ideas-for-any-styles-four',
     image: `${articleFour}`,
     nameArticle: 'Wedding Themes Ideas for Any Styles',
     time: 'JUNE 4, 2023 - 4 Likes'

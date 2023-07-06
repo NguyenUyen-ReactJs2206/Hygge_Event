@@ -1,19 +1,29 @@
+import { Link } from 'react-router-dom'
+
 type Props = {
   image: string
   nameArticle: string
   time: string
+  pathDetail: string
 }
 
-export default function LatestArticles({ image, nameArticle, time }: Props) {
+export default function LatestArticles({ image, nameArticle, time, pathDetail }: Props) {
   return (
     <article className='object-cover'>
-      <div className='h-full w-full'>
-        <img src={image} alt={image} className='h-full w-full object-cover' />
+      <div className='h-full w-full overflow-hidden'>
+        <img
+          src={image}
+          alt={image}
+          className='h-full w-full object-cover transition-all duration-700 hover:scale-105 hover:duration-700'
+        />
       </div>
       <div className='py-4 '>
-        <div className='text-lg font-semibold tracking-wider text-blue lg:text-xl lg:tracking-widest'>
+        <Link
+          to={pathDetail}
+          className='text-lg font-semibold tracking-wider text-blue hover:underline lg:text-xl lg:tracking-widest'
+        >
           {nameArticle}
-        </div>
+        </Link>
         <div className='text-sm font-medium tracking-wide lg:tracking-wider'>{time}</div>
       </div>
     </article>
