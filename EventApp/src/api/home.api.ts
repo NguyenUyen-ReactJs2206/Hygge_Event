@@ -172,3 +172,31 @@ export const latestArticles = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quibusdam officia, fugiat esse sint tempora voluptatum perspiciatis nam optio culpa odio ipsam molestiae quaerat veniam a maiores vero, accusamus nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat inventore, ipsa odio dicta fuga eligendi illum vitae expedita tempora? Eveniet necessitatibus ut itaque accusamus, ex sint sapiente ipsa illo dolorem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem dolorem nihil, molestias consectetur minus perferendis non enim ipsam quos dolor voluptatum vitae earum veniam odio suscipit nostrum nulla rem sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolore voluptates assumenda? Eligendi, ipsam ad itaque laudantium suscipit eius adipisci eaque eum quibusdam mollitia qui placeat animi iure error vitae.'
   }
 ]
+
+export const responsiveForCip = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 1024 },
+    items: 3,
+    slidesToSlide: 1,
+    isFinite: true
+  },
+  desktop: {
+    breakpoint: { max: 1024, min: 768 },
+    items: 3,
+    slidesToSlide: 1,
+    isFinite: true
+  },
+  tablet: {
+    breakpoint: { max: 768, min: 680 },
+    items: 1,
+    slidesToSlide: 1,
+    isFinite: true
+  },
+  mobile: {
+    breakpoint: { max: 680, min: 0 },
+    items: 1,
+    slidesToSlide: 1,
+    isFinite: true
+  }
+}

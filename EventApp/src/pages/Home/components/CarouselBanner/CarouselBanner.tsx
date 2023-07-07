@@ -17,8 +17,9 @@ export default function CarouselBanner() {
         pauseOnHover={false}
         autoPlay={true}
         infinite={true}
-        autoPlaySpeed={2000}
+        autoPlaySpeed={3000}
         showDots={true}
+        transitionDuration={2000}
       >
         {banners.map((image, index) => (
           <div key={index} className='h-[100vh] w-full overflow-hidden'>

@@ -9,8 +9,16 @@ import CarouselCategoryPost from 'src/components/Carousels/CarouselTestimonials/
 import Members from 'src/pages/Home/components/Members'
 import LatestArticles from 'src/pages/Home/components/LatestArticles'
 import CarouselBanner from 'src/pages/Home/components/CarouselBanner'
-import { corporationIdentifyProgram, features, latestArticles, members, services } from 'src/api/home.api'
+import {
+  corporationIdentifyProgram,
+  features,
+  latestArticles,
+  members,
+  responsiveForCip,
+  services
+} from 'src/api/home.api'
 import HorizontalLineEffect from 'src/components/HorizontalLineEffect'
+import CarouselComponent from './components/CarouselComponent/CarouselComponent'
 
 export default function Home() {
   return (
@@ -79,48 +87,48 @@ export default function Home() {
       <div className='strengths'>
         <div className='group relative grid grid-cols-2'>
           <div className='absolute col-span-2 h-full w-full lg:static lg:col-span-1'>
-            <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:px-20 lg:py-32 '>
+            <div className='lg:group-hover:duration-7000 h-full w-full items-center p-4 transition-all duration-700 sm:px-10 sm:py-20 lg:px-20 lg:py-32 lg:group-hover:bg-blue'>
               <div
-                className='translate-y-12 transform opacity-0 transition-all 
-            duration-1000 group-hover:translate-y-0
+                className='translate-y-12 transform opacity-0 transition-all duration-1000 
+            group-hover:translate-y-0
             group-hover:opacity-100 lg:translate-y-0
             lg:transform-none lg:opacity-100
             lg:transition-none lg:duration-0'
               >
-                <h3 className='text-xl font-extrabold uppercase tracking-wider text-blue sm:text-2xl sm:font-semibold'>
+                <h3 className='text-xl font-extrabold uppercase tracking-wider text-blue sm:text-2xl sm:font-semibold lg:group-hover:text-white'>
                   Our Strengths
                 </h3>
                 <div className=''>
-                  <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium'>
+                  <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium lg:group-hover:text-white'>
                     <div className='uppercase tracking-wide'>Planning</div>
                     <div>66%</div>
-                    <div className='absolute bottom-0 left-0 h-1 w-[66%] bg-blue'></div>
-                    <div className='absolute bottom-0 right-0 h-1 w-[34%] bg-gray/10'></div>
+                    <div className='absolute bottom-0 left-0 h-1 w-[66%] bg-blue lg:group-hover:bg-white'></div>
+                    <div className='absolute bottom-0 right-0 h-1 w-[34%] bg-gray/10 lg:group-hover:bg-gray/80'></div>
                   </div>
                 </div>
                 <div className=''>
-                  <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium'>
+                  <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium lg:group-hover:text-white'>
                     <div className='uppercase tracking-wide'>Concept</div>
                     <div>72%</div>
-                    <div className='absolute bottom-0 left-0 h-1 w-[72%] bg-blue'></div>
-                    <div className='absolute bottom-0 right-0 h-1 w-[28%] bg-gray/10'></div>
+                    <div className='absolute bottom-0 left-0 h-1 w-[72%] bg-blue lg:group-hover:bg-white'></div>
+                    <div className='absolute bottom-0 right-0 h-1 w-[28%] bg-gray/10 lg:group-hover:bg-gray/80'></div>
                   </div>
                 </div>
 
                 <div className=''>
-                  <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium'>
+                  <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium lg:group-hover:text-white'>
                     <div className='uppercase tracking-wide'>Design</div>
                     <div>78%</div>
-                    <div className='absolute bottom-0 left-0 h-1 w-[78%] bg-blue'></div>
-                    <div className='absolute bottom-0 right-0 h-1 w-[22%] bg-gray/10'></div>
+                    <div className='absolute bottom-0 left-0 h-1 w-[78%] bg-blue lg:group-hover:bg-white'></div>
+                    <div className='absolute bottom-0 right-0 h-1 w-[22%] bg-gray/10 lg:group-hover:bg-gray/80'></div>
                   </div>
                 </div>
                 <div className=''>
-                  <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium'>
+                  <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium lg:group-hover:text-white'>
                     <div className='uppercase tracking-wide'>Production</div>
                     <div>90%</div>
-                    <div className='absolute bottom-0 left-0 h-1 w-[90%] bg-blue'></div>
-                    <div className='absolute bottom-0 right-0 h-1 w-[10%] bg-gray/10'></div>
+                    <div className='absolute bottom-0 left-0 h-1 w-[90%] bg-blue lg:group-hover:bg-white'></div>
+                    <div className='absolute bottom-0 right-0 h-1 w-[10%] bg-gray/10 lg:group-hover:bg-gray/80'></div>
                   </div>
                 </div>
               </div>
@@ -147,7 +155,7 @@ export default function Home() {
             </div>
           </div>
           <div className='absolute col-span-2 h-full w-full lg:static lg:col-span-1'>
-            <div className='h-full w-full items-center p-4 sm:px-10 sm:py-20 lg:px-20 lg:pt-36 xl:pt-52 '>
+            <div className='lg:group-hover:duration-7000 duration-7000 h-full w-full items-center p-4 transition-all sm:px-10 sm:py-20 lg:px-20 lg:pt-36 lg:group-hover:bg-blue xl:pt-52'>
               <div
                 className='translate-y-12 transform opacity-0 transition-all 
             duration-1000 group-hover:translate-y-0
@@ -155,10 +163,10 @@ export default function Home() {
             lg:transform-none lg:opacity-100
             lg:transition-none lg:duration-0'
               >
-                <h3 className='text-xl font-extrabold uppercase tracking-wider text-blue sm:text-2xl sm:font-semibold'>
+                <h3 className='text-xl font-extrabold uppercase tracking-wider text-blue sm:text-2xl sm:font-semibold lg:group-hover:text-white'>
                   From warmth to endless amore
                 </h3>
-                <p className='mt-4 text-base tracking-wider sm:text-lg'>
+                <p className='mt-4 text-base tracking-wider sm:text-lg lg:group-hover:text-white'>
                   We are dedicated to creating unforgettable and everlasting memories for couples, turning their dreams
                   into reality with impeccable planning and attention to detail.
                 </p>
@@ -273,117 +281,22 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='corporation-identify-program my-32 sm:my-40'>
-        <div className='hidden md:block'>
-          <div className='relative h-full w-full pb-40 pt-14 lg:pb-48 lg:pt-16'>
-            <img src={backgroundBlack} alt='background' className='h-[70px] w-full' />
-            <div className='container absolute bottom-0 top-0 mx-auto grid grid-cols-3 md:gap-2 lg:inset-x-2 lg:gap-12 xl:inset-x-10 twoXl:inset-x-16'>
-              <div className='col-span-1'>
-                <div className='h-full w-full scale-100 border-t border-t-gray/5 bg-white shadow-md transition-all duration-700 hover:shadow-2xl hover:duration-700'>
-                  <div className='flex justify-center md:py-6 lg:pb-8 lg:pt-12'>
-                    <div className='relative h-20 w-20 border-2 border-gray/60'>
-                      <div className='absolute left-0 top-0 h-[25px] w-[50px] border-b-2 border-r-2 border-gray/60'></div>
-                      <div className='absolute right-0 top-0 h-[25px] w-[30px] border-b-2 border-gray/60'></div>
-                    </div>
-                  </div>
-                  <CorporationIdentifyProgramHome
-                    nameCip={corporationIdentifyProgram[0].nameCip}
-                    descriptionCip={corporationIdentifyProgram[0].descriptionCip}
-                  />
-                </div>
-              </div>
-              <div className='col-span-1'>
-                <div className='h-full w-full scale-100 border-t border-t-gray/5 bg-white shadow-md transition-all duration-700 hover:shadow-2xl hover:duration-700'>
-                  <div className='flex justify-center md:py-6 lg:pb-8 lg:pt-12'>
-                    <div className='relative h-20 w-20 border-2 border-gray/60'>
-                      <div className='absolute right-0 top-0 h-[25px] w-[30px] border-b-2 border-l-2 border-gray/60'></div>
-                      <div className='absolute bottom-0 right-0 h-[55px] w-[30px] border-l-2 border-gray/60'></div>
-                    </div>
-                  </div>
-                  <CorporationIdentifyProgramHome
-                    nameCip={corporationIdentifyProgram[1].nameCip}
-                    descriptionCip={corporationIdentifyProgram[1].descriptionCip}
-                  />
-                </div>
-              </div>
-              <div className='col-span-1'>
-                <div className='h-full w-full scale-100 border-t border-t-gray/5 bg-white shadow-md transition-all duration-700 hover:shadow-2xl hover:duration-700'>
-                  <div className='flex justify-center md:py-6 lg:pb-8 lg:pt-12'>
-                    <div className='relative h-20 w-20 border-2 border-gray/60'>
-                      <div className='absolute left-0 top-0 h-[50px] w-[50px] border-b-2 border-r-2 border-gray/60'></div>
-                      <div className='absolute right-0 top-0 h-[50px] w-[30px] border-b-2 border-gray/60'></div>
-                    </div>
-                  </div>
-                  <CorporationIdentifyProgramHome
-                    nameCip={corporationIdentifyProgram[2].nameCip}
-                    descriptionCip={corporationIdentifyProgram[2].descriptionCip}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className='block md:hidden'>
-          <div className='relative mb-2 h-full w-full pb-32 pt-16'>
-            <img src={backgroundBlack} alt='background' className='h-[70px] w-full' />
-            <div className='absolute bottom-0 left-4 right-4 top-0 grid grid-cols-1 sm:left-28 sm:right-28'>
-              <div className='col-span-1'>
-                <div className='h-full w-full border-t border-t-gray/5 bg-white shadow-md'>
-                  <div className='flex justify-center py-6'>
-                    <div className='relative h-20 w-20 border-2 border-gray/60'>
-                      <div className='absolute left-0 top-0 h-[25px] w-[50px] border-b-2 border-r-2 border-gray/60'></div>
-                      <div className='absolute right-0 top-0 h-[25px] w-[30px] border-b-2 border-gray/60'></div>
-                    </div>
-                  </div>
-                  <CorporationIdentifyProgramHome
-                    nameCip={corporationIdentifyProgram[0].nameCip}
-                    descriptionCip={corporationIdentifyProgram[0].descriptionCip}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='relative mb-2 h-full w-full pb-32 pt-16'>
-            <img src={backgroundBlack} alt='background' className='h-[70px] w-full' />
-            <div className='absolute bottom-0 left-4 right-4 top-0 grid grid-cols-1 sm:left-28 sm:right-28'>
-              <div className='col-span-1'>
-                <div className='h-full w-full border-t border-t-gray/5 bg-white shadow-md'>
-                  <div className='flex justify-center py-6'>
-                    <div className='relative h-20 w-20 border-2 border-gray/60'>
-                      <div className='absolute right-0 top-0 h-[25px] w-[30px] border-b-2 border-l-2 border-gray/60'></div>
-                      <div className='absolute bottom-0 right-0 h-[55px] w-[30px] border-l-2 border-gray/60'></div>
-                    </div>
-                  </div>
-                  <CorporationIdentifyProgramHome
-                    nameCip={corporationIdentifyProgram[1].nameCip}
-                    descriptionCip={corporationIdentifyProgram[1].descriptionCip}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='relative mb-2 h-full w-full pb-32 pt-16'>
-            <img src={backgroundBlack} alt='background' className='h-[70px] w-full' />
-            <div className='absolute bottom-0 left-4 right-4 top-0 grid grid-cols-1 sm:left-28 sm:right-28'>
-              <div className='col-span-1'>
-                <div className='h-full w-full border-t border-t-gray/5 bg-white shadow-md'>
-                  <div className='flex justify-center py-6'>
-                    <div className='relative h-20 w-20 border-2 border-gray/60'>
-                      <div className='absolute left-0 top-0 h-[50px] w-[50px] border-b-2 border-r-2 border-gray/60'></div>
-                      <div className='absolute right-0 top-0 h-[50px] w-[30px] border-b-2 border-gray/60'></div>
-                    </div>
-                  </div>
-                  <CorporationIdentifyProgramHome
-                    nameCip={corporationIdentifyProgram[2].nameCip}
-                    descriptionCip={corporationIdentifyProgram[2].descriptionCip}
-                  />
-                </div>
+      <div className='corporation-identify-program mb:16 mt-32 sm:mt-40'>
+        <div className=''>
+          <div className=' h-full w-full pb-40 pt-14 lg:pb-48 lg:pt-16'>
+            <img src={backgroundBlack} alt='background' className='h-full w-full' />
+            <div className='container bottom-0 top-0 mx-auto'>
+              <div className='mt-[-100px] h-full w-full'>
+                <CarouselComponent
+                  responsive={responsiveForCip}
+                  corporationIdentifyProgram={corporationIdentifyProgram}
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className='slide my-20'>
+      <div className='slide mb-20'>
         <div className='relative h-full w-full pb-52 md:pb-48'>
           <img src={backgroundSlide} alt='background' className='h-[200px] w-full object-top' />
           <div className='container absolute bottom-0 left-2 right-2 top-16 mx-auto h-full bg-white shadow-md xs:left-5 xs:right-5 lg:inset-x-6 xl:inset-x-14'>
