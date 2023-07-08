@@ -4,21 +4,13 @@ import strengthTwo from 'src/assets/images/strengths/strengthTwo.png'
 import NumberUp from 'src/pages/Home/components/NumberUp'
 import backgroundBlack from 'src/assets/images/background/backgroundBlack.png'
 import backgroundSlide from 'src/assets/images/background/backgroundSlide.png'
-import CorporationIdentifyProgramHome from 'src/pages/Home/components/CorporationIdentifyProgramHome'
 import CarouselCategoryPost from 'src/components/Carousels/CarouselTestimonials/CarouselCategoryPost'
-import Members from 'src/pages/Home/components/Members'
-import LatestArticles from 'src/pages/Home/components/LatestArticles'
 import CarouselBanner from 'src/pages/Home/components/CarouselBanner'
-import {
-  corporationIdentifyProgram,
-  features,
-  latestArticles,
-  members,
-  responsiveForCip,
-  services
-} from 'src/api/home.api'
+import { features, services } from 'src/api/home.api'
 import HorizontalLineEffect from 'src/components/HorizontalLineEffect'
 import CarouselComponent from './components/CarouselComponent/CarouselComponent'
+import CarouselMembers from './components/CarouselMembers'
+import CarouselLatestArticles from './components/CarouselLatestArticles'
 
 export default function Home() {
   return (
@@ -282,16 +274,11 @@ export default function Home() {
         </div>
       </div>
       <div className='corporation-identify-program mb:16 mt-32 sm:mt-40'>
-        <div className=''>
-          <div className=' h-full w-full pb-40 pt-14 lg:pb-48 lg:pt-16'>
-            <img src={backgroundBlack} alt='background' className='h-full w-full' />
-            <div className='container bottom-0 top-0 mx-auto'>
-              <div className='mt-[-100px] h-full w-full'>
-                <CarouselComponent
-                  responsive={responsiveForCip}
-                  corporationIdentifyProgram={corporationIdentifyProgram}
-                />
-              </div>
+        <div className=' h-full w-full pb-40 pt-14 lg:pb-48 lg:pt-16'>
+          <img src={backgroundBlack} alt='background' className='h-full w-full' />
+          <div className='container bottom-0 top-0 mx-auto'>
+            <div className='mt-[-100px] h-full w-full'>
+              <CarouselComponent />
             </div>
           </div>
         </div>
@@ -320,15 +307,7 @@ export default function Home() {
             </div>
           </div>
           <div className='mb-10'>
-            <div className='grid grid-cols-6 md:gap-4 lg:gap-6 xl:gap-8'>
-              {members.map((member, index) => (
-                <Fragment key={index}>
-                  <div className='col-span-6 md:col-span-2'>
-                    <Members name={member.name} posision={member.position} avatar={member.img} />
-                  </div>
-                </Fragment>
-              ))}
-            </div>
+            <CarouselMembers />
           </div>
         </div>
       </div>
@@ -337,20 +316,7 @@ export default function Home() {
           <h3 className='mb-10 text-center text-3xl font-semibold uppercase tracking-widest text-blue md:mb-20 md:text-5xl'>
             Latest Articles
           </h3>
-          <div className='grid grid-cols-4 gap-4 md:gap-2 lg:gap-10 xl:gap-16 '>
-            {latestArticles.map((article, index) => (
-              <Fragment key={index}>
-                <div className='col-span-4 transition-all duration-500 hover:shadow-md hover:duration-500 sm:col-span-2 md:col-span-1 '>
-                  <LatestArticles
-                    pathDetail={article.slug}
-                    nameArticle={article.nameArticle}
-                    image={article.image}
-                    time={article.time}
-                  />
-                </div>
-              </Fragment>
-            ))}
-          </div>
+          <CarouselLatestArticles />
         </div>
       </div>
     </div>

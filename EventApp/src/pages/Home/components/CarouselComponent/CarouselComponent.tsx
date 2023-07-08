@@ -1,56 +1,13 @@
 import Carousel from 'react-multi-carousel'
 import CorporationIdentifyProgramHome from '../CorporationIdentifyProgramHome'
-import './index.css'
+import '../../index.css'
+import { corporationIdentifyProgram, responsiveForCip } from 'src/api/home.api'
 
-type Props = {
-  responsive: {
-    superLargeDesktop: {
-      breakpoint: {
-        max: number
-        min: number
-      }
-      items: number
-      slidesToSlide: number
-      isFinite: boolean
-    }
-    desktop: {
-      breakpoint: {
-        max: number
-        min: number
-      }
-      items: number
-      slidesToSlide: number
-      isFinite: boolean
-    }
-    tablet: {
-      breakpoint: {
-        max: number
-        min: number
-      }
-      items: number
-      slidesToSlide: number
-      isFinite: boolean
-    }
-    mobile: {
-      breakpoint: {
-        max: number
-        min: number
-      }
-      items: number
-      slidesToSlide: number
-      isFinite: boolean
-    }
-  }
-  corporationIdentifyProgram: {
-    nameCip: string
-    descriptionCip: string
-  }[]
-}
-export default function CarouselComponent({ responsive, corporationIdentifyProgram }: Props) {
+export default function CarouselComponent() {
   return (
     <div className=''>
       <Carousel
-        responsive={responsive}
+        responsive={responsiveForCip}
         pauseOnHover={false}
         autoPlay={true}
         infinite={true}

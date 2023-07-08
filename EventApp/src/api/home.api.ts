@@ -38,6 +38,7 @@ export const services = [
     description: 'Thank you for choosing us as a companion to your bigday.'
   }
 ]
+
 export const features = [
   `${featureOne}`,
   `${featureTow}`,
@@ -46,6 +47,7 @@ export const features = [
   `${featureFive}`,
   `${featureSix}`
 ]
+
 export const corporationIdentifyProgram = [
   {
     nameCip: 'UniQue Design',
@@ -109,6 +111,7 @@ export const slidesReview = [
     name: 'Huy Hoang - Out valued bride'
   }
 ]
+
 export const members = [
   {
     img: `${avatarOne}`,
@@ -138,6 +141,7 @@ export const members = [
     linkT: ''
   }
 ]
+
 export const latestArticles = [
   {
     slug: 'wedding-themes-ideas-for-any-styles-one',
@@ -190,6 +194,62 @@ export const responsiveForCip = {
   tablet: {
     breakpoint: { max: 768, min: 680 },
     items: 1,
+    slidesToSlide: 1,
+    isFinite: true
+  },
+  mobile: {
+    breakpoint: { max: 680, min: 0 },
+    items: 1,
+    slidesToSlide: 1,
+    isFinite: true
+  }
+}
+
+export const responsiveForMembers = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 1024 },
+    items: 3,
+    slidesToSlide: 1,
+    isFinite: true
+  },
+  desktop: {
+    breakpoint: { max: 1024, min: 768 },
+    items: 3,
+    slidesToSlide: 1,
+    isFinite: true
+  },
+  tablet: {
+    breakpoint: { max: 768, min: 680 },
+    items: 2,
+    slidesToSlide: 1,
+    isFinite: true
+  },
+  mobile: {
+    breakpoint: { max: 680, min: 0 },
+    items: 1,
+    slidesToSlide: 1,
+    isFinite: true
+  }
+}
+
+export const responsiveForLatest = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 1024 },
+    items: 4,
+    slidesToSlide: 0,
+    isFinite: true
+  },
+  desktop: {
+    breakpoint: { max: 1024, min: 768 },
+    items: 4,
+    slidesToSlide: 0,
+    isFinite: true
+  },
+  tablet: {
+    breakpoint: { max: 768, min: 680 },
+    items: 2,
     slidesToSlide: 1,
     isFinite: true
   },

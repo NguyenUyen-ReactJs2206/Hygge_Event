@@ -9,7 +9,7 @@ type Props = {
 
 export default function LatestArticles({ image, nameArticle, time, pathDetail }: Props) {
   return (
-    <article className='object-cover'>
+    <article className='mb-2 object-cover'>
       <div className='h-full w-full overflow-hidden'>
         <img
           src={image}

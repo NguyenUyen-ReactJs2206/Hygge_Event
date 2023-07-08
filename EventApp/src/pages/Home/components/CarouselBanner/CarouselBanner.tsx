@@ -7,7 +7,8 @@ export default function CarouselBanner() {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 0 },
       items: 1,
-      slidesToSlide: 1
+      slidesToSlide: 1,
+      isFinite: true
     }
   }
   return (
@@ -19,6 +20,7 @@ export default function CarouselBanner() {
         infinite={true}
         autoPlaySpeed={3000}
         showDots={true}
+        arrows={false}
         transitionDuration={2000}
       >
         {banners.map((image, index) => (

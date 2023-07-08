@@ -21,7 +21,7 @@ export default function MainLayout({ children }: Props) {
     }, 2000)
 
     return () => clearTimeout(timer)
-  }, [])
+  }, [setLoading])
 
   return (
     <div>
@@ -45,7 +45,7 @@ export default function MainLayout({ children }: Props) {
             offset={-70}
             duration={500}
           >
-            <button className='flex h-full w-full items-center justify-center rounded-full bg-white/70 text-center text-black/70 hover:bg-white hover:text-black'>
+            <button className='flex h-full w-full animate-bounce items-center justify-center rounded-full bg-white/70 text-center text-black/70 hover:bg-white hover:text-black'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
