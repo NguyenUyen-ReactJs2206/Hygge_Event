@@ -1,4 +1,6 @@
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { AppContext } from 'src/contexts/app.context'
 
 type Props = {
   image: string
@@ -8,6 +10,7 @@ type Props = {
 }
 
 export default function LatestArticles({ image, nameArticle, time, pathDetail }: Props) {
+  const { handleNextPage } = useContext(AppContext)
   return (
     <article className='mb-2 object-cover'>
       <div className='h-full w-full overflow-hidden'>
@@ -21,6 +24,7 @@ export default function LatestArticles({ image, nameArticle, time, pathDetail }:
         <Link
           to={pathDetail}
           className='text-lg font-semibold tracking-wider text-blue hover:underline lg:text-xl lg:tracking-widest'
+          onClick={handleNextPage}
         >
           {nameArticle}
         </Link>

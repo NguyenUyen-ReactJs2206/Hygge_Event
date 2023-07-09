@@ -48,7 +48,14 @@ export default function ConceptDetail({ name, listConceptDetail }: Props) {
           <div className='mx-auto my-10 max-w-[1000px]'>
             <h4 className='py-4 text-2xl font-medium tracking-wider text-gray'>More concept</h4>
             <div className=''>
-              <Carousel responsive={responsive}>
+              <Carousel
+                responsive={responsive}
+                pauseOnHover={false}
+                showDots={true}
+                sliderClass='transition-duration-2000'
+                infinite={true}
+                arrows={true}
+              >
                 <MoreConcept name='Rapunzel' pathConcept={pathConceptDetails.conceptRapunzel} />
                 <MoreConcept name='Bridgerton' pathConcept={pathConceptDetails.conceptBridgerton} />
                 <MoreConcept name='Beaty And The Beast' pathConcept={pathConceptDetails.conceptBeatyAndTheBeast} />
