@@ -1,27 +1,17 @@
 import Carousel from 'react-multi-carousel'
-import { banners } from 'src/api/home.api'
+import { banners, responsiveForBanner } from 'src/api/home.api'
 
 export default function CarouselBanner() {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 0 },
-      items: 1,
-      slidesToSlide: 1,
-      isFinite: true
-    }
-  }
   return (
     <div className=''>
       <Carousel
-        responsive={responsive}
+        responsive={responsiveForBanner}
         pauseOnHover={false}
         autoPlay={true}
         infinite={true}
-        autoPlaySpeed={3000}
+        autoPlaySpeed={4000}
+        arrows={true}
         showDots={true}
-        arrows={false}
-        transitionDuration={2000}
       >
         {banners.map((image, index) => (
           <div key={index} className='h-[100vh] w-full overflow-hidden'>

@@ -1,6 +1,9 @@
+import { useState } from 'react'
+import saveAs from 'file-saver'
 import { Fragment } from 'react'
 import { createPortal } from 'react-dom'
 import Carousel from 'react-multi-carousel'
+import 'src/sass/index.scss'
 
 type Props = {
   isPopupVisible: boolean
@@ -15,6 +18,8 @@ export default function PopUpSlideImages({
   currentIndexImages,
   setCurrentIndexImages
 }: Props) {
+  const [isFullScreen, setIsFullScreen] = useState(false)
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -64,8 +69,44 @@ export default function PopUpSlideImages({
   const handleChangeImage = (index: number) => {
     setCurrentIndexImages(index)
   }
+
+  const handleDownload = () => {
+    // // Tạo một phần tử liên kết ảo
+    // const downloadLink = document.createElement('a')
+    // downloadLink.href = listImageDetail[currentIndexImages]
+    // downloadLink.download = `${listImageDetail[currentIndexImages]}`
+    // // Kích hoạt việc tải về
+    // downloadLink.click()
+    // axios({
+    //   url: `${listImageDetail[currentIndexImages]}`, // Thay đổi thành đường dẫn ảnh thực tế
+    //   method: 'GET',
+    //   responseType: 'blob' // Sử dụng responseType là 'blob' để tải xuống thành công
+    // })
+    //   .then((response) => {
+    //     const blob = new Blob([response.data])
+    //     console.log(blob, 'bbbbbbbb')
+    //     saveAs(blob, `${listImageDetail[currentIndexImages]}`) // Thay đổi tên_tệp_tải_xuống.jpg thành tên tệp tin bạn muốn cho tệp đã tải xuống
+    //   })
+    //   .catch((error) => {
+    //     console.log(error)
+    //   })
+    saveAs(listImageDetail[currentIndexImages], `${listImageDetail[currentIndexImages]}`)
+  }
+  const toggleFullScreen = () => {
+    const img = document.getElementById('fullscreen')
+    if (isFullScreen) {
+      ;(img as HTMLElement).style.width = 'auto'
+      ;(img as HTMLElement).style.height = 'auto'
+      document.exitFullscreen()
+    } else {
+      ;(img as HTMLElement).style.width = '100%'
+      ;(img as HTMLElement).style.height = '100%'
+      document.documentElement.requestFullscreen()
+    }
+    setIsFullScreen(!isFullScreen)
+  }
   return createPortal(
-    <div className='fixed inset-0 z-[99999] h-[100vh] w-full bg-black'>
+    <div className='fixed inset-0 z-[99999] h-[100vh] w-full bg-black' id='fullscreen'>
       <div className='relative h-[100vh]'>
         <div className='m-auto flex h-[85vh] max-w-[1300px] items-center justify-center'>
           <div className='overflow-hidden'>
@@ -78,7 +119,9 @@ export default function PopUpSlideImages({
         </div>
         <div className='absolute inset-x-0 bottom-0 mx-auto h-[15vh] max-w-[1500px] bg-[#0d0a0a]'>
           <div className='mt-2'>
-            <Carousel responsive={responsive}>{image}</Carousel>
+            <Carousel responsive={responsive} centerMode={true} itemClass='carousel-item-padding-4-px'>
+              {image}
+            </Carousel>
           </div>
         </div>
         <div className='absolute left-0 right-0 top-0 h-[7vh] w-full bg-black/20'>
@@ -87,23 +130,41 @@ export default function PopUpSlideImages({
               listImageDetail.length
             }`}</div>
             <div className='flex gap-8 '>
-              <button>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={1.5}
-                  stroke='currentColor'
-                  className='h-6 w-6 cursor-pointer stroke-white/80 hover:stroke-white'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15'
-                  />
-                </svg>
+              <button onClick={toggleFullScreen}>
+                {isFullScreen && (
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    strokeWidth={1.5}
+                    stroke='currentColor'
+                    className='h-6 w-6 cursor-pointer stroke-white/80 hover:stroke-white'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25'
+                    />
+                  </svg>
+                )}
+                {!isFullScreen && (
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    strokeWidth={1.5}
+                    stroke='currentColor'
+                    className='h-6 w-6 cursor-pointer stroke-white/80 hover:stroke-white'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15'
+                    />
+                  </svg>
+                )}
               </button>
-              <button>
+              <button onClick={() => handleDownload()}>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   fill='none'

@@ -1,6 +1,6 @@
 import Carousel from 'react-multi-carousel'
 import CorporationIdentifyProgramHome from '../CorporationIdentifyProgramHome'
-import '../../index.css'
+import 'src/sass/index.scss'
 import { corporationIdentifyProgram, responsiveForCip } from 'src/api/home.api'
 
 export default function CarouselComponent() {

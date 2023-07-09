@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import Carousel from 'react-multi-carousel'
 import { latestArticles, responsiveForLatest } from 'src/api/home.api'
 import LatestArticles from '../LatestArticles'
+import 'src/sass/index.scss'
 
 export default function CarouselLatestArticles() {
   return (

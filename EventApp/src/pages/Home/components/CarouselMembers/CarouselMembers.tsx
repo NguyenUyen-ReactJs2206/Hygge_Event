@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import Carousel from 'react-multi-carousel'
 import { members, responsiveForMembers } from 'src/api/home.api'
 import Members from '../Members'
-import '../../index.css'
+import 'src/sass/index.scss'
 
 export default function CarouselMembers() {
   return (

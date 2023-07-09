@@ -5,6 +5,7 @@ import 'react-multi-carousel/lib/styles.css'
 import { responsive } from 'src/api/conceptDetails.api'
 import { useState } from 'react'
 import PopUpSlideImages from 'src/components/PopUpSlideImages'
+import 'src/sass/index.scss'
 
 type Props = {
   name: string

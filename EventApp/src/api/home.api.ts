@@ -177,6 +177,34 @@ export const latestArticles = [
   }
 ]
 
+export const responsiveForBanner = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 1024 },
+    items: 1,
+    slidesToSlide: 1,
+    isFinite: true
+  },
+  desktop: {
+    breakpoint: { max: 1024, min: 768 },
+    items: 1,
+    slidesToSlide: 1,
+    isFinite: true
+  },
+  tablet: {
+    breakpoint: { max: 768, min: 680 },
+    items: 1,
+    slidesToSlide: 1,
+    isFinite: true
+  },
+  mobile: {
+    breakpoint: { max: 680, min: 0 },
+    items: 1,
+    slidesToSlide: 1,
+    isFinite: true
+  }
+}
+
 export const responsiveForCip = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
