@@ -94,7 +94,7 @@ export default function NavHeader() {
                 )}
               </div>
 
-              <ul className='hidden w-max items-center gap-4 font-extrabold uppercase tracking-wide text-blue lg:flex lg:text-sm'>
+              <ul className='hidden w-max items-center gap-5 font-extrabold uppercase tracking-wide text-blue lg:flex lg:text-sm'>
                 <li className='group relative '>
                   <NavLink
                     to={path.home}
@@ -119,7 +119,7 @@ export default function NavHeader() {
                     }
                     onClick={handleNextPage}
                   >
-                    About Us
+                    {t('aboutus')}
                   </NavLink>
                   <UnderLineEffect color='blue' />
                 </li>
@@ -133,7 +133,7 @@ export default function NavHeader() {
                     }
                     onClick={handleNextPage}
                   >
-                    Concept
+                    {t('concept')}
                   </NavLink>
                   <UnderLineEffect color='blue' />
                 </li>
@@ -147,7 +147,7 @@ export default function NavHeader() {
                     }
                     onClick={handleNextPage}
                   >
-                    Gallery
+                    {t('gallery')}
                   </NavLink>
                   <UnderLineEffect color='blue' />
                 </li>
@@ -161,7 +161,7 @@ export default function NavHeader() {
                     }
                     onClick={handleNextPage}
                   >
-                    Testimonials
+                    {t('testimonials')}
                   </NavLink>
                   <UnderLineEffect color='blue' />
                 </li>
@@ -175,7 +175,7 @@ export default function NavHeader() {
                     }
                     onClick={handleNextPage}
                   >
-                    Blog
+                    {t('blog')}
                   </NavLink>
                   <UnderLineEffect color='blue' />
                 </li>
@@ -189,7 +189,7 @@ export default function NavHeader() {
                     }
                     onClick={handleNextPage}
                   >
-                    Contact
+                    {t('contact')}
                   </NavLink>
                   <UnderLineEffect color='blue' />
                 </li>
@@ -214,7 +214,7 @@ export default function NavHeader() {
                         d='M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418'
                       />
                     </svg>
-                    <span className='cursor-pointer  hover:text-blue hover:duration-300'>
+                    <span className='w-8 cursor-pointer text-start hover:duration-300'>
                       {isChangeLanguage ? 'EN' : 'VI'}
                     </span>
                   </button>
@@ -278,7 +278,7 @@ export default function NavHeader() {
                 )}
               </div>
 
-              <ul className=' hidden w-max items-center gap-4 font-extrabold uppercase tracking-wide text-white lg:flex lg:text-sm'>
+              <ul className=' hidden w-max items-center gap-5 font-extrabold uppercase tracking-wide text-white lg:flex lg:text-sm'>
                 <li className='group relative '>
                   <NavLink
                     to={path.home}
@@ -289,7 +289,7 @@ export default function NavHeader() {
                     }
                     onClick={handleNextPage}
                   >
-                    Home
+                    {t('home')}
                   </NavLink>
                   <UnderLineEffect color='white' />
                 </li>
@@ -303,7 +303,7 @@ export default function NavHeader() {
                     }
                     onClick={handleNextPage}
                   >
-                    About Us
+                    {t('aboutus')}
                   </NavLink>
                   <UnderLineEffect color='white' />
                 </li>
@@ -317,7 +317,7 @@ export default function NavHeader() {
                     }
                     onClick={handleNextPage}
                   >
-                    Concept
+                    {t('concept')}
                   </NavLink>
                   <UnderLineEffect color='white' />
                 </li>
@@ -331,7 +331,7 @@ export default function NavHeader() {
                     }
                     onClick={handleNextPage}
                   >
-                    Gallery
+                    {t('gallery')}
                   </NavLink>
                   <UnderLineEffect color='white' />
                 </li>
@@ -345,7 +345,7 @@ export default function NavHeader() {
                     }
                     onClick={handleNextPage}
                   >
-                    Testimonials
+                    {t('testimonials')}
                   </NavLink>
                   <UnderLineEffect color='white' />
                 </li>
@@ -359,7 +359,7 @@ export default function NavHeader() {
                     }
                     onClick={handleNextPage}
                   >
-                    Blog
+                    {t('blog')}
                   </NavLink>
                   <UnderLineEffect color='white' />
                 </li>
@@ -373,7 +373,7 @@ export default function NavHeader() {
                     }
                     onClick={handleNextPage}
                   >
-                    Contact
+                    {t('contact')}
                   </NavLink>
                   <UnderLineEffect color='white' />
                 </li>
@@ -398,7 +398,7 @@ export default function NavHeader() {
                         d='M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418'
                       />
                     </svg>
-                    <span className='cursor-pointer hover:text-white/80 hover:duration-300'>
+                    <span className='w-8 cursor-pointer text-start hover:duration-300'>
                       {isChangeLanguage ? 'EN' : 'VI'}
                     </span>
                   </button>
@@ -422,7 +422,7 @@ export default function NavHeader() {
                 }`
               }
             >
-              Home
+              {t('home')}
             </NavLink>
           </li>
           <li className=''>
@@ -433,7 +433,7 @@ export default function NavHeader() {
                 `inline-block px-6 py-2 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
               }
             >
-              About Us
+              {t('aboutus')}
             </NavLink>
           </li>
           <li className=''>
@@ -444,7 +444,7 @@ export default function NavHeader() {
                 `inline-block px-6 py-2 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
               }
             >
-              Concept
+              {t('concept')}
             </NavLink>
           </li>
           <li className=' '>
@@ -455,7 +455,7 @@ export default function NavHeader() {
                 `inline-block px-6 py-2 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
               }
             >
-              Gallery
+              {t('gallery')}
             </NavLink>
           </li>
           <li className=' '>
@@ -466,7 +466,7 @@ export default function NavHeader() {
                 `inline-block px-6 py-2 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
               }
             >
-              Testimonials
+              {t('testimonials')}
             </NavLink>
           </li>
           <li className=' '>
@@ -477,7 +477,7 @@ export default function NavHeader() {
                 `inline-block px-6 py-2 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
               }
             >
-              Blog
+              {t('blog')}
             </NavLink>
           </li>
           <li className=''>
@@ -488,15 +488,15 @@ export default function NavHeader() {
                 `inline-block px-6 py-2 hover:text-blue/50 hover:duration-300 ${isActive ? 'font-bold text-blue' : ''}`
               }
             >
-              Contact
+              {t('contact')}
             </NavLink>
           </li>
-          <li className='py-2'>
+          <li className='flex items-center justify-center py-2'>
             <button
               onClick={() => {
                 isChangeLanguage ? changeLanguage('en') : changeLanguage('vi')
               }}
-              className='flex cursor-pointer items-center justify-center'
+              className='flex cursor-pointer items-center justify-center text-center'
             >
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -512,7 +512,7 @@ export default function NavHeader() {
                   d='M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418'
                 />
               </svg>
-              <span className='cursor-pointer  hover:text-blue hover:duration-300'>
+              <span className='w-8 cursor-pointer text-start hover:text-blue hover:duration-300'>
                 {isChangeLanguage ? 'EN' : 'VI'}
               </span>
             </button>

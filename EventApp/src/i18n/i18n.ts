@@ -8,12 +8,24 @@ export const locales = {
 const resources = {
   vi: {
     translation: {
-      home: 'Trang chủ'
+      home: 'Trang chủ',
+      aboutus: 'Chúng tôi',
+      concept: 'Ý tưởng',
+      gallery: 'Hình ảnh',
+      testimonials: 'Lời khen',
+      blog: 'Blog',
+      contact: 'Liên hệ'
     }
   },
   en: {
     translation: {
-      home: 'Home'
+      home: 'Home',
+      aboutus: 'About Us',
+      concept: 'Concept',
+      gallery: 'Gallery',
+      testimonials: 'Testimonials',
+      blog: 'Blog',
+      contact: 'Contact'
     }
   }
 }
