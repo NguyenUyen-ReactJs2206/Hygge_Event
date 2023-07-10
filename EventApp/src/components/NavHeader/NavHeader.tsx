@@ -4,8 +4,13 @@ import { Link, NavLink } from 'react-router-dom'
 import path from '../../constants/path'
 import UnderLineEffect from '../UnderlineEffect'
 import { AppContext } from 'src/contexts/app.context'
+import { useTranslation } from 'react-i18next'
 
 export default function NavHeader() {
+  const { i18n, t } = useTranslation()
+
+  const [isChangeLanguage, setIsChangeLanguage] = useState(false)
+
   const { setLoading, handleNextPage } = useContext(AppContext)
   const [open, setOpen] = useState(false)
   const [showNav, setShowNav] = useState(false)
@@ -28,6 +33,11 @@ export default function NavHeader() {
     setTimeout(() => {
       setLoading(false)
     }, 1000)
+  }
+
+  const changeLanguage = (lng: 'vi' | 'en') => {
+    i18n.changeLanguage(lng)
+    setIsChangeLanguage(!isChangeLanguage)
   }
 
   return (
@@ -95,7 +105,7 @@ export default function NavHeader() {
                     }
                     onClick={handleNextPage}
                   >
-                    Home
+                    {t('home')}
                   </NavLink>
                   <UnderLineEffect color='blue' />
                 </li>
@@ -183,8 +193,31 @@ export default function NavHeader() {
                   </NavLink>
                   <UnderLineEffect color='blue' />
                 </li>
-                <li className='group relative'>
-                  <span className='cursor-pointer py-1 pl-5 hover:text-blue hover:duration-300'>EN</span>
+                <li className='py-1 pl-5'>
+                  <button
+                    onClick={() => {
+                      isChangeLanguage ? changeLanguage('en') : changeLanguage('vi')
+                    }}
+                    className='flex cursor-pointer items-center justify-center'
+                  >
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      strokeWidth={1.5}
+                      stroke='currentColor'
+                      className='h-5 w-5'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        d='M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418'
+                      />
+                    </svg>
+                    <span className='cursor-pointer  hover:text-blue hover:duration-300'>
+                      {isChangeLanguage ? 'EN' : 'VI'}
+                    </span>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -197,7 +230,11 @@ export default function NavHeader() {
         >
           <div className='container'>
             <div className='flex items-center justify-between font-medium'>
-              <Link to={path.home} className='flex w-full justify-between p-2 lg:w-auto lg:p-4'>
+              <Link
+                to={path.home}
+                onClick={handleNextPage}
+                className='flex w-full justify-between p-2 lg:w-auto lg:p-4'
+              >
                 <img src={logo} alt='logo' className='h-9 md:cursor-pointer' />
               </Link>
               <div>
@@ -340,8 +377,31 @@ export default function NavHeader() {
                   </NavLink>
                   <UnderLineEffect color='white' />
                 </li>
-                <li className='group relative'>
-                  <span className='cursor-pointer py-1 pl-5 hover:text-white/80 hover:duration-300'>EN</span>
+                <li className='py-1 pl-5'>
+                  <button
+                    onClick={() => {
+                      isChangeLanguage ? changeLanguage('en') : changeLanguage('vi')
+                    }}
+                    className='flex cursor-pointer items-center justify-center'
+                  >
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      strokeWidth={1.5}
+                      stroke='currentColor'
+                      className='h-5 w-5'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        d='M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418'
+                      />
+                    </svg>
+                    <span className='cursor-pointer hover:text-white/80 hover:duration-300'>
+                      {isChangeLanguage ? 'EN' : 'VI'}
+                    </span>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -430,6 +490,32 @@ export default function NavHeader() {
             >
               Contact
             </NavLink>
+          </li>
+          <li className='py-2'>
+            <button
+              onClick={() => {
+                isChangeLanguage ? changeLanguage('en') : changeLanguage('vi')
+              }}
+              className='flex cursor-pointer items-center justify-center'
+            >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                strokeWidth={1.5}
+                stroke='currentColor'
+                className='h-5 w-5'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  d='M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418'
+                />
+              </svg>
+              <span className='cursor-pointer  hover:text-blue hover:duration-300'>
+                {isChangeLanguage ? 'EN' : 'VI'}
+              </span>
+            </button>
           </li>
         </ul>
       </div>
