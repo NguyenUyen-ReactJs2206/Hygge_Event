@@ -18,7 +18,7 @@ export default function NavHeader() {
   const handleScroll = () => {
     const currentScrollPos = window.scrollY
 
-    setShowNav(() => (currentScrollPos === 0 ? false : true))
+    setShowNav(() => (currentScrollPos < 50 ? false : true))
     setOpen(false)
   }
   useEffect(() => {
@@ -225,8 +225,8 @@ export default function NavHeader() {
         </nav>
 
         <nav
-          className={`fixed top-0 z-[99999] w-full bg-blue py-2 opacity-100 transition-all duration-[700ms]
-     ${showNav ? 'visible transition-all duration-[700ms]' : 'invisible translate-y-[-100%] duration-[700ms]'}`}
+          className={`fixed top-0 z-[99999] w-full bg-blue py-2 opacity-100 transition-all duration-[300ms]
+     ${showNav ? 'visible transition-all duration-[300ms]' : 'invisible translate-y-[-100%] duration-[300ms]'}`}
         >
           <div className='container'>
             <div className='flex items-center justify-between font-medium'>
