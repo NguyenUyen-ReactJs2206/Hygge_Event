@@ -23,6 +23,7 @@
     "i18next": "^23.2.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.1",
     "react-i18next": "^13.0.1",
     "react-multi-carousel": "^2.8.4",
     "react-router-dom": "^6.12.1",
@@ -31,7 +32,8 @@
     "react-spinners": "^0.13.8",
     "react-transition-group": "^4.4.5",
     "sass": "^1.63.4",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",

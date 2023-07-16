@@ -1,4 +1,11 @@
+import { useForm } from 'react-hook-form'
+import { FormContact } from 'src/types/formContact.type'
+
 export default function Contact() {
+  const { register, handleSubmit } = useForm<FormContact>()
+  const onSubmit = handleSubmit((data) => {
+    console.log(data, 'dddddddd')
+  })
   return (
     <div className='contact-page' id='top'>
       <div className='py-32 lg:pt-40'>
@@ -8,7 +15,7 @@ export default function Contact() {
               <div className='mx-4'>
                 <div className='grid grid-cols-2'>
                   <div className='col-span-2 md:col-span-1 lg:col-span-2'>
-                    <div className='flex border-b border-b-blue py-8'>
+                    <div className='flex border-b border-b-blue/60 py-8'>
                       <div className='flex h-24 w-24 flex-shrink-0 items-center justify-center rounded-full bg-blue text-white'>
                         aa
                       </div>
@@ -21,7 +28,7 @@ export default function Contact() {
                     </div>
                   </div>
                   <div className='col-span-2 md:col-span-1 lg:col-span-2'>
-                    <div className='flex border-b border-b-blue py-8'>
+                    <div className='flex border-b border-b-blue/60 py-8'>
                       <div className='flex h-24 w-24 flex-shrink-0 items-center justify-center rounded-full bg-blue text-white'>
                         aa
                       </div>
@@ -46,7 +53,10 @@ export default function Contact() {
               </div>
             </div>
             <div className=' col-span-12 lg:col-span-8'>
-              <form className='bg-blue/10 px-4 py-20 text-center sm:px-6 md:px-10 lg:px-16 xl:px-20'>
+              <form
+                onSubmit={onSubmit}
+                className='bg-blue/10 px-4 py-20 text-center sm:px-6 md:px-10 lg:px-16 xl:px-20'
+              >
                 <h2 className='mb-12 text-5xl font-extrabold text-blue'>Get In Touch</h2>
                 <div className='grid grid-cols-2 gap-x-6 gap-y-4'>
                   <div className='col-span-2 md:col-span-1'>
@@ -54,6 +64,7 @@ export default function Contact() {
                       placeholder='Your Name'
                       type='text'
                       className='w-full border border-blue/80 px-4 py-6 text-lg outline-none focus:outline-blue'
+                      {...register('name')}
                     />
                   </div>
                   <div className='col-span-2 md:col-span-1'>
@@ -61,6 +72,7 @@ export default function Contact() {
                       placeholder='Email'
                       type='email'
                       className='w-full border border-blue/80 px-4 py-6 text-lg outline-none focus:outline-blue'
+                      {...register('email')}
                     />
                   </div>
                   <div className='col-span-2 md:col-span-1'>
@@ -68,6 +80,7 @@ export default function Contact() {
                       placeholder='Phone Number'
                       type='text'
                       className='w-full border border-blue/80 px-4 py-6 text-lg outline-none focus:outline-blue'
+                      {...register('phone')}
                     />
                   </div>
                   <div className='col-span-2 md:col-span-1'>
@@ -75,6 +88,7 @@ export default function Contact() {
                       placeholder='Subject'
                       type='text'
                       className='w-full border border-blue/80 px-4 py-6 text-lg outline-none focus:outline-blue'
+                      {...register('subject')}
                     />
                   </div>
                   <div className='col-span-2'>
@@ -82,6 +96,7 @@ export default function Contact() {
                       placeholder='Write Comments'
                       className='w-full border border-blue/80 px-4 py-6 text-lg outline-none focus:outline-blue'
                       rows={4}
+                      {...register('comment')}
                     ></textarea>
                   </div>
                   <div className='col-span-2'>
@@ -95,7 +110,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-
       <div className=' bg-blue/10 py-32 text-center'>
         <div className='container'>
           <div className='mx-auto max-w-[600px] px-4 sm:px-10'>
