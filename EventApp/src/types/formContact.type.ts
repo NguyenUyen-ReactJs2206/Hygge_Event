@@ -1,7 +1,7 @@
-export interface FormContact {
+export interface FormContactType {
   name: string
   email: string
-  phone: number
+  phone: string
   subject: string
   comment: string
 }
