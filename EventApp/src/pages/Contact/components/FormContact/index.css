@@ -1,0 +1,5 @@
+.toast-success {
+  z-index: 9999999999999;
+  width: fit-content;
+  background: red;
+}

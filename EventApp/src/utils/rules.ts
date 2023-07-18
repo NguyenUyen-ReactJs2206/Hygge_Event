@@ -1,15 +1,11 @@
-import type { RegisterOptions } from 'react-hook-form'
+import * as yup from 'yup'
 
-type Rules = {
-  [key in 'email' | 'phone']?: RegisterOptions
-}
+export const schema = yup.object({
+  name: yup.string().required(),
+  email: yup.string().required('Email là bắt buộc').email('Email không đúng định dạng'),
+  phone: yup.string().required(),
+  subject: yup.string().required(),
+  comment: yup.string().required()
+})
 
-export const rules: Rules = {
-  email: {
-    required: true,
-    pattern: {
-      value: /^\S+@\S+\.\S+$/,
-      message: 'Email không đúng định dạng'
-    }
-  }
-}
+export type Schema = yup.InferType<typeof schema>
