@@ -11,6 +11,7 @@ export default function FormContact() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors }
   } = useForm<Schema>({
     resolver: yupResolver(schema)
@@ -35,11 +36,13 @@ export default function FormContact() {
   }
   const handleClose = () => {
     setShowPopup(false)
+    reset()
   }
   const handleOverlayClick = (event: any) => {
     if (event.target === event.currentTarget) {
       handleClose()
     }
+    reset()
   }
   return (
     <div>
@@ -93,6 +96,7 @@ export default function FormContact() {
           </div>
           <div className='col-span-2'>
             <button
+              type='submit'
               onClick={handleClick}
               className='mt-6 w-full bg-blue/80 px-4 py-4 text-lg uppercase text-white outline-none transition-all duration-300 hover:bg-blue hover:duration-300'
             >
@@ -101,6 +105,7 @@ export default function FormContact() {
           </div>
         </div>
       </form>
+
       {showPopup && <PopupForm handleOverlayClick={handleOverlayClick} onClose={handleClose} />}
     </div>
   )
