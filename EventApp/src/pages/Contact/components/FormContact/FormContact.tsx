@@ -3,10 +3,15 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { Schema, schema } from 'src/utils/rules'
 import { toast } from 'react-toastify'
 import './index.css'
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import PopupForm from '../PopupForm'
 import emailjs from '@emailjs/browser'
-import { YOUR_EMAIL_SERVICE_ID, YOUR_EMAIL_TEAMPLATE_ID, YOUR_PUBLIC_KEY_ID } from 'src/env'
+import {
+  YOUR_EMAIL_SERVICE_ID,
+  YOUR_EMAIL_TEAMPLATE_ID_CUSTOMER,
+  YOUR_EMAIL_TEAMPLATE_ID_SERVER,
+  YOUR_PUBLIC_KEY_ID
+} from 'src/env'
 
 export default function FormContact() {
   const [showPopup, setShowPopup] = useState(false)
@@ -53,7 +58,17 @@ export default function FormContact() {
     }
 
     emailjs
-      .send(`${YOUR_EMAIL_SERVICE_ID}`, `${YOUR_EMAIL_TEAMPLATE_ID}`, templateParams, `${YOUR_PUBLIC_KEY_ID}`)
+      .send(`${YOUR_EMAIL_SERVICE_ID}`, `${YOUR_EMAIL_TEAMPLATE_ID_SERVER}`, templateParams, `${YOUR_PUBLIC_KEY_ID}`)
+      .then(
+        (response) => {
+          console.log('Email sent successfully!', response.status, response.text)
+        },
+        (error) => {
+          console.error('Email failed to send:', error)
+        }
+      )
+    emailjs
+      .send(`${YOUR_EMAIL_SERVICE_ID}`, `${YOUR_EMAIL_TEAMPLATE_ID_CUSTOMER}`, templateParams, `${YOUR_PUBLIC_KEY_ID}`)
       .then(
         (response) => {
           console.log('Email sent successfully!', response.status, response.text)
@@ -63,6 +78,7 @@ export default function FormContact() {
         }
       )
   }
+
   const handleClose = () => {
     setShowPopup(false)
     reset()
