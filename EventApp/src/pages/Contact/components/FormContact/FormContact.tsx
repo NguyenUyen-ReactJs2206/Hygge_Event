@@ -5,6 +5,8 @@ import { toast } from 'react-toastify'
 import './index.css'
 import { useState } from 'react'
 import PopupForm from '../PopupForm'
+import emailjs from '@emailjs/browser'
+import { YOUR_EMAIL_SERVICE_ID, YOUR_EMAIL_TEAMPLATE_ID, YOUR_PUBLIC_KEY_ID } from 'src/env'
 
 export default function FormContact() {
   const [showPopup, setShowPopup] = useState(false)
@@ -30,9 +32,36 @@ export default function FormContact() {
   }
   const onSubmit = (data: Schema) => {
     console.log(data)
-    if (data) {
-      setShowPopup(true)
+    setShowPopup(true)
+
+    const customer_name = data.name
+    const customer_email = data.email
+    const customer_phone = data.phone
+    const customer_subject = data.subject
+    const customer_comment = data.comment
+
+    // Gửi email
+    const templateParams = {
+      // Thông tin cần gửi trong email
+      to_email: 'nhoxnhobe99@gmail.com',
+      from_email: 'nhoxnhobe99@gmail.com',
+      customer_name: `${customer_name}`,
+      customer_email: `${customer_email}`,
+      customer_phone: `${customer_phone}`,
+      customer_subject: `${customer_subject}`,
+      customer_comment: `${customer_comment}`
     }
+
+    emailjs
+      .send(`${YOUR_EMAIL_SERVICE_ID}`, `${YOUR_EMAIL_TEAMPLATE_ID}`, templateParams, `${YOUR_PUBLIC_KEY_ID}`)
+      .then(
+        (response) => {
+          console.log('Email sent successfully!', response.status, response.text)
+        },
+        (error) => {
+          console.error('Email failed to send:', error)
+        }
+      )
   }
   const handleClose = () => {
     setShowPopup(false)
