@@ -3,7 +3,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { Schema, schema } from 'src/utils/rules'
 import { toast } from 'react-toastify'
 import './index.css'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import PopupForm from '../PopupForm'
 import emailjs from '@emailjs/browser'
 import { YOUR_EMAIL_SERVICE_ID, YOUR_EMAIL_TEAMPLATE_ID, YOUR_PUBLIC_KEY_ID } from 'src/env'
@@ -135,7 +135,7 @@ export default function FormContact() {
         </div>
       </form>
 
-      {showPopup && <PopupForm handleOverlayClick={handleOverlayClick} onClose={handleClose} />}
+      <PopupForm showPopup={showPopup} handleOverlayClick={handleOverlayClick} onClose={handleClose} />
     </div>
   )
 }

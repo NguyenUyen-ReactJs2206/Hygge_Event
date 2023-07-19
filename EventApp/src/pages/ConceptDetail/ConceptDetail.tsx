@@ -52,7 +52,7 @@ export default function ConceptDetail({ name, listConceptDetail }: Props) {
               <path strokeLinecap='round' strokeLinejoin='round' d='M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18' />
             </svg>
 
-            <span>ComeBack</span>
+            <span>Concept</span>
           </button>
         </div>
 
@@ -84,7 +84,6 @@ export default function ConceptDetail({ name, listConceptDetail }: Props) {
               <Carousel
                 responsive={responsive}
                 pauseOnHover={false}
-                showDots={true}
                 sliderClass='transition-duration-2000'
                 infinite={true}
                 arrows={true}

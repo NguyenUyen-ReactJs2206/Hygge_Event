@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useContext } from 'react'
+import { useEffect, useRef, useContext } from 'react'
 import NavHeader from 'src/components/NavHeader'
 import Footer from '../../components/Footer'
 import { Link } from 'react-scroll'
