@@ -98,15 +98,14 @@ export default function ConceptDetail({ name, listConceptDetail }: Props) {
             </div>
           </div>
         </div>
-        {isPopupVisible && (
-          <PopUpSlideImages
-            isPopupVisible={isPopupVisible}
-            currentIndexImages={currentIndexImages}
-            setCurrentIndexImages={setCurrentIndexImages}
-            listImageDetail={listConceptDetail}
-            setIsPopupVisible={setIsPopupVisible}
-          />
-        )}
+
+        <PopUpSlideImages
+          isPopupVisible={isPopupVisible}
+          currentIndexImages={currentIndexImages}
+          setCurrentIndexImages={setCurrentIndexImages}
+          listImageDetail={listConceptDetail}
+          setIsPopupVisible={setIsPopupVisible}
+        />
       </div>
     </>
   )

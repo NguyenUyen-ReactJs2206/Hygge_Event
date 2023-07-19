@@ -12,6 +12,7 @@ type Props = {
   setIsPopupVisible: React.Dispatch<React.SetStateAction<boolean>>
 }
 export default function PopUpSlideImages({
+  isPopupVisible,
   setIsPopupVisible,
   listImageDetail,
   currentIndexImages,
@@ -69,28 +70,6 @@ export default function PopUpSlideImages({
     setCurrentIndexImages(index)
   }
 
-  const handleDownload = () => {
-    // // Tạo một phần tử liên kết ảo
-    // const downloadLink = document.createElement('a')
-    // downloadLink.href = listImageDetail[currentIndexImages]
-    // downloadLink.download = `${listImageDetail[currentIndexImages]}`
-    // // Kích hoạt việc tải về
-    // downloadLink.click()
-    // axios({
-    //   url: `${listImageDetail[currentIndexImages]}`, // Thay đổi thành đường dẫn ảnh thực tế
-    //   method: 'GET',
-    //   responseType: 'blob' // Sử dụng responseType là 'blob' để tải xuống thành công
-    // })
-    //   .then((response) => {
-    //     const blob = new Blob([response.data])
-    //     console.log(blob, 'bbbbbbbb')
-    //     saveAs(blob, `${listImageDetail[currentIndexImages]}`) // Thay đổi tên_tệp_tải_xuống.jpg thành tên tệp tin bạn muốn cho tệp đã tải xuống
-    //   })
-    //   .catch((error) => {
-    //     console.log(error)
-    //   })
-    saveAs(listImageDetail[currentIndexImages], `${listImageDetail[currentIndexImages]}`)
-  }
   const toggleFullScreen = () => {
     const img = document.getElementById('fullscreen')
     if (isFullScreen) {
@@ -105,7 +84,13 @@ export default function PopUpSlideImages({
     setIsFullScreen(!isFullScreen)
   }
   return createPortal(
-    <div className='fixed inset-0 z-[99999] h-[100vh] w-full bg-black' id='fullscreen'>
+    <div
+      className={` transition-all duration-300
+    ${isPopupVisible ? 'visible' : 'invisible translate-y-[-100%]'} 
+   fixed inset-0 z-[99999] h-[100vh] w-full bg-black 
+   `}
+      id='fullscreen'
+    >
       <div className='relative h-[100vh]'>
         <div className='m-auto flex h-[85vh] max-w-[1300px] items-center justify-center'>
           <div className='overflow-hidden'>
@@ -163,22 +148,7 @@ export default function PopUpSlideImages({
                   </svg>
                 )}
               </button>
-              <button onClick={() => handleDownload()}>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={1.5}
-                  stroke='currentColor'
-                  className='h-6 w-6 cursor-pointer stroke-white/80 hover:stroke-white'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3'
-                  />
-                </svg>
-              </button>
+
               <button onClick={handleClosePopup}>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
