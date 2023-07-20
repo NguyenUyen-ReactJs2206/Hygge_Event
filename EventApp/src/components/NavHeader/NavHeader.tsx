@@ -7,7 +7,7 @@ import { AppContext } from 'src/contexts/app.context'
 import { useTranslation } from 'react-i18next'
 
 export default function NavHeader() {
-  const { i18n, t } = useTranslation()
+  const { i18n, t } = useTranslation('navbar')
 
   const [isChangeLanguage, setIsChangeLanguage] = useState(false)
 
