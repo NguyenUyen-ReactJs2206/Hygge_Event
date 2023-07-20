@@ -1,0 +1,19 @@
+{
+  "aside contact": {
+    "office address": "Office Address",
+    "address": "165/43 Nguyen Thai Binh, Nguyen Thai Binh Ward, District 1, Ho Chi Minh City, Vietnam.",
+    "working hours": "Working Hours",
+    "hours": "Monday to Friday 09:00 to 18:30 Saturday 15:30",
+    "message us": "Message Us",
+    "message": "info.artofhygge@gmail.com"
+  },
+  "form": {
+    "get in touch": "Get In Touch",
+    "your name": "Your Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "subject": "Subject",
+    "comment": "Write Comments",
+    "submit": "Submit Now"
+  }
+}

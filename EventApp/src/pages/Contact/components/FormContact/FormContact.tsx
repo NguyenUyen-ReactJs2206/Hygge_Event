@@ -12,8 +12,10 @@ import {
   YOUR_EMAIL_TEAMPLATE_ID_SERVER,
   YOUR_PUBLIC_KEY_ID
 } from 'src/env'
+import { useTranslation } from 'react-i18next'
 
 export default function FormContact() {
+  const { t } = useTranslation('contact')
   const [showPopup, setShowPopup] = useState(false)
   const {
     register,
@@ -96,11 +98,13 @@ export default function FormContact() {
         className='bg-blue/10 px-4 py-20 text-center sm:px-6 md:px-10 lg:px-16 xl:px-20'
         noValidate
       >
-        <h2 className='mb-12 text-5xl font-extrabold text-blue'>Get In Touch</h2>
+        <h2 className='mb-4 text-3xl font-extrabold text-blue sm:mb-10 sm:text-4xl md:text-5xl'>
+          {t('form.get in touch')}
+        </h2>
         <div className='grid grid-cols-2 gap-x-6 gap-y-4'>
           <div className='col-span-2 md:col-span-1'>
             <input
-              placeholder='Your Name'
+              placeholder={t('form.your name')}
               type='text'
               className='w-full border border-blue/80 px-4 py-6 text-lg outline-none focus:outline-blue'
               {...register('name')}
@@ -108,7 +112,7 @@ export default function FormContact() {
           </div>
           <div className='col-span-2 md:col-span-1'>
             <input
-              placeholder='Email'
+              placeholder={t('form.email')}
               type='text'
               className='w-full border border-blue/80 px-4 py-6 text-lg outline-none focus:outline-blue'
               {...register('email')}
@@ -116,7 +120,7 @@ export default function FormContact() {
           </div>
           <div className='col-span-2 md:col-span-1'>
             <input
-              placeholder='Phone Number'
+              placeholder={t('form.phone')}
               type='text'
               className='w-full border border-blue/80 px-4 py-6 text-lg outline-none focus:outline-blue'
               {...register('phone')}
@@ -124,7 +128,7 @@ export default function FormContact() {
           </div>
           <div className='col-span-2 md:col-span-1'>
             <input
-              placeholder='Subject'
+              placeholder={t('form.subject')}
               type='text'
               className='w-full border border-blue/80 px-4 py-6 text-lg outline-none focus:outline-blue'
               {...register('subject')}
@@ -132,7 +136,7 @@ export default function FormContact() {
           </div>
           <div className='col-span-2'>
             <textarea
-              placeholder='Write Comments'
+              placeholder={t('form.comment')}
               className='w-full border border-blue/80 px-4 py-6 text-lg outline-none focus:outline-blue'
               rows={4}
               {...register('comment')}
@@ -143,9 +147,9 @@ export default function FormContact() {
             <button
               type='submit'
               onClick={handleClick}
-              className='mt-6 w-full bg-blue/80 px-4 py-4 text-lg uppercase text-white outline-none transition-all duration-300 hover:bg-blue hover:duration-300'
+              className='mt-4 w-full bg-blue/80 px-4 py-4 text-lg uppercase text-white outline-none transition-all duration-300 hover:bg-blue hover:duration-300 sm:mt-6'
             >
-              Submit Now
+              {t('form.submit')}
             </button>
           </div>
         </div>

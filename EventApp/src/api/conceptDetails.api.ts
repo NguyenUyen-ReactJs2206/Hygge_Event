@@ -53,11 +53,7 @@ export const listConceptBridgerton = [
   'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-starry-night-concept-7.jpg',
   'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-starry-night-concept-8.jpg',
   'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-starry-night-concept-9.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-starry-night-concept-10.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-starry-night-concept-11.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-starry-night-concept-12.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-starry-night-concept-13.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-starry-night-concept-14.jpg'
+  'https://jetaimeart.com/wp-content/uploads/2021/06/jetaimeart-starry-night-concept-10.jpg'
 ]
 
 export const listConceptBeatyAndTheBeast = [

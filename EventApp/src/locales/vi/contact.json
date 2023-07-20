@@ -1,0 +1,19 @@
+{
+  "aside contact": {
+    "office address": "Địa chỉ",
+    "address": "165/43 Nguyễn Thái Bình, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh, Việt Nam.",
+    "working hours": "Giờ làm việc",
+    "hours": "Thứ 2 đến Thứ 6, từ 09:00 đến 18:30. Thứ 7 15:30",
+    "message us": "Liên lạc",
+    "message": "info.artofhygge@gmail.com"
+  },
+  "form": {
+    "get in touch": "Liên hệ với chúng tôi",
+    "your name": "Tên của bạn",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "subject": "Chủ đề",
+    "comment": "Nội dung",
+    "submit": "Gửi"
+  }
+}

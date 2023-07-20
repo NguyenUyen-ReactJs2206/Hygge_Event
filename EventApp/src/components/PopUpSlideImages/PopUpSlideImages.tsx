@@ -1,5 +1,4 @@
 import { useState, Fragment } from 'react'
-import saveAs from 'file-saver'
 import { createPortal } from 'react-dom'
 import Carousel from 'react-multi-carousel'
 import 'src/sass/index.scss'
