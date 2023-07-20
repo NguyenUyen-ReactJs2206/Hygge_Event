@@ -1,10 +1,12 @@
+import { useTranslation } from 'react-i18next'
 import { aboutUsApi } from 'src/api/aboutUs.api'
 
 export default function AboutU2() {
+  const { t } = useTranslation('about')
   return (
     <div className='about-us-page' id='top'>
       <div className='pt-20 lg:pt-[70px]'>
-        <h1 className='font mb-4 pl-10 pt-6 text-4xl font-semibold tracking-wider text-gray lg:hidden'>About Us</h1>
+        <h1 className='font mb-4 pl-10 pt-6 text-4xl font-semibold tracking-wider text-gray lg:hidden'>{t('about')}</h1>
         <div className='group relative grid grid-cols-12'>
           <div className=' col-span-12 lg:col-span-7 xl:col-span-8'>
             <div className='h-[300px] w-full overflow-hidden xs:h-[400px] sm:h-full'>
@@ -25,10 +27,10 @@ export default function AboutU2() {
             lg:transition-none lg:duration-0'
               >
                 <h3 className='text-xl font-extrabold uppercase tracking-wider text-blue sm:text-2xl sm:font-semibold lg:text-white'>
-                  {aboutUsApi[0].title}
+                  {t('overview')}
                 </h3>
                 <p className='mt-4 text-justify text-[12px] tracking-wide xs:text-[14px] sm:text-base lg:text-white'>
-                  {aboutUsApi[0].content}
+                  {t('content overview')}
                 </p>
               </div>
             </div>
@@ -45,10 +47,10 @@ export default function AboutU2() {
             lg:transition-none lg:duration-0'
               >
                 <h3 className='text-xl font-extrabold uppercase tracking-wider text-blue sm:text-2xl sm:font-semibold'>
-                  {aboutUsApi[1].title}
+                  {t('our mision')}
                 </h3>
                 <p className='mt-4 text-justify text-[12px] tracking-wide xs:text-[14px] sm:text-base'>
-                  {aboutUsApi[1].content}
+                  {t('content our mision')}
                 </p>
               </div>
             </div>
@@ -83,10 +85,10 @@ export default function AboutU2() {
             lg:transition-none lg:duration-0'
               >
                 <h3 className='text-xl font-extrabold uppercase tracking-wider text-blue sm:text-2xl sm:font-semibold lg:text-white'>
-                  {aboutUsApi[2].title}
+                  {t('our team')}
                 </h3>
                 <p className='mt-4 text-justify text-[12px] tracking-wide xs:text-[14px] sm:text-base lg:text-white'>
-                  {aboutUsApi[2].content}
+                  {t('content our team')}
                 </p>
               </div>
             </div>
@@ -103,12 +105,12 @@ export default function AboutU2() {
             lg:transition-none lg:duration-0'
               >
                 <h3 className='text-xl font-extrabold uppercase tracking-wider text-blue sm:text-2xl sm:font-semibold'>
-                  {aboutUsApi[3].title}
+                  {t('our commitment')}
                 </h3>
                 <p className='mt-4 text-justify text-[12px] tracking-wide xs:text-[14px] sm:text-base'>
-                  {aboutUsApi[3].contentOne}
+                  {t('content commitment one')}
                   <br />
-                  {aboutUsApi[3].contentTwo}
+                  {t('content commitment two')}
                 </p>
               </div>
             </div>
