@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
-import strengthOne from 'src/assets/images/strengths/strengthOne.png'
-import strengthTwo from 'src/assets/images/strengths/strengthTwo.png'
+import strengthOne from 'src/assets/images/home/strengths/strengthOne.png'
+import strengthTwo from 'src/assets/images/home/strengths/strengthTwo.png'
 import NumberUp from 'src/pages/Home/components/NumberUp'
 import backgroundBlack from 'src/assets/images/background/backgroundBlack.png'
 import backgroundSlide from 'src/assets/images/background/backgroundSlide.png'

@@ -18,7 +18,7 @@ export default function PopupForm({ showPopup, onClose, handleOverlayClick }: Pr
       items-center justify-center bg-slate-400/70 `}
     >
       <div className={`rounded-sm bg-white shadow-2xl`}>
-        <div className=' h-fit w-[250px] py-8 xs:w-[320px] sm:w-[350px] md:h-[350px] md:w-[550px]'>
+        <div className='h-fit w-[250px] py-8 xs:w-[320px] sm:w-[350px] md:h-[350px] md:w-[550px]'>
           <div className='mb-4 flex w-full items-center justify-center '>
             <div className='flex h-[60px] w-[60px] items-center justify-center rounded-full border-[4px] border-green-200 text-green-400 md:h-[80px] md:w-[80px] md:border-[5px] '>
               <svg

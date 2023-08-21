@@ -278,7 +278,7 @@ export default function NavHeader() {
                 )}
               </div>
 
-              <ul className=' hidden w-max items-center gap-5 font-extrabold uppercase tracking-wide text-white lg:flex lg:text-sm'>
+              <ul className='hidden w-max items-center gap-5 font-extrabold uppercase tracking-wide text-white lg:flex lg:text-sm'>
                 <li className='group relative '>
                   <NavLink
                     to={path.home}

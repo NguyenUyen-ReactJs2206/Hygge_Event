@@ -1,23 +1,45 @@
+import banner1 from 'src/assets/images/home/banner/banner-1.jpg'
+import banner2 from 'src/assets/images/home/banner/banner-2.jpg'
+import banner3 from 'src/assets/images/home/banner/banner-3.jpg'
+import banner4 from 'src/assets/images/home/banner/banner-4.jpg'
+import banner5 from 'src/assets/images/home/banner/banner-5.jpg'
+import banner6 from 'src/assets/images/home/banner/banner-6.jpg'
+import banner7 from 'src/assets/images/home/banner/banner-7.jpg'
+import banner8 from 'src/assets/images/home/banner/banner-8.jpg'
+import banner9 from 'src/assets/images/home/banner/banner-9.jpg'
+import banner10 from 'src/assets/images/home/banner/banner-10.jpg'
+import banner11 from 'src/assets/images/home/banner/banner-11.jpg'
+import banner12 from 'src/assets/images/home/banner/banner-12.jpg'
+
 import featureOne from 'src/assets/images/home/featured/featuredOne.png'
 import featureTow from 'src/assets/images/home/featured/featuredTwo.png'
 import featureThree from 'src/assets/images/home/featured/featuredThree.png'
 import featureFor from 'src/assets/images/home/featured/featuredFor.png'
 import featureFive from 'src/assets/images/home/featured/featuredFive.png'
 import featureSix from 'src/assets/images/home/featured/featuredSix.png'
+
 import avatarOne from 'src/assets/images/home/avatar/avatarOne.png'
 import avatarTwo from 'src/assets/images/home/avatar/avatarTwo.png'
 import avatarThree from 'src/assets/images/home/avatar/avatarThree.png'
+
 import articleOne from '../assets/images/home/latestArticle/latest-article-one.png'
 import articleTwo from '../assets/images/home/latestArticle/latest-article-two.png'
 import articleThree from '../assets/images/home/latestArticle/latest-article-three.png'
 import articleFour from '../assets/images/home/latestArticle/latest-article-four.png'
 
 export const banners = [
-  'https://jetaimeart.com/wp-content/uploads/2021/05/slider-10.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/05/slider-03.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/05/slider-01.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/05/slider-09.jpg',
-  'https://jetaimeart.com/wp-content/uploads/2021/05/slider-07.jpg'
+  `${banner1}`,
+  `${banner2}`,
+  `${banner3}`,
+  `${banner4}`,
+  `${banner5}`,
+  `${banner6}`,
+  `${banner7}`,
+  `${banner8}`,
+  `${banner9}`,
+  `${banner10}`,
+  `${banner11}`,
+  `${banner12}`
 ]
 
 export const services = [
